@@ -1,0 +1,88 @@
+// start .sNominations
+.sNominations {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(sm){
+
+		--sTPB: calc(#{rem(57)}); 
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	
+	.dd-group{
+		border-bottom: 1px solid $body-color;
+
+	}
+	&__item{
+		border-top: 1px solid $body-color;
+	}
+	&__head{
+		position: relative;
+		padding-top: rem(22);
+		padding-bottom: rem(23);
+		padding-right: rem(30);
+		margin-bottom: 0;
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			right: 0;
+			width: rem(26);
+			height: rem(12);
+			background-size: 100% 100%;
+			background-image: var(--chevron-down);
+			// top: rem(34);
+			margin-top: em(6);
+		}
+	}
+	&__body{
+		padding-top: rem(44);
+		padding-bottom: rem(86);
+		.row{
+			align-items: center;
+			@include media-breakpoint-up(sm) {
+				--bs-gutter-x: #{rem(40)};
+			}
+			--bs-gutter-y: 28px;
+		}
+	}
+	&__text{
+		p{
+			line-height: calc(24 / 14);
+		}
+		// max-width: rem(532);
+	}
+	&__date{
+		@include media-breakpoint-up(xl) {
+
+			font-size: rem(18);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+		}
+		// font-size: 14px;
+		text-transform: uppercase;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
+		&:not(.active) &__date{
+			color: var(--bs-primary);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNominations

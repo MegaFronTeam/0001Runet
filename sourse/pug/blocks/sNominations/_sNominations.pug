@@ -1,0 +1,38 @@
+mixin sNominations(data)
+	// start sNominations
+	+b.SECTION.sNominations.section#sNominations&attributes(attributes)
+		.section-sp-start
+			.container
+				.section-inner
+					+b.section-title
+						.row
+							.col
+								h2 номинации
+							.col-auto
+								+e.link(href="#") 
+									+icon("arrow-right")
+					.dd-group
+						mixin item(t)
+							+e.item.dd-group__item
+								+e.head.dd-group__head.dd-head-js.h3= t
+								+e.body.dd-group__body
+									.row
+										.col-md-6
+											+e.text
+												p В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы
+										.col
+											+e.date приём заявок
+												.strong до 28 НОЯБРЯ
+										.col-auto
+											a.btn.btn-primary.btn-circle(href="#") подать заявку
+						+item(`Государство и Общество`)
+						+item(`СМИ и массовые коммуникации`)
+						+item(`Образование и кадры`)
+						+item(`Экономика и бизнес`)
+						+item(`Подкасты и цифровой контент `)
+						+item(`Наука, технологии и инновации`)
+						+item(`Здоровье и отдых`)
+						+item(`Народов много – Родина одна`)
+						+item(`Туризм и индустрия гостеприимства`)
+						+item(`Путешествия по РФ `)
+	// end sNominations

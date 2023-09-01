@@ -1,0 +1,27 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.section-sp-start
+			.container
+				.section-inner
+					+b.section-title
+						.row
+							.col
+								h2 Новости
+							.col-auto
+								+e.link(href="#") 
+									+icon("arrow-right")
+					+e.row.row
+						mixin item(i)
+							+e.col.col-lg-4.col-sm-6 
+								+e.item(href="#")
+									+e.img-wrap
+										+img(`img/news-img-${i}.jpg`).res-i
+									+e.caption
+										+e.date 30 ноября
+										+e.title.h6 Опубликован шорт-лист Премии Рунета 2022
+										p 6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз
+						+item(1)
+						+item(2)
+						+item(3)
+	// end sNews

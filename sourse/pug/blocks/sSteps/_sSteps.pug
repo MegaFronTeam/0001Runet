@@ -1,0 +1,35 @@
+mixin sSteps(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container-xl-fluid.container
+			+b.section-title
+				.container
+					h2 Этапы премии
+				
+			+e.row.row
+				mixin item(d,t,p)
+					+e.col.col-xl-3.col-md-6
+						+b.card&attributes(attributes)
+							+e.body
+								+e.date!= d
+								+e.title!= t
+								p!= p
+								if block
+									p  Заявок подано: 
+										strong 2334
+							block
+				+item(`1&nbsp;октября&nbsp;&mdash; 28&nbsp;ноября`,`Подача заявок`,`Небольшое описание этапа.  Например, предлагаем ознакомиться  с&nbsp;номинациями, или правилами конкурса, если они есть.`,``).active
+					+e.footer
+						.row
+							.col
+
+								.h6.strong.mb-0 Стоимость
+								+e.price 20 000 руб.
+							.col-auto
+								a.btn.btn-dark.btn-circle(href="#")  подать заявку
+
+				+item(`29&nbsp;ноября&nbsp;&mdash; 2&nbsp;декабря`,`Голосование экспертного клуба`,`А&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые ресурсы`)
+
+				+item(`3&nbsp;декабря&nbsp;&mdash; 8&nbsp;декабря`,`Голосование экспертного совета`,`а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые ресурсы`)
+				+item(`13 декабря`,`Церемония вручения `,`Небольшое описание этапа. Где состоится церемония, как туда попасть, нужна&nbsp;ли регистрация, где узнать информацию подробнее, свяжутся&nbsp;ли с&nbsp;победителями и&nbsp;тд`)
+	// end sSteps

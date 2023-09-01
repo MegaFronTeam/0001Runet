@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Главная</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page" data-bg="main.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<!-- start headerBlock-->
+				<div class="headerBlock section" id="headerBlock">
+					<div class="container">
+						<div class="section-title">
+							<h1>Премия РУНЕТА 2023</h1>
+						</div>
+						<div class="row"></div>
+					</div>
+				</div>
+				<!-- end headerBlock-->
+				<!-- start sNominations-->
+				<section class="sNominations section" id="sNominations">
+					<div class="section-sp-start">
+						<div class="container">
+							<div class="section-inner">
+								<div class="section-title">
+									<div class="row">
+										<div class="col">
+											<h2>номинации</h2>
+										</div>
+										<div class="col-auto">
+											<a class="section-title__link" href="#"> 
+												<svg class="icon icon-arrow-right ">
+													<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="dd-group">
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Государство и Общество
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">СМИ и массовые коммуникации
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Образование и кадры
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Экономика и бизнес
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Подкасты и цифровой контент 
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Наука, технологии и инновации
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Здоровье и отдых
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Народов много – Родина одна
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Туризм и индустрия гостеприимства
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="sNominations__item dd-group__item">
+														<div class="sNominations__head dd-group__head dd-head-js h3">Путешествия по РФ 
+														</div>
+														<div class="sNominations__body dd-group__body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="sNominations__text">
+																		<p>В&nbsp;этой номинации за&nbsp;первенство поборются: государственные, коммерческие, общественные организации, а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые и&nbsp;государственные ресурсы</p>
+																	</div>
+																</div>
+																<div class="col">
+																	<div class="sNominations__date">приём заявок
+																		<div class="strong">до 28 НОЯБРЯ</div>
+																	</div>
+																</div>
+																<div class="col-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+															</div>
+														</div>
+													</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sNominations-->
+				<!-- start sSteps-->
+				<section class="sSteps section" id="sSteps">
+					<div class="container-xl-fluid container">
+						<div class="section-title">
+							<div class="container">
+								<h2>Этапы премии</h2>
+							</div>
+						</div>
+						<div class="sSteps__row row">
+							<div class="sSteps__col col-xl-3 col-md-6">
+								<div class="card active">
+									<div class="card__body">
+										<div class="card__date">1&nbsp;октября&nbsp;&mdash; 28&nbsp;ноября
+										</div>
+										<div class="card__title">Подача заявок
+										</div>
+										<p>Небольшое описание этапа.  Например, предлагаем ознакомиться  с&nbsp;номинациями, или правилами конкурса, если они есть.</p>
+										<p> Заявок подано: <strong>2334</strong></p>
+									</div>
+									<div class="card__footer">
+										<div class="row">
+											<div class="col">
+												<div class="h6 strong mb-0">Стоимость</div>
+												<div class="card__price">20 000 руб.
+												</div>
+											</div>
+											<div class="col-auto"><a class="btn btn-dark btn-circle" href="#"> подать заявку</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sSteps__col col-xl-3 col-md-6">
+								<div class="card">
+									<div class="card__body">
+										<div class="card__date">29&nbsp;ноября&nbsp;&mdash; 2&nbsp;декабря
+										</div>
+										<div class="card__title">Голосование экспертного клуба
+										</div>
+										<p>А&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые ресурсы</p>
+									</div>
+								</div>
+							</div>
+							<div class="sSteps__col col-xl-3 col-md-6">
+								<div class="card">
+									<div class="card__body">
+										<div class="card__date">3&nbsp;декабря&nbsp;&mdash; 8&nbsp;декабря
+										</div>
+										<div class="card__title">Голосование экспертного совета
+										</div>
+										<p>а&nbsp;также СМИ и&nbsp;социальные ресурсы, реализующие концепцию цифрового государства, развивающие социальную компоненту Рунета, общественно значимые ресурсы</p>
+									</div>
+								</div>
+							</div>
+							<div class="sSteps__col col-xl-3 col-md-6">
+								<div class="card">
+									<div class="card__body">
+										<div class="card__date">13 декабря
+										</div>
+										<div class="card__title">Церемония вручения 
+										</div>
+										<p>Небольшое описание этапа. Где состоится церемония, как туда попасть, нужна&nbsp;ли регистрация, где узнать информацию подробнее, свяжутся&nbsp;ли с&nbsp;победителями и&nbsp;тд</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sSteps-->
+				<!-- start sFolkVote-->
+				<section class="sFolkVote section" id="sFolkVote">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sFolkVote</h2>
+						</div>
+						<div class="sFolkVote__row row">
+						</div>
+					</div>
+				</section>
+				<!-- end sFolkVote-->
+				<!-- start sNews-->
+				<section class="sNews section" id="sNews">
+					<div class="section-sp-start">
+						<div class="container">
+							<div class="section-inner">
+								<div class="section-title">
+									<div class="row">
+										<div class="col">
+											<h2>Новости</h2>
+										</div>
+										<div class="col-auto">
+											<a class="section-title__link" href="#"> 
+												<svg class="icon icon-arrow-right ">
+													<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="sNews__row row">
+									<div class="sNews__col col-lg-4 col-sm-6"> 
+										<a class="sNews__item" href="#">
+											<div class="sNews__img-wrap"><img class="res-i" src="img/news-img-1.jpg" alt="" loading="lazy"/>
+											</div>
+											<div class="sNews__caption">
+												<div class="sNews__date">30 ноября
+												</div>
+												<div class="sNews__title h6">Опубликован шорт-лист Премии Рунета 2022
+												</div>
+												<p>6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз</p>
+											</div>
+										</a>
+									</div>
+									<div class="sNews__col col-lg-4 col-sm-6"> 
+										<a class="sNews__item" href="#">
+											<div class="sNews__img-wrap"><img class="res-i" src="img/news-img-2.jpg" alt="" loading="lazy"/>
+											</div>
+											<div class="sNews__caption">
+												<div class="sNews__date">30 ноября
+												</div>
+												<div class="sNews__title h6">Опубликован шорт-лист Премии Рунета 2022
+												</div>
+												<p>6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз</p>
+											</div>
+										</a>
+									</div>
+									<div class="sNews__col col-lg-4 col-sm-6"> 
+										<a class="sNews__item" href="#">
+											<div class="sNews__img-wrap"><img class="res-i" src="img/news-img-3.jpg" alt="" loading="lazy"/>
+											</div>
+											<div class="sNews__caption">
+												<div class="sNews__date">30 ноября
+												</div>
+												<div class="sNews__title h6">Опубликован шорт-лист Премии Рунета 2022
+												</div>
+												<p>6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sNews-->
+				<!-- start sPartners-->
+				<section class="sPartners section" id="sPartners">
+					<div class="container-xl-fluid container">
+						<div class="section-title">
+							<div class="container">
+								<h2>Партнеры</h2>
+							</div>
+						</div>
+						<div class="sPartners__container container">
+							<div class="sPartners__inner">
+								<div class="sPartners__group"> 
+									<div class="sPartners__row row">
+										<div class="sPartners__group-title sPartners__group-title--col h4 col-lg-3 order-first"> Организатор
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-1.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__group-title sPartners__group-title--col h4 col-lg-auto order-lg-first"> При поддержке
+										</div>
+										<div class="col-12 m-lg-0 order-lg-first"> </div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-2.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-3.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-4.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sPartners__group">
+									<div class="sPartners__group-title h4">Партнеры номинации
+									</div>
+									<div class="sPartners__row row">
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-5.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-6.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-7.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sPartners__group">
+									<div class="sPartners__group-title h4">Генеральные партнеры
+									</div>
+									<div class="sPartners__row row">
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-8.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-9.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-10.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-11.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-12.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-13.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sPartners__group">
+									<div class="sPartners__group-title h4">Информационные партнеры
+									</div>
+									<div class="sPartners__row row">
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-14.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-15.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-16.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-17.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-18.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-19.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-20.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-21.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-22.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-23.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-24.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-25.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-26.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="sPartners__col col-lg-3 col-6">
+											<div class="sPartners__item"><img class="res-i" src="img/logo-27.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sPartners-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

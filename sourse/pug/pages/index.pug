@@ -1,0 +1,34 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sNominations/_sNominations.pug
+include ../blocks/sSteps/_sSteps.pug
+ 
+include ../blocks/sFolkVote/_sFolkVote.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+headerBlock 
+		+sNominations
+		+sSteps
+		+sFolkVote
+		+sNews
+		+sPartners
+	+parts('footer')
+      
+
+
+

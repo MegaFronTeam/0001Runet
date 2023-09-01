@@ -1,0 +1,59 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container-xl-fluid.container
+			+b.section-title
+				.container
+					h2 Партнеры
+			+e.container.container
+				+e.inner
+					mixin item(i)
+						+e.col.col-lg-3.col-6&attributes(attributes)
+							+e.item
+								+img(`img/logo-${i}.png`).res-i
+					+e.group 
+						+e.row.row
+							+e.group-title--col.h4.col-lg-3.order-first  Организатор
+							+item('1')
+							+e.group-title--col.h4.col-lg-auto.order-lg-first  При поддержке
+							.col-12.m-lg-0.order-lg-first  
+							+item('2')
+							+item('3')
+							+item('4')
+					
+					+e.group
+						+e.group-title.h4 Партнеры номинации
+						+e.row.row
+							+item('5')
+							+item('6')
+							+item('7')
+							
+					
+					+e.group
+						+e.group-title.h4 Генеральные партнеры
+						+e.row.row
+							+item('8')
+							+item('9')
+							+item('10')
+							+item('11')
+							+item('12')
+							+item('13')
+							
+					+e.group
+						+e.group-title.h4 Информационные партнеры
+						+e.row.row
+							+item('14') 
+							+item('15') 
+							+item('16') 
+							+item('17') 
+							+item('18') 
+							+item('19') 
+							+item('20') 
+							+item('21') 
+							+item('22') 
+							+item('23') 
+							+item('24') 
+							+item('25') 
+							+item('26') 
+							+item('27') 
+	// end sPartners
