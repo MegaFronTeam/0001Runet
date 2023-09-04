@@ -1,9 +1,26 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title
-				h1 Премия РУНЕТА 2023
-			.row
-						
+		.container 
+			+e.title
+				+e.text.animate-text-wrap
+					.animate-text НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
+				span.h1.animate-text-wrap
+					span.animate-text Премия 
+				span.h1.animate-text-wrap
+					span.animate-text РУНЕТА 
+				span.h1.animate-text-wrap
+					span.text-primary.animate-text-wrap
+						span.animate-text 2023
+			+e.footer.row
+				.col-lg-auto
+					+e.row.row
+						.col-lg-auto
+							a.btn.btn-primary.btn-circle(href="#") подать заявку
+						.col-auto.ttu.order-sm-first
+							+e.date приём заявок
+								.strong до 28 НОЯБРЯ
+				.col.order-lg-first
+					+img("img/head-logo-1.png").res-i
+					+img("img/head-logo-2.png").res-i
 	// end headerBlock

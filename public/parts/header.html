@@ -1,32 +1,63 @@
 
 <!-- start header-->
 <header class="header" id="header">
-	<!-- start top-nav-->
-	<div class="top-nav block-with-lazy">
-		<div class="container">
-			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
-					<div class="menu-mobile menu-mobile--js">
-						<div class="menu-mobile__inner">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-							</div>
-							<nav>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
-									<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
-									<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
-									<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
-									<li class="menu-item" itemprop="item"><a href="#">
-											<svg class="icon icon-vk ">
-												<use xlink:href="img/svg/sprite.svg#vk"></use>
-											</svg></a></li>
-								</ul>
-							</nav>
-						</div>
+	<div class="menu-mobile menu-mobile menu-mobile--js d-md-none">
+		<div class="menu-mobile__inner">
+			<div class="menu-mobile__head d-md-none container">
+				<svg class="iconC iconC-menu ">
+					<use xlink:href="img/svg/spriteC.svg#menu"></use>
+				</svg><a href="/"><img src="img/logo.svg" alt=""/></a>
+				<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
+				</div>
+			</div>
+			<nav>
+				<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+					<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+					<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+					<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+					<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+					<li class="menu-item" itemprop="item"><a href="#">Архив</a></li>
+				</ul>
+			</nav>
+			<div class="footer d-md-none container">
+				<div class="row">
+					<div class="col">
+						<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000 
+						</a><br/>
+						<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+						</a>
+					</div>
+					<div class="col-lg-12 col-auto">
+						<a class="footer__link" href="#">
+							<svg class="icon icon-vk ">
+								<use xlink:href="img/svg/sprite.svg#vk"></use>
+							</svg>
+						</a>
 					</div>
 				</div>
-				<div class="col-auto d-lg-none">
-					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+			</div>
+		</div>
+	</div>
+	<!-- start top-nav-->
+	<div class="top-nav block-with-lazy section">
+		<div class="container">
+			<div class="top-nav__row row">
+				<div class="col"><a href="/"><img src="img/logo.svg" alt=""/></a></div>
+				<div class="col-md-auto order-md-0 order-last d-none d-md-block">
+					<nav>
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+							<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+							<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+							<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+							<li class="menu-item" itemprop="item"><a href="#">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-auto d-md-none">
+					<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
 					</div>
 				</div>
 			</div>

@@ -1,9 +1,35 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+		.container-xl-fluid.container
+			+e.row.row
+				.col-xl-2.order-first
+					+e.logo(href="#")
+						+img("img/logo-footer.svg")
+				.col-lg-3.col
+					ul
+						li: a(href="#")  Номинанты
+						li: a(href="#")  Эксперты
+						li: a(href="#")  Лауреаты
+						li: a(href="#")  Новости
+						li: a(href="#")  Архив
+				+e.col-right.col-sm-auto.text-lg-end
+					.row
+						.col
+							+e.link(href="tel:+7(800)8000000") +7 (800) 800 0000 
+							br
+							+e.link(href="mailto:premia@runet.group") premia@runet.group
+						.col-lg-12.col-auto
+							+e.link(href="#")
+								+icon('vk') 
+				.col-lg.order-lg-first
+					p Общенациональная награда в&nbsp;области высоких технологий и&nbsp;интернета. Поощряет выдающиеся заслуги компаний-лидеров и&nbsp;отдельных деятелей, внесших значительный вклад в&nbsp;развитие российского сегмента сети Интернет (Рунета)
+			+e.footer
+				.row
+					+e.copy.col © 2023 Премия Рунета
+					//- .col
+					.col-lg-3.order-lg-0.order-sm-last
+						+e.policy(href="#") Политика конфиденциальности
+					+e.col-right.col-sm-auto.text-sm-end
+						+e.developer(href="#")  
+							span Сделано в агентстве 
+							+img("img/developer.svg")

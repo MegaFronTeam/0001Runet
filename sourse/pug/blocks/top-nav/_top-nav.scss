@@ -1,11 +1,17 @@
+
 .top-nav {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	// @include mt;
+	@include media-breakpoint-up(md) {
+
+		--sPT: #{rem(54)};
+	}
+	--sPT: 20px;
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(md) {
-			--bs-gutter-y: var(--bs-gutter-x);
+			// --bs-gutter-y: var(--bs-gutter-x);
 		// }
 
 	}
@@ -21,6 +27,15 @@
 	&__slide{
 		height: auto;
 	}
+	img{
+		@include media-breakpoint-up(lg) {
+			max-width: rem(145);
+		}
+		@include media-breakpoint-up(md) {
+			max-width: rem(109);
+		}
+		max-width: 44px;
+	}
 
 
 	@include media-breakpoint-up(sm) {}
@@ -32,6 +47,11 @@
 	@include media-breakpoint-only(xs) {}
 
 	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(md) {
+		.row{
+			align-items: center;
+		}
+	}
 }
 
 

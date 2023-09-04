@@ -93,7 +93,7 @@ class JSCCommon {
 		);
 
 		window.addEventListener('resize', () => {
-			if (window.matchMedia('(min-width: 992px)').matches) this.closeMenu();
+			if (window.matchMedia('(min-width: 768px)').matches) this.closeMenu();
 		},
 			{ passive: true },
 		);
@@ -159,79 +159,7 @@ class JSCCommon {
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
 		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	}
-	// /inputMask
-	static sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				Fancybox.close();
-				Fancybox.show([{ src: "#modal-thanks", type: "inline" }]);
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-
-		});
-
-
-		// async function submitForm(event) {
-		// 	event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
-		// 	try {
-		// 		// Формируем запрос
-		// 		const response = await fetch(event.target.action, {
-		// 			method: 'POST',
-		// 			body: new FormData(event.target)
-		// 		});
-		// 		// проверяем, что ответ есть
-		// 		if (!response.ok) throw (`Ошибка при обращении к серверу: ${response.status}`);
-		// 		// проверяем, что ответ действительно JSON
-		// 		const contentType = response.headers.get('content-type');
-		// 		if (!contentType || !contentType.includes('application/json')) {
-		// 			throw ('Ошибка обработки. Ответ не JSON');
-		// 		}
-		// 		// обрабатываем запрос
-		// 		const json = await response.json();
-		// 		if (json.result === "success") {
-		// 			// в случае успеха
-		// 			alert(json.info);
-		// 		} else {
-		// 			// в случае ошибки
-		// 			console.log(json);
-		// 			throw (json.info);
-		// 		}
-		// 	} catch (error) { // обработка ошибки
-		// 		alert(error);
-		// 	}
-		// }
-	}
+	// /inputMask 
 	static heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -273,34 +201,7 @@ class JSCCommon {
 				.slideToggle(function () {
 					$(this).toggleClass('active');
 				});
-		});
-		// let parents = document.querySelectorAll('.dd-group-js');
-		// for (let parent of parents) {
-		// 	if (parent) {
-		// 		// childHeads, kind of funny))
-		// 		let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-		// 		$(ChildHeads).click(function () {
-		// 			let clickedHead = this;
-
-		// 			$(ChildHeads).each(function () {
-		// 				if (this === clickedHead) {
-		// 					//parent element gain toggle class, style head change via parent
-		// 					$(this.parentElement).toggleClass('active');
-		// 					$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-		// 						$(this).toggleClass('active');
-		// 					});
-		// 				}
-		// 				else {
-		// 					$(this.parentElement).removeClass('active');
-		// 					$(this.parentElement).find('.dd-content-js').slideUp(function () {
-		// 						$(this).removeClass('active');
-		// 					});
-		// 				}
-		// 			});
-
-		// 		});
-		// 	}
-		// }
+		}); 
 	}
 
 	static imgToSVG() {
