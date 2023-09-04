@@ -7,6 +7,8 @@ include ../blocks/sSteps/_sSteps.pug
 include ../blocks/sFolkVote/_sFolkVote.pug
 include ../blocks/sNews/_sNews.pug
 include ../blocks/sPartners/_sPartners.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/top-nav/_top-nav.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -19,7 +21,7 @@ block pagecontent
 	//- +mob-mnu()
 	
 	
-	+parts('header')
+	+top-nav
 	main
 		+headerBlock 
 		+sNominations
@@ -27,7 +29,7 @@ block pagecontent
 		+sFolkVote
 		+sNews
 		+sPartners
-	+parts('footer')
+	+footer
       
 
 

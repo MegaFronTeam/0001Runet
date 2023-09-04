@@ -51,6 +51,7 @@
     "jquery": "^3.7.0",
     "smooth-scrollbar": "^8.8.4",
     "swiper": "^10.2.0",
+    "three": "^0.156.0",
     "wowjs": "^1.1.3"
   }
 }

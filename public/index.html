@@ -31,37 +31,98 @@
 	<body class="main-page" data-bg="main.jpg">
 		<div class="scroller">
 			<div class="main-wrapper">
-				<script>addBlock(`header`)</script>
-				<div id="headerWrap"></div>
+				<div class="menu-mobile menu-mobile menu-mobile--js d-md-none">
+					<div class="menu-mobile__inner">
+						<div class="menu-mobile__head d-md-none container">
+							<svg class="iconC iconC-menu ">
+								<use xlink:href="img/svg/spriteC.svg#menu"></use>
+							</svg><a href="/"><img src="img/logo.svg" alt=""/></a>
+							<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
+							</div>
+						</div>
+						<nav>
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+								<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+								<li class="menu-item" itemprop="item"><a href="#">Архив</a></li>
+							</ul>
+						</nav>
+						<div class="footer d-md-none container">
+							<div class="row">
+								<div class="col">
+									<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000 
+									</a><br/>
+									<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+									</a>
+								</div>
+								<div class="col-lg-12 col-auto">
+									<a class="footer__link" href="#">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy section">
+					<div class="container-xl-fluid container">
+						<div class="top-nav__row row" data-aos="fade-up"> 
+							<div class="col"><a href="/"><img src="img/logo.svg" alt=""/></a></div>
+							<div class="col-md-auto order-md-0 order-last d-none d-md-block">
+								<nav>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+										<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">
+												<svg class="icon icon-vk ">
+													<use xlink:href="img/svg/sprite.svg#vk"></use>
+												</svg></a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col-auto d-md-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
 				<main>
 					<!-- start headerBlock-->
 					<div class="headerBlock section" id="headerBlock">
 						<div class="container-xl-fluid container">
 							<div class="headerBlock__title">
 								<div class="headerBlock__text animate-text-wrap">
-									<div class="animate-text">НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ</div>
-								</div><span class="h1 animate-text-wrap"><span class="animate-text">Премия </span></span><span class="h1 animate-text-wrap"><span class="animate-text">РУНЕТА </span></span><span class="h1 animate-text-wrap"><span class="text-primary animate-text-wrap"><span class="animate-text">2023</span></span></span>
+									<div class="animate-text" data-aos="fade-up"> НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ</div>
+								</div><span class="h1 animate-text-wrap"><span class="animate-text" data-aos="fade-up"> Премия </span></span><span class="h1 animate-text-wrap"><span class="animate-text" data-aos="fade-up"> РУНЕТА </span></span><span class="h1 animate-text-wrap"><span class="text-primary animate-text-wrap"><span class="animate-text" data-aos="fade-up"> 2023</span></span></span>
 							</div>
 							<div class="headerBlock__footer row">
 								<div class="col-lg-auto">
 									<div class="headerBlock__row row">
-										<div class="col-lg-auto"><a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
-										<div class="col-auto ttu order-sm-first">
+										<div class="col-lg-auto" data-aos="fade-up"> <a class="btn btn-primary btn-circle" href="#">подать заявку</a></div>
+										<div class="col-auto ttu order-sm-first" data-aos="fade-up"> 
 											<div class="headerBlock__date">приём заявок
 												<div class="strong">до 28 НОЯБРЯ</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col order-lg-first"><img class="res-i" src="img/head-logo-1.png" alt="" loading="lazy"/><img class="res-i" src="img/head-logo-2.png" alt="" loading="lazy"/>
+								<div class="col order-lg-first"><img class="res-i" src="img/head-logo-1.png" alt="" loading="lazy" data-aos="fade-up"/><img class="res-i" src="img/head-logo-2.png" alt="" loading="lazy" data-aos="fade-up"/>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- end headerBlock-->
 					<!-- start sNominations-->
-					<section class="sNominations section" id="sNominations"> 
-						<div class="container-xl-fluid container">
+					<section class="sNominations section section section--animate" id="sNominations"> 
+						<div class="container-xl-fluid container animate-block">
 							<div class="section-inner">
 								<div class="container">
 									<div class="section-title" data-aos="fade-up"> 
@@ -278,7 +339,7 @@
 					<!-- start sSteps-->
 					<section class="sSteps section" id="sSteps">
 						<div class="container-xl-fluid container">
-							<div class="section-title">
+							<div class="section-title" data-aos="fade-up"> 
 								<div class="container">
 									<h2>Этапы премии</h2>
 								</div>
@@ -379,8 +440,8 @@
 					</section>
 					<!-- end sFolkVote-->
 					<!-- start sNews-->
-					<section class="sNews section" id="sNews">
-						<div class="container-xl-fluid container">
+					<section class="sNews section section section--animate" id="sNews">
+						<div class="container-xl-fluid container animate-block">
 							<div class="section-inner">
 								<div class="container">
 									<div class="section-title" data-aos="fade-up"> 
@@ -594,8 +655,61 @@
 					</section>
 					<!-- end sPartners-->
 				</main>
-				<script>addBlock(`footer`)</script>
-				<div id="footerWrap"></div>
+				<div class="footer-wrap">
+					<footer class="footer section">
+						<div class="container-xl-fluid container">
+							<div class="footer__row row">
+								<div class="col-xl-2 order-first">
+									<a class="footer__logo" href="#"><img src="img/logo-footer.svg" alt="" loading="lazy"/>
+									</a>
+								</div>
+								<div class="col-lg-3 col">
+									<ul>
+										<li><a href="#"> Номинанты</a></li>
+										<li><a href="#"> Эксперты</a></li>
+										<li><a href="#"> Лауреаты</a></li>
+										<li><a href="#"> Новости</a></li>
+										<li><a href="#"> Архив</a></li>
+									</ul>
+								</div>
+								<div class="footer__col-right col-sm-auto text-lg-end">
+									<div class="row">
+										<div class="col">
+											<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000 
+											</a><br/>
+											<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+											</a>
+										</div>
+										<div class="col-lg-12 col-auto">
+											<a class="footer__link" href="#">
+												<svg class="icon icon-vk ">
+													<use xlink:href="img/svg/sprite.svg#vk"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg order-lg-first">
+									<p>Общенациональная награда в&nbsp;области высоких технологий и&nbsp;интернета. Поощряет выдающиеся заслуги компаний-лидеров и&nbsp;отдельных деятелей, внесших значительный вклад в&nbsp;развитие российского сегмента сети Интернет (Рунета)</p>
+								</div>
+							</div>
+							<div class="footer__footer">
+								<div class="row">
+									<div class="footer__copy col">© 2023 Премия Рунета
+									</div>
+									<div class="col-lg-3 order-lg-0 order-sm-last">
+										<a class="footer__policy" href="#">Политика конфиденциальности
+										</a>
+									</div>
+									<div class="footer__col-right col-sm-auto text-sm-end">
+										<a class="footer__developer" href="#"> <span>Сделано в агентстве </span><img src="img/developer.svg" alt="" loading="lazy"/>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
 			</div>
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>

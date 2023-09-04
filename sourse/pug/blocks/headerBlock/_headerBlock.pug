@@ -4,23 +4,23 @@ mixin headerBlock()
 		.container-xl-fluid.container
 			+e.title
 				+e.text.animate-text-wrap
-					.animate-text НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
+					.animate-text( data-aos="fade-up")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
 				span.h1.animate-text-wrap
-					span.animate-text Премия 
+					span.animate-text( data-aos="fade-up")  Премия 
 				span.h1.animate-text-wrap
-					span.animate-text РУНЕТА 
+					span.animate-text( data-aos="fade-up")  РУНЕТА 
 				span.h1.animate-text-wrap
 					span.text-primary.animate-text-wrap
-						span.animate-text 2023
+						span.animate-text( data-aos="fade-up")  2023
 			+e.footer.row
 				.col-lg-auto
 					+e.row.row
-						.col-lg-auto
+						.col-lg-auto( data-aos="fade-up") 
 							a.btn.btn-primary.btn-circle(href="#") подать заявку
-						.col-auto.ttu.order-sm-first
+						.col-auto.ttu.order-sm-first( data-aos="fade-up") 
 							+e.date приём заявок
 								.strong до 28 НОЯБРЯ
 				.col.order-lg-first
-					+img("img/head-logo-1.png").res-i
-					+img("img/head-logo-2.png").res-i
+					+img("img/head-logo-1.png").res-i( data-aos="fade-up") 
+					+img("img/head-logo-2.png").res-i( data-aos="fade-up") 
 	// end headerBlock

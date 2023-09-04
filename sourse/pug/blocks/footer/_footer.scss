@@ -1,7 +1,15 @@
+.footer-wrap{
+	background-color: #000207;
+
+}
 .footer {
 		
 	margin-top: auto;
 	background-color: #000207;
+	position: relative;
+	z-index: 2;
+	// transform: translate(0,-100px);
+	// position: relative;
 --sPT: #{rem(80)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
