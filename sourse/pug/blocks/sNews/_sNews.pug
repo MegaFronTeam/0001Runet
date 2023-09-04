@@ -4,7 +4,7 @@ mixin sNews(data)
 		.container-xl-fluid.container
 			.section-inner
 				.container
-					+b.section-title
+					+b.section-title( data-aos="fade-up") 
 						.row
 							.col
 								h2 Новости
@@ -15,12 +15,12 @@ mixin sNews(data)
 						mixin item(i)
 							+e.col.col-lg-4.col-sm-6 
 								+e.item(href="#")
-									+e.img-wrap
+									+e.img-wrap( data-aos="fade-up") 
 										+img(`img/news-img-${i}.jpg`).res-i
 									+e.caption
-										+e.date 30 ноября
-										+e.title.h6 Опубликован шорт-лист Премии Рунета 2022
-										p 6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз
+										+e.date( data-aos="fade-up")  30 ноября
+										+e.title.h6( data-aos="fade-up")  Опубликован шорт-лист Премии Рунета 2022
+										p( data-aos="fade-up")  6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз
 						+item(1)
 						+item(2)
 						+item(3)

@@ -15,12 +15,14 @@
 		
 	}
 	
-	.dd-group{
-		border-bottom: 1px solid $body-color;
-
+	.dd-group{ 
 	}
 	&__item{
 		border-top: 1px solid $body-color;
+		&:last-child{
+			border-bottom: 1px solid $body-color;
+
+		}
 	}
 	&__head{
 		position: relative;

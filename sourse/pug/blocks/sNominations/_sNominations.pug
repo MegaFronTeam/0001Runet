@@ -4,7 +4,7 @@ mixin sNominations(data)
 		.container-xl-fluid.container
 			.section-inner
 				.container
-					+b.section-title
+					+b.section-title( data-aos="fade-up") 
 						.row
 							.col
 								h2 номинации
@@ -13,7 +13,7 @@ mixin sNominations(data)
 									+icon("arrow-right")
 					.dd-group
 						mixin item(t)
-							+e.item.dd-group__item
+							+e.item.dd-group__item( data-aos="fade-up") 
 								+e.head.dd-group__head.dd-head-js.h3= t
 								+e.body.dd-group__body
 									.row

@@ -374,7 +374,7 @@ ul {
 
 @include media-breakpoint-up(lg) {
 	.wow {
-		visibility: hidden;
+		// visibility: hidden;
 	}
 }
 
@@ -719,4 +719,19 @@ p {
 	}
 	z-index: 2;
 	// position: fixed;
+}
+
+.scrollbar-thumb{
+	border-radius: 0 !important;
+}
+
+.scrollbar-track {
+	background: rgba(222, 222, 222, .25) !important;
+}
+
+@include media-breakpoint-up(lg) {
+	.wow:not(.animate__animated) {
+		// visibility: hidden;
+		opacity: 0;
+	}
 }

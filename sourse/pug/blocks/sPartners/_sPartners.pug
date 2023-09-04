@@ -4,25 +4,25 @@ mixin sPartners(data)
 		.container-xl-fluid.container
 			.section-inner.section-inner--transparent.p-0
 				.container 
-					+b.section-title 
+					+b.section-title( data-aos="fade-up") 
 						h2 Партнеры 
 					+e.inner
 						mixin item(i)
-							+e.col.col-lg-3.col-6&attributes(attributes)
+							+e.col.col-lg-3.col-6( data-aos="fade-up")&attributes(attributes)
 								+e.item
 									+img(`img/logo-${i}.png`).res-i
 						+e.group 
 							+e.row.row
-								+e.group-title--col.h4.col-lg-3.order-first  Организатор
+								+e.group-title--col.h4.col-lg-3.order-first( data-aos="fade-up")  Организатор
 								+item('1')
-								+e.group-title--col.h4.col-lg-auto.order-lg-first  При поддержке
+								+e.group-title--col.h4.col-lg-auto.order-lg-first( data-aos="fade-up")  При поддержке
 								.col-12.m-lg-0.order-lg-first  
 								+item('2')
 								+item('3')
 								+item('4')
 						
 						+e.group
-							+e.group-title.h4 Партнеры номинации
+							+e.group-title.h4( data-aos="fade-up") Партнеры номинации
 							+e.row.row
 								+item('5')  
 								+item('6')
@@ -30,7 +30,7 @@ mixin sPartners(data)
 								
 						
 						+e.group
-							+e.group-title.h4 Генеральные партнеры
+							+e.group-title.h4( data-aos="fade-up") Генеральные партнеры
 							+e.row.row
 								+item('8')
 								+item('9')
@@ -40,7 +40,7 @@ mixin sPartners(data)
 								+item('13')
 								
 						+e.group
-							+e.group-title.h4 Информационные партнеры
+							+e.group-title.h4( data-aos="fade-up") Информационные партнеры
 							+e.row.row
 								+item('14') 
 								+item('15') 

@@ -30,6 +30,8 @@ function eventHandler() {
 
 
 
+
+
 	ScrollTrigger.defaults({
 		toggleActions: "play none play none",
 	});
@@ -51,6 +53,39 @@ function eventHandler() {
 		},
 	});
 	bodyScrollBar.addListener(ScrollTrigger.update);
+
+
+	gsap.utils.toArray("[data-aos]").forEach(aos => {
+
+
+		const animate = aos.dataset.animate;
+		function myfunction() {
+			aos.classList.toggle(`aos-animate`);
+			if (animate) {
+				// aos.classList.toggle(animate);
+			}
+		};
+		const rect = aos.getBoundingClientRect();
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: aos,
+			start: 'top 90%',
+			end: 'bottom +100 top',
+			// markers: true,
+			toggleActions: "play none reverse none",
+			onEnter: () => myfunction(),
+			// onLeave: () => myfunction(),
+			onLeaveBack: () => myfunction(),
+			// onEnterBack: () => myfunction(),
+			invalidateOnRefresh: true,
+		});
+	})
+
+	AOS.init({
+		mirror: true,
+		duration: 800, // values from 0 to 3000, with step 50ms
+		easing: 'ease-in-out',
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
