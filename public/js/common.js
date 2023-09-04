@@ -21,47 +21,36 @@ function eventHandler() {
 	}, { passive: true });
 
 	whenResize();
+ 
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	let scroller = document.querySelector(".scroller"), tween;
 
 
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
+
+
+	ScrollTrigger.defaults({
+		toggleActions: "play none play none",
+	});
+	let bodyScrollBar;
+	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		bodyScrollBar = Scrollbar.init(scroller, {
+			// let bodyScrollBar = Scrollbar.init(document.body, {
+			damping: 0.1,
+			thumbMinSize: 20,
+			delegateTo: document,
+		});
 	}
-
-	new Swiper('.breadcrumb-slider--js', {
-		slidesPerView: 'auto',
-		freeMode: true,
-		watchOverflow: true
+	ScrollTrigger.scrollerProxy(scroller, {
+		scrollTop(value) {
+			if (arguments.length) {
+				bodyScrollBar.scrollTop = value;
+			}
+			return bodyScrollBar.scrollTop;
+		},
 	});
-
-	const swiper4 = new Swiper('.sBanners__slider--js', { // если не используешь методы swiper  - можно обращаться без нее к Swiper
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
-	});
-
+	bodyScrollBar.addListener(ScrollTrigger.update);
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

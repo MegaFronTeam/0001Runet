@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
@@ -27,21 +28,27 @@
 		</script>
 	</head>
 	<body class="main-page">
-		<div class="main-wrapper">
-			<script>addBlock(`header`)</script>
-			<div id="headerWrap"></div>
-			<main>
-				<div class="section container">
-					<h1>Modal page </h1><a class="btn btn-primary" data-fancybox data-type="ajax" href="modal/call.html">call</a>
-				</div>
-			</main>
-			<script>addBlock(`footer`)</script>
-			<div id="footerWrap"></div>
+		<div class="scroller">
+			<div class="main-wrapper">
+				<script>addBlock(`header`)</script>
+				<div id="headerWrap"></div>
+				<main>
+					<div class="section container">
+						<h1>Modal page </h1><a class="btn btn-primary" data-fancybox data-type="ajax" href="modal/call.html">call</a>
+					</div>
+				</main>
+				<script>addBlock(`footer`)</script>
+				<div id="footerWrap"></div>
+			</div>
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/gsap/gsap.min.js"></script>
+		<script src="libs/gsap/ScrollToPlugin.min.js"></script>
+		<script src="libs/gsap/ScrollTrigger.min.js"></script>
+		<script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

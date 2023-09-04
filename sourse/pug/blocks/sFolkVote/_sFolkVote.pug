@@ -1,9 +1,24 @@
 mixin sFolkVote(data)
 	// start sFolkVote
 	+b.SECTION.sFolkVote.section#sFolkVote&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sFolkVote
-				
-			+e.row.row
+		.before
+		.container-xl-fluid.container
+			.container
+				+e.row.row
+					.col-lg-6.order-lg-last
+						+b.hands-block
+							+e.item--1
+								+img("img/hand-1.png")
+							+e.item--2
+								+img("img/hand-2.png")
+							+e.item--3
+								+img("img/hand-2.png")
+					.col
+						+b.section-title
+							h2 Народное голосование
+						+e.row-date.row
+							.col
+								p Пользователи выберут лучшие бизнес-сообщества, социальные проекты и назовут лучших блогеров Рунета
+							.col-sm-auto.order-sm-first
+								+e.date 1 – 12 <br> декабря
 	// end sFolkVote

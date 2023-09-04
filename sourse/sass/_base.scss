@@ -712,3 +712,11 @@ p {
 		color: $body-bg;
 	}
 }
+
+.scroller {
+	@include media-breakpoint-up(lg) {
+		height: 100vh;
+	}
+	z-index: 2;
+	// position: fixed;
+}

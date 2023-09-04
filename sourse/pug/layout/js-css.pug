@@ -6,6 +6,8 @@ mixin allcss()
 	link(href="libs/swiper/swiper-bundle.min.css", rel="stylesheet")
 	link(href="libs/@fancyapps/ui/fancybox/fancybox.css", rel="stylesheet")
 	//- link(href=`css/main.min.css?v=${version}`, rel="stylesheet")
+	link(href="libs/animate.css/animate.min.css", rel="stylesheet")
+
 	link(href=`css/custom-bootstrap.min.css`, rel="stylesheet")
 	link(href=`css/main.min.css`, rel="stylesheet")
 
@@ -15,5 +17,11 @@ mixin allcjs()
 	script(src="libs/swiper/swiper-bundle.min.js")  
 	script(src="libs/inputmask/inputmask.min.js") 
 	//- script(src=`js/common.js?v=${version}`)
+
+	script(src="libs/gsap/gsap.min.js")
+	script(src="libs/gsap/ScrollToPlugin.min.js")
+	script(src="libs/gsap/ScrollTrigger.min.js")
+	script(src="libs/smooth-scrollbar/smooth-scrollbar.js")
+
 	script(src=`js/JSCCommon.js`)
 	script(src=`js/common.js`)
