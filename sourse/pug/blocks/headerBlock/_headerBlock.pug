@@ -2,6 +2,8 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
+			+b.premia-block( data-aos="fade-up")
+				+img(`img/premia.png`)
 			+e.title
 				+e.text.animate-text-wrap
 					.animate-text( data-aos="fade-up")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
@@ -22,5 +24,6 @@ mixin headerBlock()
 								.strong до 28 НОЯБРЯ
 				.col.order-lg-first
 					+img("img/head-logo-1.png").res-i( data-aos="fade-up") 
-					+img("img/head-logo-2.png").res-i( data-aos="fade-up") 
+					+img("img/head-logo-2.png").res-i( data-aos="fade-up")
+
 	// end headerBlock

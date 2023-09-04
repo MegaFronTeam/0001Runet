@@ -152,7 +152,7 @@ function eventHandler() {
 					scroller,
 					trigger: '.sSteps',
 					start: 'top bottom', 
-					end: "60% bottom", 
+					end: "50% bottom", 
 					scrub: 1.2 ,
 					pinSpacing: false
 				} 
