@@ -3,6 +3,7 @@
 	--sPT: #{rem(120)};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(100)};
+	position: relative;
 	
 	&__row{
 		--bs-gutter-x: #{rem(24)};

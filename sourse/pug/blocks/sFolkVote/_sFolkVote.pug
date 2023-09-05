@@ -1,7 +1,15 @@
 mixin sFolkVote(data)
 	// start sFolkVote
 	+b.SECTION.sFolkVote.section#sFolkVote&attributes(attributes)
-		.before
+
+		#scene3
+			+b.el--9.layer( data-depth="0.3"): div()
+				img(src="img/el-9.png", alt="").res-i
+			+b.el--10.layer( data-depth="0.2"): div()
+				img(src="img/el-10.png", alt="").res-i
+			+b.el--11.layer( data-depth="0.5"): div()
+				img(src="img/el-11.png", alt="").res-i
+			.before
 		.container-xl-fluid.container
 			.container
 				+e.row.row

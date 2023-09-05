@@ -202,6 +202,9 @@ function eventHandler() {
 	}
 	setAnimationsFolkVote('.sFolkVote h2')
 	setAnimationsFolkVote('.sFolkVote .before',  150, 50) 
+	setAnimationsFolkVote('.el--9 div',   -50, 50, )
+	setAnimationsFolkVote('.el--10 div',   10, 10, )
+	setAnimationsFolkVote('.el--11 div',   20, 150, )
 	setAnimationsFolkVote('.sFolkVote__row-date',   50, 100, )
 	setAnimationsFolkVote('.hands-block__item--3',  -300, -100, '50%', `86%`)
 	setAnimationsFolkVote('.hands-block__item--2', -150, -150, '55%', `86%`)
@@ -216,14 +219,42 @@ function eventHandler() {
 	} );
 	parallaxInstance.friction(0.2, 0.2);
 
-	var scene2 = document.getElementById('#scene2');
+	var scene2 = document.getElementById('scene2');
 	var parallaxInstance2 = new Parallax(scene2, {
 		scalarX: 20,
 		scalarY: 20,
 		precision: 50,
-		// selector: '.el--8'
+		selector: '.el',
+		// pointerEvents: 'all'
 	} );
+	
+	
 	parallaxInstance2.friction(0.2, 0.2);
+
+	var scene3 = document.getElementById('scene3');
+	var parallaxInstance3 = new Parallax(scene3, {
+		scalarX: 20,
+		scalarY: 20,
+		precision: 50,
+		selector: '.el',
+		// pointerEvents: 'all'
+	} );
+
+	parallaxInstance3.friction(0.2, 0.2);
+
+	
+
+	var scene4 = document.getElementById('scene4');
+	var parallaxInstance4 = new Parallax(scene4, {
+		scalarX: 30,
+		scalarY: 30,
+		precision: 10,
+		selector: '.el',
+		// pointerEvents: 'all'
+	} );
+
+	parallaxInstance4.friction(0.4, 0.4);
+
 
 };
 if (document.readyState !== 'loading') {

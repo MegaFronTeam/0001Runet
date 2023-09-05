@@ -853,10 +853,105 @@ p {
 
 .el--8{
 	position: absolute;
-	top: 100% !important;
+	top: 90% !important;
 	width: rem(280);
 	left: 50% !important;
 	margin-top: rem(-150);
 	filter: saturate(0);
 	z-index: 2;
+}
+.scene-wrap{
+	position: relative;
+}
+#scene3{
+	// z-index: -1;
+}
+#scene4,
+#scene3,
+#scene2{ 
+	// position: static !important;
+	position: absolute !important;
+	@include a-cent;
+}
+
+
+
+.el--9{
+	position: absolute;
+	top: 5% !important;
+	width: rem(440);
+	left: 10% !important;
+	margin-top: rem(-150); 
+	z-index: 2;
+}
+
+.el--10{
+	position: absolute;
+	top: 95% !important;
+	width: rem(140);
+	left: 8% !important;
+	margin-top: rem(-150); 
+	z-index: 2;
+}
+.el--11{
+	position: absolute;
+	top: auto !important;
+	width: rem(800);
+	right: 0;
+	bottom: 0; 
+	z-index: -1;
+	left: auto !important;
+	// margin-top: rem(-150);  
+}
+
+
+.el--12{
+	position: absolute;
+	top: -200px !important;
+	width: rem(360);
+	right: 5%; 
+	z-index: -1;
+	left: 50% !important;
+	// margin-top: rem(-150);  
+}
+.el--13{
+	position: absolute;
+	top: 140px !important;
+	width: rem(200);
+	right: 0; 
+	z-index: -1;
+	left: auto !important;
+	// margin-top: rem(-150);  
+}
+.el--14{
+	position: absolute;
+	top: 50% !important;
+	width: rem(670);
+	// right: 0; 
+	z-index: -1;
+	left: 0 !important;
+	margin-left: rem(-400);
+	// margin-top: rem(-150);  
+}
+.el--15{
+	position: absolute;
+	top: 50% !important;
+	width: rem(380);
+	right: 0; 
+	z-index: -1;
+	left: auto !important;
+	// margin-left: rem(-400);
+	// margin-top: rem(-150);  
+}
+.el--16{
+	position: absolute;
+	top: auto !important;
+	width: rem(380);
+	bottom: -40px;
+	// right: 0; 
+	z-index: -1;
+	left: 48% !important;
+	z-index: 5;
+	// margin-left: rem(-400);
+	// margin-top: rem(-150);  
 }
