@@ -71,6 +71,7 @@ function eventHandler() {
 			trigger: aos,
 			start: 'top 90%',
 			end: 'bottom +100 top',
+
 			// markers: true,
 			toggleActions: "play none none none",
 			onEnter: () => myfunction(),
@@ -84,7 +85,7 @@ function eventHandler() {
 	AOS.init({
 		// mirror: true,
 		duration: 800, // values from 0 to 3000, with step 50ms
-		easing: 'ease-in-out',
+		easing: 'easeOutQuart',
 		once: true,
 	});
 
@@ -119,7 +120,7 @@ function eventHandler() {
 				scroller,
 				trigger: section,
 				start: 'top bottom', 
-				end: "bottom bottom", 
+				end: "70% bottom", 
 				scrub: 1,
 				pinSpacing: false
 			}
@@ -130,7 +131,7 @@ function eventHandler() {
 				ease: "none",  y: 200
 			})
 			.to(section.querySelector(".animate-block"), { 
-				ease: "none", y: -250
+				ease: "none", y: -50
 			});
 		}
 
@@ -194,23 +195,35 @@ function eventHandler() {
 				ease: "none", y: 50 + y1
 			})
 			.to(step, {
+				ease: "none" 	})
+			.to(step, {
 				ease: "none", y: -50 + y2
 			});
 	}
 	setAnimationsFolkVote('.sFolkVote h2')
-	setAnimationsFolkVote('.sFolkVote .before',  150, 200) 
+	setAnimationsFolkVote('.sFolkVote .before',  150, 50) 
 	setAnimationsFolkVote('.sFolkVote__row-date',   50, 100, )
-	setAnimationsFolkVote('.hands-block__item--3',  -400, 0, '60%', `86%`)
-	setAnimationsFolkVote('.hands-block__item--2', -150, -100, '65%', `86%`)
-	setAnimationsFolkVote('.hands-block__item--1', 100, -200, '70%', `86%`)
+	setAnimationsFolkVote('.hands-block__item--3',  -300, -100, '50%', `86%`)
+	setAnimationsFolkVote('.hands-block__item--2', -150, -150, '55%', `86%`)
+	setAnimationsFolkVote('.hands-block__item--1', 50, -200, '60%', `86%`)
 
 	var scene = document.getElementById('headElems');
 	var parallaxInstance = new Parallax(scene, {
 		scalarX: 20,
 		scalarY: 20,
 		precision: 50,
+		calibrationDelay: 1500,
 	} );
 	parallaxInstance.friction(0.2, 0.2);
+
+	var scene2 = document.getElementById('#scene2');
+	var parallaxInstance2 = new Parallax(scene2, {
+		scalarX: 20,
+		scalarY: 20,
+		precision: 50,
+		// selector: '.el--8'
+	} );
+	parallaxInstance2.friction(0.2, 0.2);
 
 };
 if (document.readyState !== 'loading') {

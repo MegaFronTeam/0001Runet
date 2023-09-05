@@ -4,6 +4,9 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	.section-inner { 
+		&::before{
+			backdrop-filter: none;
+		}
 		@include media-breakpoint-up(sm) { 
 			// --sPT: #{rem(1100)};
 			--sTPB: calc(#{rem(92)}); 

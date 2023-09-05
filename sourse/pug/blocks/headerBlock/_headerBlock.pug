@@ -18,7 +18,7 @@ mixin headerBlock()
 					img(src="img/el-6.png", alt="")
 				+b.el--7( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-7.png", alt="")
-			.before
+			.before( data-aos="zoom-in"  data-aos-delay="100"   data-aos-duration="1000")
 			+b.premia-block( data-aos="fade-up"  data-aos-delay="100"   data-aos-duration="1000")
 					img(src="img/premia.png", alt="")
 			+e.title
@@ -37,7 +37,7 @@ mixin headerBlock()
 						.col-lg-auto
 							a.btn.btn-primary.btn-circle(href="#") подать заявку
 						.col-auto.ttu.order-sm-first
-							+e.date приём заявок
+							+e.date.text-sm-end приём заявок
 								.strong до 28 НОЯБРЯ
 				.col.order-lg-first( data-aos="fade-up" data-aos-offset="50") 
 					+img("img/head-logo-1.png").res-i

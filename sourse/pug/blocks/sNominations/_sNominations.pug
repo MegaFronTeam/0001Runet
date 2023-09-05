@@ -13,7 +13,7 @@ mixin sNominations(data)
 									+icon("arrow-right")
 					.dd-group
 						mixin item(t)
-							+e.item.dd-group__item( data-aos="fade-up") 
+							+e.item.dd-group__item( data-aos="fade-up" data-aos-offset="0") 
 								+e.head.dd-group__head.dd-head-js.h3= t
 								+e.body.dd-group__body
 									.row
@@ -35,4 +35,6 @@ mixin sNominations(data)
 						+item(`Народов много – Родина одна`)
 						+item(`Туризм и индустрия гостеприимства`)
 						+item(`Путешествия по РФ `)
+					+b.el--8.layer(data-depth="0.3"): div(data-aos="fade-up" )
+						img(src="img/el-8.png", alt="").res-i
 	// end sNominations

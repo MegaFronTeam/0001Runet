@@ -125,8 +125,7 @@ main {
 // 	flex-grow: 1;
 // }
 
-.section {
-	@include bgs;
+.section { 
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
 }
@@ -584,6 +583,12 @@ h1 {
 }
 
 
+.animate-block{
+	-webkit-transform:translate3d(0,0,0);
+		 backface-visibility: hidden;
+		 will-change: transform;
+}
+
 .section-inner {
 	position: relative;
 	z-index: 2;
@@ -608,11 +613,14 @@ h1 {
 			left: 0;
 			border-radius: rem(80px) 0px 0px rem(80px);
 		}
+		 -webkit-transform:translate3d(0,0,0);
+		 backface-visibility: hidden;
+		 will-change: transform;
 		background: var(--black-003, rgba(38, 38, 38, 0.75));
-		backdrop-filter: blur(111px);
+		backdrop-filter: blur(50px);
 		height: 100%; 
 		width: 200vw;
-		z-index: -1;
+		// z-index: -1;
 	}
 	&--transparent{
 		&::before{
@@ -763,4 +771,92 @@ p {
 	// * {
 	// 	z-index: 2;
 	// }
+}
+
+
+
+
+.el{
+	position: absolute;
+	z-index: -1;
+	div{
+		// transform: translate3d(0,50vh,0);
+	}
+	// @include mt;
+	img{
+		max-width: 100%;
+	}
+	&--1{
+		filter: blur(33px);
+		top: 0 !important;
+		width: rem(615);
+		margin-top: rem(-700);
+		left: 55% !important;
+		margin-left: rem(-400);
+	}
+	
+	&--2{ 
+		top: 0 !important;
+		width: rem(400); 
+		left: 50% !important;
+		margin-left: rem(-300);
+		filter: blur(22px)
+	}
+	
+	&--3{ 
+		top: 70% !important;
+		width: rem(740); 
+		left: 65% !important;
+		margin-left: rem(-300);
+		filter: blur(33px);
+	}
+	&--4{ 
+		// top: 0;
+		bottom: 100%;
+		width: rem(240); 
+		top: auto !important;
+		left: 65% !important;
+		margin-left: rem(-300); 
+	}
+	&--5{ 
+		// top: 0;
+		top: auto !important;
+		bottom: 100% !important;
+		width: rem(140); 
+		// left: 65%;
+		left: auto !important;
+		right: 0 !important;
+		opacity: 0.77; 
+		filter: saturate(0);
+		mix-blend-mode: luminosity;
+	}
+	&--6{ 
+		// top: 0;
+		top: 50%  !important;
+		margin-top: rem(-100);
+		width: rem(250);  
+		left: auto !important;
+		right: 150px !important;  
+	}
+	&--7{ 
+		// top: 0;
+		// top: 80%;
+		bottom: 0;
+		// margin-top: rem(-150);
+		width: rem(300);  
+		left: 28% !important; 
+		top: auto !important;
+	}
+
+}
+
+
+.el--8{
+	position: absolute;
+	top: 100% !important;
+	width: rem(280);
+	left: 50% !important;
+	margin-top: rem(-150);
+	filter: saturate(0);
+	z-index: 2;
 }
