@@ -162,16 +162,19 @@ function eventHandler() {
 		scrollTrigger: {
 			scroller,
 			trigger: '.sSteps',
-			start: '30% bottom',
-			end: "bottom+=20% top",
+			start: 'top bottom',
+			end: "bottom top",
 			scrub: 1,
 			pinSpacing: false
 		}
 
 	})
 	titleStep
+		.from('.sSteps h2', {
+			ease: "none", y: -150 
+		})
 		.to('.sSteps h2' , {
-			ease: "none", y: -200
+			ease: "none", y: 200
 		}); 
 		
 
@@ -194,12 +197,20 @@ function eventHandler() {
 				ease: "none", y: -50 + y2
 			});
 	}
-	setAnimationsFolkVote('h2')
-	setAnimationsFolkVote('.before',  150, 200) 
+	setAnimationsFolkVote('.sFolkVote h2')
+	setAnimationsFolkVote('.sFolkVote .before',  150, 200) 
 	setAnimationsFolkVote('.sFolkVote__row-date',   50, 100, )
 	setAnimationsFolkVote('.hands-block__item--3',  -400, 0, '60%', `86%`)
 	setAnimationsFolkVote('.hands-block__item--2', -150, -100, '65%', `86%`)
 	setAnimationsFolkVote('.hands-block__item--1', 100, -200, '70%', `86%`)
+
+	var scene = document.getElementById('headElems');
+	var parallaxInstance = new Parallax(scene, {
+		scalarX: 20,
+		scalarY: 20
+	} );
+	parallaxInstance.friction(0.2, 0.2);
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

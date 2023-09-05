@@ -6,8 +6,8 @@
 	--bs-body-font-size: 12px;
 	@include media-breakpoint-up(sm){
 		--bs-body-font-size: #{$em-base};
-		--sPT: #{rem(128)};
-		--sPB: #{rem(128)};
+		--sPT: calc(#{rem(70)} + 2vh);
+		--sPB: calc(#{rem(70)} + 2vh);
 		--sTPB: calc(#{rem(98)}); 
 	}
 

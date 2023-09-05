@@ -2,28 +2,45 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			+b.premia-block( data-aos="fade-up")
-				+img(`img/premia.png`)
+			.alems.d-none.d-sm-block#headElems
+				+b.el--1( data-depth=".2" data-scalar-x="14" data-scalar-y="20"): div(data-aos="fade-up"  data-aos-duration="2000")
+					img(src="img/el-1.png", alt="")
+				+b.el--2( data-depth="0.2"): div(data-aos="fade-up"   data-aos-duration="2000")
+					img(src="img/el-2.png", alt="")
+				+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
+					img(src="img/el-3.png", alt="")
+				
+				+b.el--4( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000" )
+					img(src="img/el-4.png", alt="")
+				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-5.png", alt="")
+				+b.el--6( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-6.png", alt="")
+				+b.el--7( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-7.png", alt="")
+			.before
+			+b.premia-block( data-aos="fade-up"  data-aos-delay="100"   data-aos-duration="1000")
+					img(src="img/premia.png", alt="")
 			+e.title
 				+e.text.animate-text-wrap
-					.animate-text( data-aos="fade-up")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
+					.animate-text( data-aos="fade-up"  data-aos-delay="800")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
 				span.h1.animate-text-wrap
-					span.animate-text( data-aos="fade-up")  Премия 
+					span.animate-text( data-aos="fade-up"  data-aos-delay="800")  Премия 
 				span.h1.animate-text-wrap
-					span.animate-text( data-aos="fade-up")  РУНЕТА 
+					span.animate-text( data-aos="fade-up"  data-aos-delay="800")  РУНЕТА 
 				span.h1.animate-text-wrap
 					span.text-primary.animate-text-wrap
-						span.animate-text( data-aos="fade-up")  2023
+						span.animate-text( data-aos="fade-up"  data-aos-delay="800")  2023
 			+e.footer.row
 				.col-lg-auto
-					+e.row.row
-						.col-lg-auto( data-aos="fade-up") 
+					+e.row.row( data-aos="fade-up") 
+						.col-lg-auto
 							a.btn.btn-primary.btn-circle(href="#") подать заявку
-						.col-auto.ttu.order-sm-first( data-aos="fade-up") 
+						.col-auto.ttu.order-sm-first
 							+e.date приём заявок
 								.strong до 28 НОЯБРЯ
-				.col.order-lg-first
-					+img("img/head-logo-1.png").res-i( data-aos="fade-up") 
-					+img("img/head-logo-2.png").res-i( data-aos="fade-up")
+				.col.order-lg-first( data-aos="fade-up" data-aos-offset="50") 
+					+img("img/head-logo-1.png").res-i
+					+img("img/head-logo-2.png").res-i
 
 	// end headerBlock

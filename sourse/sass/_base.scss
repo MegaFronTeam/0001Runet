@@ -741,3 +741,26 @@ p {
 		opacity: 0;
 	}
 }
+
+
+@include media-breakpoint-down(md) {
+	.sNews h2,
+	.sFolkVote__row-date,
+	.desctop-animation,
+	.sFolkVote h2,
+	.hands-block__item,
+	.sSteps__col,
+	.animate-block{
+		transform: translate(0,0) !important;
+	}
+}
+
+.alems{
+	position: absolute !important;
+	@include a-cent;
+	z-index: -1;
+	// z-index: 4;
+	// * {
+	// 	z-index: 2;
+	// }
+}
