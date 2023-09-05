@@ -19,8 +19,8 @@ mixin headerBlock()
 				+b.el--7( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-7.png", alt="")
 			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			+b.premia-block( data-aos="fade-up"  data-aos-delay="500"   data-aos-duration="1000")
-					img(src="img/premia.png", alt="")
+			div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"): +b.premia-block
+					img(src="img/premia.png", alt="").res-i
 			+e.title
 				+e.text.animate-text-wrap
 					.animate-text( data-aos="fade-up"  data-aos-delay="800")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
