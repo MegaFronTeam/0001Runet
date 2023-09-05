@@ -207,7 +207,8 @@ function eventHandler() {
 	var scene = document.getElementById('headElems');
 	var parallaxInstance = new Parallax(scene, {
 		scalarX: 20,
-		scalarY: 20
+		scalarY: 20,
+		precision: 50,
 	} );
 	parallaxInstance.friction(0.2, 0.2);
 
