@@ -713,6 +713,12 @@ p {
 	}
 }
 
+@include media-breakpoint-down(lg) {
+	[data-aos^=fade][data-aos^=fade] {
+		opacity: 1 !important;
+		transform: translate3d(0,0,0);
+	}
+}
 .scroller {
 	@include media-breakpoint-up(lg) {
 		height: 100vh;

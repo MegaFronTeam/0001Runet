@@ -36,7 +36,7 @@ function eventHandler() {
 		toggleActions: "play none play none",
 	});
 	let bodyScrollBar;
-	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		bodyScrollBar = Scrollbar.init(scroller, {
 			// let bodyScrollBar = Scrollbar.init(document.body, {
 			damping: 0.1,
@@ -119,7 +119,7 @@ function eventHandler() {
 				scroller,
 				trigger: section,
 				start: 'top bottom', 
-				end: "50% bottom", 
+				end: "bottom bottom", 
 				scrub: 1,
 				pinSpacing: false
 			}
@@ -128,21 +128,9 @@ function eventHandler() {
 		up
 			.from(section.querySelector(".animate-block"), { 
 				ease: "none",  y: 200
-			});
-			var down = gsap.timeline({ 
-				scrollTrigger: {
-					scroller,
-				trigger: section,
-				start: '80% bottom', 
-				end: "bottom top", 
-				scrub: 1,
-				pinSpacing: false
-			}
-			
-		})
-		down
+			})
 			.to(section.querySelector(".animate-block"), { 
-				ease: "none", y: -200
+				ease: "none", y: -250
 			});
 		}
 
@@ -151,44 +139,31 @@ function eventHandler() {
 				scrollTrigger: {
 					scroller,
 					trigger: '.sSteps',
-					start: 'top bottom', 
-					end: "50% bottom", 
+					start: '20% bottom', 
+					end: "bottom+=20% bottom", 
 					scrub: 1.2 ,
 					pinSpacing: false
 				} 
 			})
 			up
 				.from(step, { 
-					ease: "none", y: 50 + y1
-				});
-			
-				var down = gsap.timeline({ 
-					scrollTrigger: {
-						scroller,
-						trigger: '.sSteps',
-					start: '80% bottom', 
-					end: "bottom top", 
-						scrub: 1.2  ,
-					pinSpacing: false
-				}
-				
-			})
-			down
+					ease: "none", y: 150 + y1
+				})
 				.to(step, { 
-					ease: "none", y: -50 + y2
+					ease: "none", y: -150 + y2
 				});
 			}
 	setAnimationStep(".sSteps__col:nth-child(1)")
-	setAnimationStep(".sSteps__col:nth-child(2)", .8, 200, -300, .4)
-	setAnimationStep(".sSteps__col:nth-child(3)", 1.5, 20, -150, 1)
-	setAnimationStep(".sSteps__col:nth-child(4)", .6, 270, -250, .4)  
+	setAnimationStep(".sSteps__col:nth-child(2)", .8, 100, -200, .4)
+	setAnimationStep(".sSteps__col:nth-child(3)", 1.5, 50, -150, 1)
+	setAnimationStep(".sSteps__col:nth-child(4)", .6, 200, -220, .4)  
 	
 	var titleStep = gsap.timeline({
 		scrollTrigger: {
 			scroller,
 			trigger: '.sSteps',
-			start: '10% bottom',
-			end: "bottom top",
+			start: '30% bottom',
+			end: "bottom+=20% top",
 			scrub: 1,
 			pinSpacing: false
 		}
@@ -206,7 +181,7 @@ function eventHandler() {
 				scroller,
 				trigger: '.sFolkVote',
 				start: `${start} bottom`,
-				end: "70% bottom",
+				end: "bottom bottom",
 				scrub: 1,
 				pinSpacing: false
 			}
@@ -214,20 +189,7 @@ function eventHandler() {
 		up
 			.from(step, {
 				ease: "none", y: 50 + y1
-			});
-
-		var down = gsap.timeline({
-			scrollTrigger: {
-				scroller,
-				trigger: '.sFolkVote',
-				start: `${end} bottom`,
-				end: "bottom top",
-				scrub: 1.2,
-				pinSpacing: false
-			}
-
-		})
-		down
+			})
 			.to(step, {
 				ease: "none", y: -50 + y2
 			});
@@ -235,9 +197,9 @@ function eventHandler() {
 	setAnimationsFolkVote('h2')
 	setAnimationsFolkVote('.before',  150, 200) 
 	setAnimationsFolkVote('.sFolkVote__row-date',   50, 100, )
-	setAnimationsFolkVote('.hands-block__item--3',  -400, 70, '40%', `86%`)
-	setAnimationsFolkVote('.hands-block__item--2', -150, -120, '45%', `86%`)
-	setAnimationsFolkVote('.hands-block__item--1', 100, -320, '50%', `86%`)
+	setAnimationsFolkVote('.hands-block__item--3',  -400, 0, '60%', `86%`)
+	setAnimationsFolkVote('.hands-block__item--2', -150, -100, '65%', `86%`)
+	setAnimationsFolkVote('.hands-block__item--1', 100, -200, '70%', `86%`)
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
