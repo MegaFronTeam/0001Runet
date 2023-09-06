@@ -872,6 +872,9 @@ p {
 	// position: static !important;
 	position: absolute !important;
 	@include a-cent;
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
 }
 
 
@@ -954,4 +957,22 @@ p {
 	z-index: 5;
 	// margin-left: rem(-400);
 	// margin-top: rem(-150);  
+}
+
+
+#container3D{ 
+	position: absolute;
+	left: 0;
+	top: 0;
+	// @include a-cent;
+	width: 100vw;
+	height: 100vh;
+	canvas{
+		position: absolute;
+	left: 0;
+	top: 0;
+	// @include a-cent;
+	width: 100vw;
+	height: 100vh;
+	}
 }

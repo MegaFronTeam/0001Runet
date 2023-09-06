@@ -1,4 +1,5 @@
 mixin headerBlock()
+	<div id="container3D"></div>
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
@@ -20,7 +21,9 @@ mixin headerBlock()
 					img(src="img/el-7.png", alt="")
 			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 			div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"): +b.premia-block
-					img(src="img/premia.png", alt="").res-i
+				
+					//- img(src="img/premia.png", alt="").res-i
+					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
 			+e.title
 				+e.text.animate-text-wrap
 					.animate-text( data-aos="fade-up"  data-aos-delay="800")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
