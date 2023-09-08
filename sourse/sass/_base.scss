@@ -962,17 +962,18 @@ p {
 
 #container3D{ 
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: rem(200);
+	top: rem(-300px); 
+	pointer-events: none;
 	// @include a-cent;
 	width: 100vw;
-	height: 100vh;
+	height: 200vh;
 	canvas{
 		position: absolute;
 	left: 0;
 	top: 0;
 	// @include a-cent;
-	width: 100vw;
-	height: 100vh;
+	width: 100% !important	;
+	// height: 100% !important;
 	}
 }

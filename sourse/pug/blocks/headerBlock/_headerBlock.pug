@@ -1,5 +1,5 @@
 mixin headerBlock()
-	<div id="container3D"></div>
+
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
@@ -11,6 +11,8 @@ mixin headerBlock()
 				+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
 					img(src="img/el-3.png", alt="")
 				
+				div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+					#container3D
 				+b.el--4( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
 					img(src="img/el-4.png", alt="")
 				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
@@ -20,8 +22,6 @@ mixin headerBlock()
 				+b.el--7( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-7.png", alt="")
 			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"): +b.premia-block
-				
 					//- img(src="img/premia.png", alt="").res-i
 					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
 			+e.title

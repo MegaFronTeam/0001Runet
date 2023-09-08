@@ -2,6 +2,7 @@
 .headerBlock {
 	// --sPT: #{rem()};
 	// --sPB: #{rem(0)};
+	// z-index: 2;
 	--sTPB: #{rem(0)}; 
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
@@ -170,55 +171,55 @@
 	// transform: translateY(110%);
 }
 
-.premia-block{
-	position: absolute;
-	@include media-breakpoint-up(xl){
-		right: rem(200px);
-		top: rem(-300px);
-	}
-	@include media-breakpoint-up(lg){
-		top: rem(-200px);
-		right: rem(100px);
-	}
+// .premia-block{
+// 	position: absolute;
+// 	@include media-breakpoint-up(xl){
+// 		right: rem(200px);
+// 		top: rem(-300px);
+// 	}
+// 	@include media-breakpoint-up(lg){
+// 		top: rem(-200px);
+// 		right: rem(100px);
+// 	}
 	
-	@include media-breakpoint-up(lg){
-		right: rem(-50);
+// 	@include media-breakpoint-up(lg){
+// 		right: rem(-50);
 
-	}
-	@include media-breakpoint-up(sm){
+// 	}
+// 	@include media-breakpoint-up(sm){
 
-		top: rem(20px);
-		right: -140px;
-		left: auto;
-		// right: -40px;
-	}
-	left: rem(240);
-	// right: 0;
-	top: rem(20px);
-	pointer-events: none;
-	z-index: -1;
-		@include media-breakpoint-up(xl){
+// 		top: rem(20px);
+// 		right: -140px;
+// 		left: auto;
+// 		// right: -40px;
+// 	}
+// 	left: rem(240);
+// 	// right: 0;
+// 	top: rem(20px);
+// 	pointer-events: none;
+// 	z-index: -1;
+// 		@include media-breakpoint-up(xl){
 
-			width: rem(832 * 1.6);
-			height: rem(2448.5px * 1.6);
-		}
+// 			width: rem(832 * 1.6);
+// 			height: rem(2448.5px * 1.6);
+// 		}
 		
-		@include media-breakpoint-up(lg){
+// 		@include media-breakpoint-up(lg){
 
-			width: rem(832 * 1.2);
-			height: rem(2448.5px * 1.2);
-		}
+// 			width: rem(832 * 1.2);
+// 			height: rem(2448.5px * 1.2);
+// 		}
 		
-		@include media-breakpoint-down(sm){
-			transform: rotate(-30deg);
-		}
-		@include media-breakpoint-up(sm){
+// 		@include media-breakpoint-down(sm){
+// 			transform: rotate(-30deg);
+// 		}
+// 		@include media-breakpoint-up(sm){
 
-			width: rem(832 * .9);
-			height: rem(2448.5px * .9);
-		}
-		width: rem(832 * .6);
-		height: rem(2448.5px * .6);
+// 			width: rem(832 * .9);
+// 			height: rem(2448.5px * .9);
+// 		}
+// 		width: rem(832 * .6);
+// 		height: rem(2448.5px * .6);
 
  
-}
+// }

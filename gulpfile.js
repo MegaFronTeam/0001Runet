@@ -332,7 +332,7 @@ class gs {
             
         ], { usePolling: true }, gs.styles);
         watch([sourse + '/sass/**/*.css', sourse + '/sass/**/*.scss', `!${sourse}/sass/_base.scss`, `!${sourse}/sass/_root.scss`, `!${sourse}/sass/_fonts.scss`, sourse + '/sass/**/*.sass' ], { usePolling: true }, gs.bootstrapstyles);
-        watch([sourse + '/pug/**/*.pug', sourse + '/pug/content.json'], { usePolling: true }, gs.pugFiles);
+        watch([sourse + '/pug/**/*.pug', sourse + '/pug/content.json', sourse + '/pug/**/*.js'], { usePolling: true }, gs.pugFiles);
         watch(sourse + '/svg/*.svg', { usePolling: true }, gs.svg);
         // watch([sourse + '/js/libs.js'], { usePolling: true }, gs.scripts);
         watch(sourse + '/sass/*.svg', { usePolling: true }, gs.svgCopy);
