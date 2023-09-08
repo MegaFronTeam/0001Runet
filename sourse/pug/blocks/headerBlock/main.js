@@ -6,20 +6,20 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";  
 import { RGBELoader } from "three/addons/loaders/RGBELoader.js";  
-
+import { EXRLoader } from 'three/addons/loaders/EXRLoader.js';
 //Create a Three.JS Scene
-let spotLight, lightHelper, camera;
+let camera;
 // const monkeyUrl = new URL('/scene1.gltf', import.meta.url);
-const monkeyUrl = new URL('model/RU-logo-export-anim-3.1.gltf', import.meta.url);
-
-let x = 2
+// const monkeyUrl = new URL('model/RU-logo-export-anim-3.1.gltf', import.meta.url);
+const monkeyUrl = new URL('model/RU-logo-export-anim-4-raw-2.gltf', import.meta.url); 
 const scene = new THREE.Scene();
-scene.add(new THREE.GridHelper(20, 20));
+// scene.add(new THREE.GridHelper(20, 20));
+
 //create a new camera with positions and angles
 // const camera = new THREE.PerspectiveCamera(75, window.innerWidth  / window.innerHeight  , 1, 20);
 // camera.position.set(3, 0.15, 3);
 
-camera = new THREE.PerspectiveCamera(40, window.innerWidth / (window.innerHeight * x), 0.25, 100);
+camera = new THREE.PerspectiveCamera(40, window.innerWidth / (window.innerWidth), 0.25, 100);
 camera.position.set(1, 5, 55);
 camera.position.x = -44;
 camera.position.z = 10;
@@ -47,13 +47,13 @@ const textures = { none: null };
 //Instantiate a loader for the .gltf file
 const dracoLoader = new DRACOLoader();
 
-const textureloader = new THREE.TextureLoader();
-
+ 
 dracoLoader.setDecoderPath('https://unpkg.com/browse/three@0.156.1/examples/jsm/libs/draco/')
 
 
-const loader = new GLTFLoader()
-loader.setDRACOLoader(dracoLoader) 
+const loader = new GLTFLoader();
+loader.setDRACOLoader(dracoLoader); 
+
 loader.load(
   // `models/${objToRender}/scene.gltf`,
   // `statuette/statuette.gltf`,
@@ -64,9 +64,10 @@ loader.load(
 
   function (gltf) {
     //If the file is loaded, add it to the scene
-    object = gltf.scene;
-    object.scale.set(4, 4, 4);
-    scene.add(object); 
+    object = gltf.scene;  
+    // object = new THREE.Mesh(object, material);
+    object.scale.set(4, 4, 4); 
+    scene.add(object);  
     mixer = new THREE.AnimationMixer(object);
     const clips = gltf.animations;
     clips.forEach(function (clip) {
@@ -85,29 +86,30 @@ loader.load(
 );
 
 
-
-
+let w = 1331;
+let h = 3916;
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ 
   alpha: true ,
   antialias: true,
   // powerPreference: "high-performance"
  }); //Alpha: true allows for the transparent background
-// renderer.setPixelRatio(window.devicePixelRatio * 10);
+renderer.setPixelRatio(window.devicePixelRatio * 12);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.3;
-renderer.setClearColor(0x000000, 0);
-renderer.setSize(window.innerWidth, window.innerHeight * x);
+renderer.toneMappingExposure = 1.2;
+renderer.setClearColor(0x000000, 0); 
+// renderer.setSize(window.innerWidth, window.innerWidth);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
 
-
-
+ 
 //Add the renderer to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement); 
 
 
 // const filename = 'model/ru-hdri-test.hdr';
 const filename = 'model/ru-hdri-test-3.hdr';
+// const filename = 'model/ru-hdri-compressed.png';
 
 let envPath = filename;
 let envMap; 
@@ -134,15 +136,16 @@ function animate() {
 } 
 //Add a listener to the window, so we can resize the window and the camera
 window.addEventListener("resize", function () {
-  camera.aspect = window.innerWidth / (window.innerHeight * x);
+  camera.aspect = window.innerWidth / (window.innerWidth);
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, (window.innerHeight * x)  );
+  renderer.setPixelRatio(window.devicePixelRatio * 12);
+  // renderer.setSize(window.innerWidth, window.innerWidth  );
 });
  
 function render() {
-  
+
   if (mixer)  
-      mixer.update(0.015); 
+      mixer.update(0.02); 
   camera.lookAt(cameraTarget);
 
   renderer.render(scene, camera);
