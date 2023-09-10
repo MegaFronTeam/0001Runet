@@ -67,13 +67,18 @@ loader.setDRACOLoader(dracoLoader);
 
 let w = 1331;
 let h = 3916;
+let x = 1;
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ 
   alpha: true ,
   antialias: true,
   // powerPreference: "high-performance"
  }); //Alpha: true allows for the transparent background
-renderer.setPixelRatio(window.devicePixelRatio * 12);
+let  pixelRatio = window.devicePixelRatio;
+let  width = document.getElementById("container3D").clientWidth * pixelRatio;
+let  height = document.getElementById("container3D").clientHeight * pixelRatio;
+renderer.setSize(width, height);
+// renderer.setPixelRatio(window.devicePixelRatio * x);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = .094;
 renderer.setClearColor(0x000000, 0); 
@@ -109,14 +114,9 @@ function animate() {
 window.addEventListener("resize", function () {
   camera.aspect = window.innerWidth / (window.innerWidth);
   camera.updateProjectionMatrix();
-  renderer.setPixelRatio(window.devicePixelRatio * 12);
+  renderer.setSize(width, height);
   // renderer.setSize(window.innerWidth, window.innerWidth  );
-});
-
-
-
-
-
+}); 
 
 loader.load( 
   monkeyUrl.href, 
@@ -128,17 +128,12 @@ loader.load(
       if (child instanceof THREE.Mesh) {
         child.material = new THREE.MeshStandardMaterial({
           color: 0xEBB86B,
-          roughness: .114,
-          metalness: .56,
+          roughness: .112,
+          metalness: .54,
           envMapIntensity: 2,
           envMap: envMap
         });
- 
-        // child.material.map = diffuseMap;
-        // child.material.roughnessMap = roughnessMap;
-        // child.material.needsUpdate = true;
-
-        //Sometimes there are some vertex normals missing in the .obj files, ThreeJs will compute them
+  
       }
     });
     // object = new THREE.Mesh(object, material);
@@ -151,12 +146,9 @@ loader.load(
       action.play();
     });
   },
-  function (xhr) {
-    //While it is loading, log the progress
-    // console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+  function (xhr) { 
   },
-  function (error) {
-    //If there is an error, log it
+  function (error) { 
     console.error(error);
   }
 );
