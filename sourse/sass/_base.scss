@@ -1041,6 +1041,7 @@ p {
 
 .filter-block{
 	margin-bottom: rem(56);
+	z-index: 100;
 	&__row{
 		--bs-gutter-y: 40px;
 
@@ -1076,7 +1077,7 @@ p {
 		}
 	}
 	&__btns{
-		max-width: rem(410 + 122);
+		max-width: rem(875);
 		margin-left: auto;
 	}
 	&__selects{
@@ -1110,4 +1111,11 @@ p {
 		stroke: currentColor;
 		stroke-width: 2.5;
 	}
+}
+
+.scroll-content{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	// transform: translateX(0) !important;
 }
