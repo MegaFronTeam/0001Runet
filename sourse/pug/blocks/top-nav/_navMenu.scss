@@ -96,6 +96,8 @@
 		top: 0;
 		// left: 0;
 		right: 0; 
+		background: rgba(0, 2, 7, 0.80);
+		backdrop-filter: blur(20px);
 		opacity: var(--opacity);
 		&:not(.active){
 			// transform: scale(0);

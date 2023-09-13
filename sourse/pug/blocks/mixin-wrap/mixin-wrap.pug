@@ -32,11 +32,10 @@ mixin addblock()
 
 
 mixin search()
-	+b.search-block
-		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти" inputmode='search')
-			button 
-				+icon("search")
+	+b.search-block 
+		input(type="text" placeholder="Введите запрос" inputmode='search').form-control
+		button 
+			+icon("search")
 
 mixin page-head(t,...items)
 	+b.page-head
@@ -50,3 +49,6 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+
+	

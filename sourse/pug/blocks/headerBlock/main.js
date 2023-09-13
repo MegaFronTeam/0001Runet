@@ -9,8 +9,6 @@ import { RGBMLoader } from "three/addons/loaders/RGBMLoader.js";
 // import { EXRLoader } from 'three/addons/loaders/EXRLoader.js';
 //Create a Three.JS Scene
 let camera;
-// const monkeyUrl = new URL('/scene1.gltf', import.meta.url);
-// const monkeyUrl = new URL('model/RU-logo-export-anim-3.1.gltf', import.meta.url);
 const monkeyUrl = new URL('model/RU-logo-export-anim-4.gltf', import.meta.url); 
 const scene = new THREE.Scene();
 // scene.add(new THREE.GridHelper(20, 20));
@@ -19,21 +17,23 @@ const scene = new THREE.Scene();
 // const camera = new THREE.PerspectiveCamera(75, window.innerWidth  / window.innerHeight  , 1, 20);
 // camera.position.set(3, 0.15, 3);
 
-camera = new THREE.PerspectiveCamera(40, window.innerWidth / (window.innerWidth), 0.25, 100);
+let canvas  = document.getElementById("container3D")
+camera = new THREE.PerspectiveCamera(40, window.innerWidth / (window.innerWidth ), 0.25, 100);
 camera.position.set(1, 5, 55);
 camera.position.x = -44;
-camera.position.z = 10;
-camera.position.y = 35;
+camera.position.z = 6;
+camera.position.y = 38;
 
+ 
 scene.rotation.x = -.1;
 scene.rotation.y = -1;
 // camera.position.z = -1;
-scene.position.y = 8; 
-scene.position.z = -1;
+scene.position.y = 9.5; 
+scene.position.z = 0;
 
 
 
-let cameraTarget = new THREE.Vector3( 144, 12.4, -15 );
+let cameraTarget = new THREE.Vector3( 0, 29.4, 0 );
 //Keep the 3D object on a global variable so we can access it later
 let object;
 
@@ -60,14 +60,7 @@ let envMap;
 
 
 const loader = new GLTFLoader();
-loader.setDRACOLoader(dracoLoader); 
-
-
- 
-
-let w = 1331;
-let h = 3916;
-let x = 1;
+loader.setDRACOLoader(dracoLoader);  
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ 
   alpha: true ,
@@ -75,8 +68,8 @@ const renderer = new THREE.WebGLRenderer({
   // powerPreference: "high-performance"
  }); //Alpha: true allows for the transparent background
 let  pixelRatio = window.devicePixelRatio;
-let  width = document.getElementById("container3D").clientWidth * pixelRatio;
-let  height = document.getElementById("container3D").clientHeight * pixelRatio;
+let  width = canvas.clientWidth * pixelRatio;
+let  height = canvas.clientHeight * pixelRatio;
 renderer.setSize(width, height);
 // renderer.setPixelRatio(window.devicePixelRatio * x);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -88,7 +81,7 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
  
 //Add the renderer to the DOM
-document.getElementById("container3D").appendChild(renderer.domElement); 
+canvas.appendChild(renderer.domElement); 
 
 
 
@@ -112,7 +105,10 @@ function animate() {
 } 
 //Add a listener to the window, so we can resize the window and the camera
 window.addEventListener("resize", function () {
-  camera.aspect = window.innerWidth / (window.innerWidth);
+  pixelRatio = window.devicePixelRatio;
+  width = canvas.clientWidth * pixelRatio;
+  height = canvas.clientHeight * pixelRatio;
+  camera.aspect = window.innerWidth / (window.innerWidth );
   camera.updateProjectionMatrix();
   renderer.setSize(width, height);
   // renderer.setSize(window.innerWidth, window.innerWidth  );
@@ -154,12 +150,12 @@ loader.load(
 );
 
 
+camera.lookAt(cameraTarget);
  
 function render() {
 
   if (mixer)  
       mixer.update(0.02); 
-  camera.lookAt(cameraTarget);
 
   renderer.render(scene, camera);
 

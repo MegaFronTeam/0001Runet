@@ -8,10 +8,11 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
 		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
@@ -71,7 +72,10 @@
 				<div class="top-nav block-with-lazy section">
 					<div class="container-xl-fluid container">
 						<div class="top-nav__row row" data-aos="fade-up"> 
-							<div class="col"><a href="/"><img src="img/logo.svg" alt=""/></a></div>
+							<div class="col">
+								<a class="top-nav__logo" href="/"><img src="img/logo.svg" alt=""/>
+								</a>
+							</div>
 							<div class="col-md-auto order-md-0 order-last d-none d-md-block">
 								<nav>
 									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
@@ -122,7 +126,8 @@
 							</div>
 							<div class="before" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000"></div>
 							<div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-								<div class="premia-block" id="container3D"></div>
+								<div class="premia-block d-none d-md-block" id="container3D"></div>
+								<div class="d-md-none"><img class="res-i main-img" src="img/premia.png" alt=""/></div>
 							</div>
 							<div class="headerBlock__title">
 								<div class="headerBlock__text animate-text-wrap">
@@ -768,7 +773,12 @@
 							</div>
 						</div>
 					</footer>
-				</div><script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+				</div>
+				<a class="arrow-up arrow-up--js btn btn-dark" href="#">
+					<svg class="icon icon-chevron-up ">
+						<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+					</svg>
+				</a><script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
 				<script type="importmap">
 					{
 						"imports": {
@@ -789,8 +799,6 @@ import { RGBMLoader } from "three/addons/loaders/RGBMLoader.js";
 // import { EXRLoader } from 'three/addons/loaders/EXRLoader.js';
 //Create a Three.JS Scene
 let camera;
-// const monkeyUrl = new URL('/scene1.gltf', import.meta.url);
-// const monkeyUrl = new URL('model/RU-logo-export-anim-3.1.gltf', import.meta.url);
 const monkeyUrl = new URL('model/RU-logo-export-anim-4.gltf', import.meta.url); 
 const scene = new THREE.Scene();
 // scene.add(new THREE.GridHelper(20, 20));
@@ -799,21 +807,23 @@ const scene = new THREE.Scene();
 // const camera = new THREE.PerspectiveCamera(75, window.innerWidth  / window.innerHeight  , 1, 20);
 // camera.position.set(3, 0.15, 3);
 
-camera = new THREE.PerspectiveCamera(40, window.innerWidth / (window.innerWidth), 0.25, 100);
+let canvas  = document.getElementById("container3D")
+camera = new THREE.PerspectiveCamera(40, window.innerWidth / (window.innerWidth ), 0.25, 100);
 camera.position.set(1, 5, 55);
 camera.position.x = -44;
-camera.position.z = 10;
-camera.position.y = 35;
+camera.position.z = 6;
+camera.position.y = 38;
 
+ 
 scene.rotation.x = -.1;
 scene.rotation.y = -1;
 // camera.position.z = -1;
-scene.position.y = 8; 
-scene.position.z = -1;
+scene.position.y = 9.5; 
+scene.position.z = 0;
 
 
 
-let cameraTarget = new THREE.Vector3( 144, 12.4, -15 );
+let cameraTarget = new THREE.Vector3( 0, 29.4, 0 );
 //Keep the 3D object on a global variable so we can access it later
 let object;
 
@@ -840,14 +850,7 @@ let envMap;
 
 
 const loader = new GLTFLoader();
-loader.setDRACOLoader(dracoLoader); 
-
-
- 
-
-let w = 1331;
-let h = 3916;
-let x = 1;
+loader.setDRACOLoader(dracoLoader);  
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ 
 	alpha: true ,
@@ -855,8 +858,8 @@ const renderer = new THREE.WebGLRenderer({
 	// powerPreference: "high-performance"
  }); //Alpha: true allows for the transparent background
 let  pixelRatio = window.devicePixelRatio;
-let  width = document.getElementById("container3D").clientWidth * pixelRatio;
-let  height = document.getElementById("container3D").clientHeight * pixelRatio;
+let  width = canvas.clientWidth * pixelRatio;
+let  height = canvas.clientHeight * pixelRatio;
 renderer.setSize(width, height);
 // renderer.setPixelRatio(window.devicePixelRatio * x);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -868,7 +871,7 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
  
 //Add the renderer to the DOM
-document.getElementById("container3D").appendChild(renderer.domElement); 
+canvas.appendChild(renderer.domElement); 
 
 
 
@@ -892,7 +895,10 @@ function animate() {
 } 
 //Add a listener to the window, so we can resize the window and the camera
 window.addEventListener("resize", function () {
-	camera.aspect = window.innerWidth / (window.innerWidth);
+	pixelRatio = window.devicePixelRatio;
+	width = canvas.clientWidth * pixelRatio;
+	height = canvas.clientHeight * pixelRatio;
+	camera.aspect = window.innerWidth / (window.innerWidth );
 	camera.updateProjectionMatrix();
 	renderer.setSize(width, height);
 	// renderer.setSize(window.innerWidth, window.innerWidth  );
@@ -934,12 +940,12 @@ loader.load(
 );
 
 
+camera.lookAt(cameraTarget);
  
 function render() {
 
 	if (mixer)  
 			mixer.update(0.02); 
-	camera.lookAt(cameraTarget);
 
 	renderer.render(scene, camera);
 
@@ -963,6 +969,7 @@ animate();
 		<script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
 		<script src="libs/aos/aos.js"></script>
 		<script src="libs/parallax-js/parallax.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

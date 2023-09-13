@@ -101,3 +101,99 @@ $output-bourbon-deprecation-warnings: false;
 // 		// border-color: $pagination-active-border-color;
 // 	}
 // }
+
+
+.select2{
+  width: 100% !important;
+}
+.select2-container--default .select2-selection--single {
+  @extend .form-select;
+	height: auto !important;
+  box-shadow:  none !important;
+  border-color: $primary !important;
+  @include media-breakpoint-up(lg) {
+    font-size: rem(16);
+  }
+  font-size: 14px;
+	// padding-left: rem(10);
+}
+
+.select2-container--default
+	.select2-selection--single
+	.select2-selection__rendered {
+	padding: 0;
+}
+
+.select2-container--default
+	.select2-selection--single
+	.select2-selection__arrow {
+	display: none;
+}
+
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  line-height: calc(24 / 16);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  color: $primary;
+  
+}
+
+.select2-search{
+  display: none;
+}
+
+.select2-container--open .select2-selection,
+.select2-dropdown{
+  background-color: var(--black-003, rgba(38, 38, 38, 0.75));
+  backdrop-filter: blur(20px);  
+  box-shadow:  none !important;
+
+border-color: $primary !important; 
+}
+
+.select2-dropdown{
+  border-radius: $border-radius;
+}
+
+.select2-results__option{
+  background: none !important;
+  padding-left: rem(24);
+   @include media-breakpoint-up(lg) {
+    font-size: rem(16);
+  }
+  font-size: 14px;
+}
+.select2-results__option--highlighted{
+  color: $primary !important;
+}
+.select2-results__option--selected{
+  color: var(--grey-002, #7C7C7C) !important;
+}
+
+.select-wrap{
+  position: relative;
+}
+
+.select2-dropdown--abow  { 
+
+}
+.select2-dropdown--below  {
+  // border-radius: $border-radius $border-radius  0 0;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single{
+  border-bottom: none;
+}
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single{
+  border-top: none;
+  margin-top: 1px;
+}
+.select2-dropdown--above{
+  margin-top: 1px;
+}
+
+.select2-container--open .select2-selection{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='13' viewBox='0 0 24 13' fill='none'%3E%3Cpath d='M23 12L12 2L1 12' stroke='%23EBB86B' stroke-width='2.5'/%3E%3C/svg%3E");
+}

@@ -1,0 +1,95 @@
+// start .sNominees
+.sNominees {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+		min-height: 1000px;
+			padding-bottom: calc(var(--sPB) * 2);
+	&__row{
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(50)};
+		}
+		--bs-gutter-x: #{rem(40)};
+
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+
+	.card{
+		@include media-breakpoint-up(sm) {
+			min-height: 100%;
+			height: rem(390);
+		}
+		@include media-breakpoint-up(sm) {
+			padding: rem(100) var(--card-sp) var(--card-sp);
+		}
+		padding: rem(70) var(--card-sp) var(--card-sp);
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 2;
+		color: #fff;
+		@include mt;
+		&__body{
+
+			flex-grow: 1;
+		}
+		&__label{
+			@include mt;
+			position: absolute;
+			left: var(--card-sp);
+			top: var(--card-sp);
+			font-weight: bold;
+			color: var(--color, var(--bs-primary));
+		}
+		&__title{
+			@include rfs(28px);
+			margin-bottom: rem920;
+			font-weight: bold;
+			line-height: 1;
+			margin-bottom:  rem(24);
+		}
+		.h6{
+			color: var(--color, #959595);
+			@include mt;
+			margin-bottom: 24px;
+		}
+		&__footer{
+			color: var(--color, #959595);
+			@include mt;
+		}
+		&::before{
+			content: '';
+			border-radius: inherit;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			position: absolute;
+			z-index: -1;
+			background-color: $primary;
+			@include mt;
+			opacity: var(--op,0);
+		}
+		&:hover{
+			color: $dark;
+			--color: #{$dark};
+			--op: 1;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNominees

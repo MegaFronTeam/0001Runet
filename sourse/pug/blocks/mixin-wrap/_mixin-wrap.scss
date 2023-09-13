@@ -81,22 +81,17 @@
 
 .search-block{
 	position: relative;
-	input{
-		font-size: 14px;
-		width: 100%;
-		border: none !important;
-		outline: none !important;
-		padding-left: rem(30);
-		padding-top: rem(14);
-		padding-bottom: rem(14);
+	
+	input{ 
+		width: 100%;  
+		padding-left: rem(34);
+		padding-right: rem(68);
 	}
-	.icon{
-		font-size: rem(20);
+	.icon{ 
 		border: none !important;
 	}
 	button{
-		position: absolute;
-		left: 0;
+		position: absolute; 
 		top: 0;
 		height: 100%;
 		display: flex;
@@ -104,6 +99,15 @@
 		align-items: center;
 		background: none !important;
 		border: none !important;
+		right: 1rem;
+		color: $primary;
+		left: auto;
+			.icon{
+		font-size: 24px;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 2.5;
+	}
 	}
 }
 

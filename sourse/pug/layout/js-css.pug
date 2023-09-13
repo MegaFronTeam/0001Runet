@@ -2,12 +2,13 @@
 mixin allcss() 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	link(href="libs/swiper/swiper-bundle.min.css", rel="stylesheet")
 	link(href="libs/@fancyapps/ui/fancybox/fancybox.css", rel="stylesheet")
 	//- link(href=`css/main.min.css?v=${version}`, rel="stylesheet")
 	//- link(href="libs/animate.css/animate.min.css", rel="stylesheet")
 	link(href="libs/aos/aos.css", rel="stylesheet")
+	link(href="libs/select2/css/select2.min.css", rel="stylesheet")
 
 	link(href=`css/custom-bootstrap.min.css`, rel="stylesheet")
 	link(href=`css/main.min.css`, rel="stylesheet")
@@ -25,6 +26,7 @@ mixin allcjs()
 	script(src="libs/smooth-scrollbar/smooth-scrollbar.js")
 	script(src="libs/aos/aos.js")
 	script(src="libs/parallax-js/parallax.min.js")
+	script(src="libs/select2/js/select2.full.min.js")
 
 	//- script( type="module" src=`js/3d.js`)
 	script(src=`js/JSCCommon.js`)

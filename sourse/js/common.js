@@ -210,51 +210,68 @@ function eventHandler() {
 	setAnimationsFolkVote('.hands-block__item--2', -150, -150, '55%', `86%`)
 	setAnimationsFolkVote('.hands-block__item--1', 50, -200, '60%', `86%`)
 
+
 	var scene = document.getElementById('headElems');
-	var parallaxInstance = new Parallax(scene, {
-		scalarX: 20,
-		scalarY: 20,
-		precision: 50,
-		calibrationDelay: 1500,
-	} );
-	parallaxInstance.friction(0.2, 0.2);
+	if(scene){
+
+		var parallaxInstance = new Parallax(scene, {
+			scalarX: 20,
+			scalarY: 20,
+			precision: 50,
+			calibrationDelay: 1500,
+		} );
+		parallaxInstance.friction(0.2, 0.2);
+	}
 
 	var scene2 = document.getElementById('scene2');
-	var parallaxInstance2 = new Parallax(scene2, {
-		scalarX: 20,
-		scalarY: 20,
-		precision: 50,
-		selector: '.el',
-		// pointerEvents: 'all'
-	} );
-	
-	
-	parallaxInstance2.friction(0.2, 0.2);
+	if ( scene2){
 
+		var parallaxInstance2 = new Parallax(scene2, {
+			scalarX: 20,
+			scalarY: 20,
+			precision: 50,
+			selector: '.el',
+			// pointerEvents: 'all'
+		} );
+		
+		
+		parallaxInstance2.friction(0.2, 0.2);
+		
+	}
 	var scene3 = document.getElementById('scene3');
-	var parallaxInstance3 = new Parallax(scene3, {
-		scalarX: 20,
-		scalarY: 20,
-		precision: 50,
-		selector: '.el',
-		// pointerEvents: 'all'
-	} );
+	if(scene3) {
 
-	parallaxInstance3.friction(0.2, 0.2);
+		var parallaxInstance3 = new Parallax(scene3, {
+			scalarX: 20,
+			scalarY: 20,
+			precision: 50,
+			selector: '.el',
+			// pointerEvents: 'all'
+		} );	
+		parallaxInstance3.friction(0.2, 0.2);
+	}
 
 	
 
 	var scene4 = document.getElementById('scene4');
-	var parallaxInstance4 = new Parallax(scene4, {
-		scalarX: 30,
-		scalarY: 30,
-		precision: 10,
-		selector: '.el',
-		// pointerEvents: 'all'
-	} );
+	if(scene4) {
 
-	parallaxInstance4.friction(0.4, 0.4);
+		var parallaxInstance4 = new Parallax(scene4, {
+			scalarX: 30,
+			scalarY: 30,
+			precision: 10,
+			selector: '.el',
+			// pointerEvents: 'all'
+		} );	
+		parallaxInstance4.friction(0.4, 0.4);
+	}
 
+	$(".select-wrap").each(function(){
+		let self = $(this);
+		self.find(".select-js").select2({
+			dropdownParent: self
+		});
+	})
 
 };
 if (document.readyState !== 'loading') {

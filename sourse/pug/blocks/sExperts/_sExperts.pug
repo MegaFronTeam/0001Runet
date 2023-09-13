@@ -1,0 +1,42 @@
+mixin sExperts(data)
+	// start sExperts
+	+b.sExperts.section.section--animate#sExperts&attributes(attributes)
+		.container-xl-fluid.container.animate-block
+			.container
+				+b.filter-block
+					+e.title(data-aos="fade-up"  ) Поиск по экспертам
+					+e.row.row
+						.col-lg-auto(data-aos="fade-up"  )
+							+search()
+						.col
+							+e.btns
+								+e.row-sm.row
+									.col-auto(data-aos="fade-up"  )
+										label.d-block
+											input(type="radio", name="expert" checked="checked").btn-check
+											span.btn.btn-outline-primary.d-block все
+									.col(data-aos="fade-up"  )
+										label.d-block
+											input(type="radio", name="expert").btn-check
+											span.btn.btn-outline-primary.d-block Экспертный клуб
+									.col-md(data-aos="fade-up"  )
+										label.d-block
+											input(type="radio", name="expert").btn-check
+											span.btn.btn-outline-primary.d-block Экспертный совет
+				+e.row.row
+					mixin item(i,t1,t2,label="Экспертный клуб")
+						+e.col.col-lg-4.col-md-6(data-aos="fade-up"  )
+							+b.card-item(href="#")
+								+e.img-wrap
+									+img(`img/expert-img-${i}.jpg`)
+								+e.caption
+									+e.label.text-primary= label
+									+e.title.h3= t1
+									+e.text.h6= t2
+					+item(`1`,`Евтушенко Павел`,`Victory Stats`)
+					+item(`2`,`Герасимов Андрей`,`ООО "Диджитал Групп"`,'Экспертный совет')
+					+item(`3`,`Алексеева Ирина`,`RUNET GROUP`)
+					+item(`4`,`Афанасьев Евгений`,`АНО "Цифровая экономика"`)
+					+item(`5`,`Артемова Наталья`,`ООО Медиа ресурс`)
+					+item(`6`,`Артищев Михаил`,`Studioz`,'Экспертный совет')
+	// end sExperts

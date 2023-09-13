@@ -17,7 +17,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(main) 
 	+b.menu-mobile.menu-mobile--js.d-md-none
 		.menu-mobile__inner
 			+e.head.d-md-none.container
@@ -42,8 +42,11 @@ mixin top-nav()
 		.container-xl-fluid.container
 			+e.row.row( data-aos="fade-up") 
 				.col
-					a(href="/")
+					+e.logo(href="/")
 						img(src="img/logo.svg", alt="")
+						if !main
+							+e.text.d-none.d-sm-block.mono   Премия <br> РУНЕТА 
+								.text-primary 2023
 				.col-md-auto.order-md-0.order-last.d-none.d-md-block
 					+mnuLanding()
 				.col-auto.d-md-none

@@ -4,12 +4,14 @@
 	// --bs-body-font-size: 14px;
 	// --bs-body-font-size: 12px;
 	--bs-body-font-size: 12px;
-	@include media-breakpoint-up(sm){
-		--bs-body-font-size: #{$em-base};
+	@include media-breakpoint-up(sm){ 
+		--bs-body-font-size: 12px;
 		--sPT: calc(#{rem(70)} + 2vh);
 		--sPB: calc(#{rem(70)} + 2vh);
 		--sTPB: calc(#{rem(98)}); 
 	}
+
+	--card-sp: #{rem(32)};
 
 	@include media-breakpoint-up(lg){
 		--bs-body-font-size: 12px;

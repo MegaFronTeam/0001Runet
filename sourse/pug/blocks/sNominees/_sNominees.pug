@@ -1,0 +1,44 @@
+mixin sNominees(data)
+	// start sNominees
+	+b.SECTION.sNominees.section#sNominees&attributes(attributes)
+		.container-xl-fluid.container.animate-block
+			.container
+				+b.filter-block
+					+e.title(data-aos="fade-up"  ) Поиск по номинантам
+					+e.row.row
+						.col-lg-auto(data-aos="fade-up"  )
+							+search() 
+
+						.col
+							+e.selects.ms-auto
+								+e.row-sm.row
+									.col-md-7(data-aos="fade-up"  )
+										.select-wrap
+											select.form-select.select-js
+												option(value="")  Все номинации 
+												option(value="")  Все номинации 2
+												option(value="")  Все номинации 3
+									.col-md-5(data-aos="fade-up"  )
+										.select-wrap
+											select.form-select.select-js
+												option(value="")  Все этапы
+												option(value="")  Все этапы
+												option(value="")  Все этапы
+				+e.row.row
+					mixin item(t,p, f)
+						+e.col.col-xxl-3.col-lg-4.col-md-6(data-aos="fade-up"  )
+							+b.card(href="#")&attributes(attributes)
+								block
+								+e.body 
+									+e.title!= t
+									.h6!= p
+								+e.footer!= f
+					-for (var i = 0; i < 5; i++)
+						+item(`«Особый взгляд на Золотое кольцо»`,`Информационное Агентство России ТАСС`,`Туризм и индустрия гостеприимства`)
+						+item(` Проект «Объясняем.РФ»`,`АНО «Национальные приоритеты»`,`Государство и общество`)
+							+e.label Шортлист
+						+item(`Программы поддержки бизнеса`,`Федеральная налоговая служба`,`Экономика и бизнес`)
+						+item(`Проект «Цифровое право»`,`Российское агентство правовой и судебной информации (РАПСИ)`,`Государство и общество`)
+							+e.label Шортлист
+						
+	// end sNominees

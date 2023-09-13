@@ -40,6 +40,28 @@
 	}
 	&__item{
 		display: block;
+		position: relative;
+		@include media-breakpoint-up(md) {
+
+		&::before{
+			content: '';
+			z-index: -1;
+			// @include a-cent;
+			position: absolute;
+			left: calc(var(--card-sp) * -1);
+			top: calc(var(--card-sp) * -1);
+			width: calc(100% + var(--card-sp) * 2); 
+			height: calc(100% + var(--card-sp) * 2); 
+			border-radius: 30px;
+			background: var(--black-003, rgba(38, 38, 38, 0.75));
+			backdrop-filter: blur(111px);
+			opacity: var(--sat, 0);
+			@include mt;
+		}
+	}
+	&:hover{
+		--sat: 1;
+	}
 		p{
 			color: #fff;
 			font-size: rem(16);
