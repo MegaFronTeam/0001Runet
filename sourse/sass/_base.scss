@@ -1042,6 +1042,7 @@ p {
 .filter-block{
 	margin-bottom: rem(56);
 	z-index: 100;
+	position: relative;
 	&__row{
 		--bs-gutter-y: 40px;
 
