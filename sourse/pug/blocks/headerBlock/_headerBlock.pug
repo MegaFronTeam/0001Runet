@@ -3,13 +3,15 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.d-none.d-sm-block#headElems
+			.alems.alems--back.d-none.d-sm-block#headElemsBack
 				+b.el--1( data-depth=".2" data-scalar-x="14" data-scalar-y="20"): div(data-aos="fade-up"  data-aos-duration="2000")
 					img(src="img/el-1.png", alt="")
 				+b.el--2( data-depth="0.2"): div(data-aos="fade-up"   data-aos-duration="2000")
 					img(src="img/el-2.png", alt="")
 				+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
 					img(src="img/el-3.png", alt="")
+				
+			.alems.d-none.d-sm-block#headElems 
 				
 				+b.el--4( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
 					img(src="img/el-4.png", alt="")
@@ -55,13 +57,14 @@ mixin headerBlock02(title)
 	// start headerBlock
 	+b.headerBlock--page.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.d-none.d-sm-block#headElems
-				+b.el--1( data-depth=".2" data-scalar-x="14" data-scalar-y="20"): div(data-aos="fade-up"  data-aos-duration="2000")
+			.alems.alems--back.d-none.d-sm-block#headElemsBack
+				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
 					img(src="img/el-1.png", alt="")
-				+b.el--2( data-depth="0.2"): div(data-aos="fade-up"   data-aos-duration="2000")
+				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
 					img(src="img/el-2.png", alt="")
-				+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
+				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
+			.alems.d-none.d-sm-block#headElems 
 				
 				+b.el--4.--1-page( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
 					img(src="img/el-10.png", alt="")
@@ -101,14 +104,15 @@ mixin headerBlock03(title)
 	// start headerBlock
 	+b.headerBlock--page.--page-nominees.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.d-none.d-sm-block#headElems
-				+b.el--1( data-depth=".2" data-scalar-x="14" data-scalar-y="20"): div(data-aos="fade-up"  data-aos-duration="2000")
+			.alems.alems--back.d-none.d-sm-block#headElemsBack
+				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
 					img(src="img/el-1.png", alt="")
-				+b.el--2( data-depth="0.2"): div(data-aos="fade-up"   data-aos-duration="2000")
+				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
 					img(src="img/el-2.png", alt="")
-				+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
+				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
-				
+			.alems.d-none.d-sm-block#headElems 
+			
 				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
 					img(src="img/el-18.png", alt="")
 				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")

@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-md-none
+	+b.toggle-menu-mobile--js
 		span
 mixin mob-mnu()
 	-
@@ -18,25 +18,8 @@ mixin mob-mnu()
 			+mnu()
 	//  мобильное меню
 mixin top-nav(main) 
-	+b.menu-mobile.menu-mobile--js.d-md-none
-		.menu-mobile__inner
-			+e.head.d-md-none.container
-
-				+iconC("menu")
-				a(href="/")
-					img(src="img/logo.svg", alt="")
-				+menu-toggle()
-
-			+mnu()
-			+b.footer.d-md-none.container
-				.row
-					.col
-						+e.link(href="tel:+7(800)8000000") +7 (800) 800 0000 
-						br
-						+e.link(href="mailto:premia@runet.group") premia@runet.group
-					.col-lg-12.col-auto
-						+e.link(href="#")
-							+icon('vk') 
+	
+	
 	// start top-nav
 	+b.top-nav.block-with-lazy.section
 		.container-xl-fluid.container

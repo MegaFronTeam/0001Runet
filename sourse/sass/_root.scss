@@ -10,7 +10,10 @@
 		--sPB: calc(#{rem(70)} + 2vh);
 		--sTPB: calc(#{rem(98)}); 
 	}
-
+	@include media-breakpoint-up(md){
+		--size-toggle: #{rem(90)};
+	} 
+	--size-toggle: #{rem(70)};
 	--card-sp: #{rem(32)};
 
 	@include media-breakpoint-up(lg){

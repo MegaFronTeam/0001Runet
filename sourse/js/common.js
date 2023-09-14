@@ -41,9 +41,19 @@ function eventHandler() {
 			// let bodyScrollBar = Scrollbar.init(document.body, {
 			damping: 0.1,
 			thumbMinSize: 20,
-			delegateTo: document,
+			// delegateTo: document,
+			onlyScrollIfNeeded: true,
 		});
 	}
+	$(document).on('click','.arrow-up--js', function(e) {
+		e.preventDefault();
+		bodyScrollBar.scrollTo(0,0,800);
+		$('html, body').animate({ scrollTop: 0 }, 0);
+	})
+	$(document).on('click','.toggle-menu-mobile--js', function(e) {
+		e.preventDefault();
+		// bodyScrollBar.scrollTo(0,0,800);
+	})
 	ScrollTrigger.scrollerProxy(scroller, {
 		scrollTop(value) {
 			if (arguments.length) {
@@ -69,7 +79,7 @@ function eventHandler() {
 		ScrollTrigger.create({
 			scroller: scroller,
 			trigger: aos,
-			start: 'top 90%',
+			start: 'top 95%',
 			end: 'bottom +100 top',
 
 			// markers: true,
@@ -84,6 +94,7 @@ function eventHandler() {
 
 	AOS.init({
 		// mirror: true,
+		// offset: 50,
 		duration: 800, // values from 0 to 3000, with step 50ms
 		easing: 'easeOutQuart',
 		once: true,
@@ -106,12 +117,29 @@ function eventHandler() {
 
 	})
 	foot
-		.from(".footer", {
+		.from(".footer-wrap .footer", {
 			// delay: 0.1, // wait 0.2 seconds from the last scroll event before doing the snapping
 			ease: "none",
 			// duration: 10000,  
 			y: "-200px"
 		});
+	var fixedBtns = gsap.timeline({
+
+		scrollTrigger: {
+			scroller,
+			trigger: '.headerBlock',
+			start:  "clamp(bottom top)",
+			end: "+=1000%",
+			// endTrigger: scroller,
+			scrub: 1,
+			// pin: true,
+			// markers: true,
+			toggleClass: { targets: ".fixed-btn-wrap", className: "active" }
+		}
+
+	})
+	
+	// fixedBtns.to(".fixed-btn-wrap ", { toggleClass: "active" });
 
 	let sections = document.querySelectorAll(".section--animate"); 
 	for (const section of sections) {
@@ -220,10 +248,23 @@ function eventHandler() {
 			precision: 50,
 			calibrationDelay: 1500,
 		} );
-		parallaxInstance.friction(0.2, 0.2);
+		parallaxInstance.friction(0.2, 0.2); 
 	}
+	
+	var scene0 = document.getElementById('headElemsBack');
+	if(scene0){
 
+		var parallaxInstance0 = new Parallax(scene0, {
+			scalarX: 20,
+			scalarY: 20,
+			precision: 50,
+			calibrationDelay: 1500,
+		} );
+		parallaxInstance0.friction(0.2, 0.2);
+	}
+	
 	var scene2 = document.getElementById('scene2');
+
 	if ( scene2){
 
 		var parallaxInstance2 = new Parallax(scene2, {

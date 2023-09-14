@@ -1,5 +1,6 @@
 include include.pug
 include js-css.pug
+include ../blocks/top-nav/_top-nav.pug
 doctype html
 html(lang="ru")
 	head
@@ -47,6 +48,36 @@ html(lang="ru")
 	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
 	//- body.loaded_hiding(class= mainPage) 
 	body(class=mainPage data-bg=bg)
+		+b.toggl-menu-container
+			.container-xl-fluid.container
+				.ms-auto
+					.fixed-btn-wrap
+						+b.toggle-menu-mobile--js
+							span
+					.fixed-btn-wrap.fixed-btn-wrap--footer
+						+b.arrow-up--js()
+							+icon("chevron-up")
+		+b.menu-mobile.menu-mobile--js
+			.menu-mobile__inner
+				+e.head.container-xl-fluid.container
+
+					+iconC("menu")
+					a(href="/")
+						img(src="img/logo.svg", alt="")
+					+menu-toggle()
+
+				+mnu()
+				+b.footer.container-xl-fluid.container
+					.row
+						.col-md-auto.col
+							.row
+								.col-auto
+									+e.link(href="tel:+7(800)8000000") +7 (800) 800 0000  
+								.col-auto
+									+e.link(href="mailto:premia@runet.group") premia@runet.group
+						.col-auto
+							+e.link(href="#")
+								+icon('vk') 
 		.scroller
 			.main-wrapper
 				block pagecontent

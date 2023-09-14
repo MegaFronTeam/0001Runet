@@ -92,11 +92,11 @@ class JSCCommon {
 			{ passive: true },
 		);
 
-		window.addEventListener('resize', () => {
-			if (window.matchMedia('(min-width: 768px)').matches) this.closeMenu();
-		},
-			{ passive: true },
-		);
+		// window.addEventListener('resize', () => {
+		// 	if (window.matchMedia('(min-width: 768px)').matches) this.closeMenu();
+		// },
+		// 	{ passive: true },
+		// );
 	}
 
 	// tabs  .
@@ -251,11 +251,11 @@ class JSCCommon {
 	}
 
 	static setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
+		let topNav = $('.fixed-btn-wrap');
 		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+		window.scrollY > window.innerHeight
+			? topNav.addClass('active')
+			: topNav.removeClass('active');
 	}
 
 	static init() {

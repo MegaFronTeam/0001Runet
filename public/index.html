@@ -29,45 +29,68 @@
 		</script>
 	</head>
 	<body class="main-page" data-bg="main.jpg">
-		<div class="scroller">
-			<div class="main-wrapper">
-				<div class="menu-mobile menu-mobile menu-mobile--js d-md-none">
-					<div class="menu-mobile__inner">
-						<div class="menu-mobile__head d-md-none container">
-							<svg class="iconC iconC-menu ">
-								<use xlink:href="img/svg/spriteC.svg#menu"></use>
-							</svg><a href="/"><img src="img/logo.svg" alt=""/></a>
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
-							</div>
+		<div class="toggl-menu-container">
+			<div class="container-xl-fluid container">
+				<div class="ms-auto">
+					<div class="fixed-btn-wrap">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 						</div>
-						<nav>
-							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
-								<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
-								<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
-								<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
-								<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
-								<li class="menu-item" itemprop="item"><a href="#">Архив</a></li>
-							</ul>
-						</nav>
-						<div class="footer d-md-none container">
-							<div class="row">
-								<div class="col">
-									<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000 
-									</a><br/>
-									<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
-									</a>
-								</div>
-								<div class="col-lg-12 col-auto">
-									<a class="footer__link" href="#">
-										<svg class="icon icon-vk ">
-											<use xlink:href="img/svg/sprite.svg#vk"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
+					</div>
+					<div class="fixed-btn-wrap fixed-btn-wrap--footer">
+						<div class="arrow-up arrow-up--js">
+							<svg class="icon icon-chevron-up ">
+								<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+							</svg>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="menu-mobile menu-mobile menu-mobile--js">
+			<div class="menu-mobile__inner">
+				<div class="menu-mobile__head container-xl-fluid container">
+					<svg class="iconC iconC-menu ">
+						<use xlink:href="img/svg/spriteC.svg#menu"></use>
+					</svg><a href="/"><img src="img/logo.svg" alt=""></a>
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+						<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Архив</a></li>
+					</ul>
+				</nav>
+				<div class="footer container-xl-fluid container">
+					<div class="row">
+						<div class="col-md-auto col">
+							<div class="row">
+								<div class="col-auto">
+									<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000  
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto">
+							<a class="footer__link" href="#">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroller">
+			<div class="main-wrapper">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy section">
 					<div class="container-xl-fluid container">
@@ -90,7 +113,7 @@
 								</nav>
 							</div>
 							<div class="col-auto d-md-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 							</div>
 						</div>
@@ -101,7 +124,7 @@
 					<!-- start headerBlock-->
 					<div class="headerBlock section" id="headerBlock">
 						<div class="container-xl-fluid container">
-							<div class="alems d-none d-sm-block" id="headElems">
+							<div class="alems alems--back d-none d-sm-block" id="headElemsBack">
 								<div class="el el--1" data-depth=".2" data-scalar-x="14" data-scalar-y="20">
 									<div data-aos="fade-up" data-aos-duration="2000"><img src="img/el-1.png" alt=""/></div>
 								</div>
@@ -111,6 +134,8 @@
 								<div class="el el--3" data-depth="0.3">
 									<div data-aos="fade-up" data-aos-duration="2000"><img src="img/el-3.png" alt=""/></div>
 								</div>
+							</div>
+							<div class="alems d-none d-sm-block" id="headElems"> 
 								<div class="el el--4" data-depth="0.1">
 									<div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"><img src="img/el-4.png" alt=""/></div>
 								</div>
@@ -156,7 +181,7 @@
 						<div class="container-xl-fluid container animate-block">
 							<div class="section-inner">
 								<div class="container">
-									<div class="section-title" data-aos="fade-up"> 
+									<div class="section-title" data-aos="fade-up" data-aos-offset="-150"> 
 										<div class="row">
 											<div class="col">
 												<h2>номинации</h2>
@@ -171,7 +196,7 @@
 										</div>
 									</div>
 									<div class="dd-group">
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Государство и Общество
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -190,7 +215,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">СМИ и массовые коммуникации
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -209,7 +234,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Образование и кадры
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -228,7 +253,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Экономика и бизнес
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -247,7 +272,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Подкасты и цифровой контент 
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -266,7 +291,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Наука, технологии и инновации
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -285,7 +310,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Здоровье и отдых
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -304,7 +329,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Народов много – Родина одна
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -323,7 +348,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Туризм и индустрия гостеприимства
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -342,7 +367,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="0"> 
+														<div class="sNominations__item dd-group__item" data-aos="fade-up" data-aos-offset="-150"> 
 															<div class="sNominations__head dd-group__head dd-head-js h3">Путешествия по РФ 
 															</div>
 															<div class="sNominations__body dd-group__body">
@@ -940,7 +965,7 @@ camera.lookAt(cameraTarget);
 function render() {
 
 	if (mixer)  
-			mixer.update(0.02); 
+			mixer.update(0.01); 
 
 	renderer.render(scene, camera);
 

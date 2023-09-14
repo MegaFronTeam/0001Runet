@@ -155,7 +155,7 @@ camera.lookAt(cameraTarget);
 function render() {
 
   if (mixer)  
-      mixer.update(0.02); 
+      mixer.update(0.01); 
 
   renderer.render(scene, camera);
 
