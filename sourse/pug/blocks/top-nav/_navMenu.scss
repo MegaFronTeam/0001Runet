@@ -3,6 +3,7 @@
 		display: flex;
 		text-align: center;
 		@include roww(rem(56));
+		align-items: center;
 		// flex-wrap: wrap;
 	}
 

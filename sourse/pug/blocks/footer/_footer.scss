@@ -15,7 +15,11 @@
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y:#{rem(60)};
+		@include media-breakpoint-up(sm) {
+
+			--bs-gutter-y:#{rem(60)};
+		}
+		--bs-gutter-y: 36px;
 
 	}
 	.section-title{
@@ -37,7 +41,11 @@
 		// margin-right: calc(#{rem(123)} - var(--bs-gutter-x));
 	}
 	&__footer{
+		@include media-breakpoint-up(sm) {
 		border-top: 1px solid rgba(255,255,255, .2);
+		margin-top: 28px;
+	}
+	padding-top: rem(35);
 		.row{
 			@include media-breakpoint-down(sm) {
 
@@ -48,8 +56,6 @@
 
 			margin-top: rem(144);
 		}
-		margin-top: 28px;
-		padding-top: rem(35);
 		padding-bottom: rem(35);
 	}
 	p{
@@ -106,7 +112,7 @@
 		display: inline-block;
 		margin-bottom: rem(16);
 		.icon{
-			font-size: rem(18);
+			font-size: rem(28);
 		}
 	}
 	&__policy{

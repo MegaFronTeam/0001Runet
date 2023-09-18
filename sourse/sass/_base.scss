@@ -645,9 +645,6 @@ h2,
 .h2 {
 	letter-spacing: em(-0.42);
 	line-height: calc(86 / 110);
-	@include media-breakpoint-up(xl) {
-		font-size: rem(110);
-	}
 }
 
 h1,
@@ -670,10 +667,10 @@ h1,
 	}
 }
 p {
-	@include media-breakpoint-up(xxl) {
-		font-size: 1rem;
-	}
-	font-size: 14px;
+	// @include media-breakpoint-up(xxl) {
+	// 	font-size: 1rem;
+	// }
+	// font-size: 14px;
 	// @include media-breakpoint-up(xl){
 	// }
 	// font-size: 12px;
@@ -807,6 +804,7 @@ p {
 .el{
 	position: absolute;
 	z-index: 24;
+	position: absolute !important;
 	div{
 		// transform: translate3d(0,50vh,0);
 	}
@@ -843,22 +841,50 @@ p {
 	}
 	&--4{ 
 		// top: 0;
-		bottom: 100%;
-		width: rem(240); 
+		@include media-breakpoint-up(lg){
+			right: auto;
+			left: 65% !important;
+			margin-left: rem(-300); 
+			width: rem(240); 
+			bottom: 50%;
+		}
+		// top: -10% !important;
 		top: auto !important;
-		left: 65% !important;
-		margin-left: rem(-300); 
+		bottom: 90%;
+		width: rem(160); 
+		left: auto !important;
+		right: 0;
+		position: absolute !important;
 	}
 	
-	&--4-page{
-		bottom: 110%;
+	&--1-page{
+		position: absolute !important;
+		@include media-breakpoint-down(lg){
+			img{
+				// transform: rotate(90deg);
+			}
+		}
+		@include media-breakpoint-up(lg){
+			bottom: 110%;
+		}
 		// top: rem(-100) !important;
+		bottom: 100%;
+		@include media-breakpoint-down(lg){
+		width: rem(120);
+		right: 10%;
+		}
 	}
 
 	&--4-page3{
-		bottom: 110%;
-		left: 45% !important;
-		width: rem(260); 
+		@include media-breakpoint-up(lg){
+
+			bottom: 110%;
+			left: 45% !important;
+			width: rem(260); 
+		}
+		bottom: 100%;
+		left: 35% !important;
+		width: rem(120); 
 		// top: rem(-100) !important;
 	}
 	
@@ -866,16 +892,29 @@ p {
 		// top: 0;
 		top: auto !important;
 		bottom: 100% !important;
-		width: rem(140); 
+		@include media-breakpoint-down(lg){
+			img{
+
+				transform: rotate(-90deg);
+			}
+		}
+		@include media-breakpoint-up(lg){
+			
+			left: auto !important;
+			right: 0 !important;
+			width: rem(140); 
+		}
+		width: rem(100); 
+		left: 20% !important;	
 		// left: 65%;
-		left: auto !important;
-		right: 0 !important;
-		opacity: 0.77; 
+		// opacity: 0.77; 
 		filter: saturate(0);
 		mix-blend-mode: luminosity;
 	}
 	&--5-1{
-
+		@include media-breakpoint-down(lg){
+			display: none !important;
+		}
 		top: 60% !important; 
 		width: rem(140); 
 		// left: 65%;
@@ -890,17 +929,39 @@ p {
 	}
 	&--6{ 
 		// top: 0;
-		top: 50%  !important;
-		margin-top: rem(-100);
-		width: rem(250);  
-		left: auto !important;
-		right: 150px !important;  
+		@include media-breakpoint-up(lg){
+			
+			width: rem(250);  
+			margin-top: rem(-100);
+			left: auto !important;
+			right: 150px !important;  
+			top: 50%  !important;
+		}
+		top: 40%  !important;
+		left: 15% !important;
+		width: rem(150);  
+	}
+	&--6-page{
+		@include media-breakpoint-down(lg){
+			top: 55%  !important;
+			left: auto !important;
+			right: 0;
+		}
 	}
 	&--6-page3{
-		
-		top: 140% !important;
-		width: rem(400);  
+		@include media-breakpoint-down(lg){
+			left: auto !important;
+		}
+		@include media-breakpoint-up(lg){
+
+			top: 140% !important;
+			width: rem(400);  
+			right: 0px !important;  
+		}
+		top: 340% !important;
+		width: rem(250);  
 		right: 0px !important;  
+
 	}
 	&--7{ 
 		// top: 0;
@@ -911,17 +972,27 @@ p {
 			}
 			bottom: -20%;
 		// margin-top: rem(-150);
-		width: rem(300);  
-		left: 28% !important; 
+		@include media-breakpoint-up(lg){
+			width: rem(300);  
+			left: 28% !important; 
+			
+		}
+		width: rem(280);  
+		left: 58% !important; 
 		top: auto !important;
 	}
 	&--7-1{ 
 		// top: 0;
 		// top: 80%;
-		bottom: 0;
 		// margin-top: rem(-150);
+		@include media-breakpoint-up(lg){
+			bottom: 0;
 		width: rem(300);  
 		left: 18% !important; 
+	}
+		bottom: 40%;
+		width: rem(220);  
+		left: 0% !important; 
 		top: auto !important;
 	}
 	&--7-2{ 
@@ -929,9 +1000,15 @@ p {
 		// top: 80%;
 		// bottom: 0;
 		// margin-top: rem(-150);
-		width: rem(400);  
-		left: 18% !important; 
-		top: 100% !important;
+		@include media-breakpoint-up(lg){
+			
+			left: 18% !important; 
+			top: 100% !important;
+			width: rem(400);  
+		}
+		width: rem(300);  
+		left: 0 !important; 
+		top: 120% !important;
 	}
 
 }
@@ -952,13 +1029,31 @@ p {
 #scene3{
 	// z-index: -1;
 }
+#headElemsBack,
 #scene4,
-#scene3,
+#scene2,
+#headElems{
+	@include media-breakpoint-down(md) {
+		.el{
+
+			display: none !important;
+		}
+	}
+}
+#scene3{
+	@include media-breakpoint-down(lg) {
+		.el{
+
+			display: none !important;
+		}
+	}
+}
+#scene4,
 #scene2{ 
 	// position: static !important;
 	position: absolute !important;
 	@include a-cent;
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		display: none;
 	}
 }
@@ -968,18 +1063,28 @@ p {
 .el--9{
 	position: absolute;
 	top: 5% !important;
-	width: rem(440);
 	left: 10% !important;
 	margin-top: rem(-150); 
+	width: rem(340);
+	@include media-breakpoint-up(xl) {
+		width: rem(440);
+	}
 	z-index: 2;
 }
 
 .el--10{
 	position: absolute;
-	top: 95% !important;
 	width: rem(140);
-	left: 8% !important;
 	margin-top: rem(-150); 
+	top: 65% !important;
+	@include media-breakpoint-up(xl){
+		
+		top: 95% !important;
+		left: 8% !important;
+		right: auto;
+	}
+	left: auto !important;
+	right: 3%;
 	z-index: 2;
 }
 .el--11{
@@ -1096,12 +1201,14 @@ p {
 		} 
 	}
 	.search-block {
+		@include media-breakpoint-up(xl){
+			width: rem(408);
+		}
+
 		@include media-breakpoint-up(md){
-			width: rem(408); 
+			width: rem(462);
 		}
-		input{
-			
-		}
+		
 	}
 	&__btns{
 		max-width: rem(875);
@@ -1207,4 +1314,13 @@ p {
 .form-check-input[type=checkbox] {
 	background-size: 70%;
 	background-position: 50% 60%;
+}
+
+.h3,
+h3{
+	@include media-breakpoint-up(lg) {
+
+		font-size: rem(30);
+	}
+	font-size: 18px;
 }

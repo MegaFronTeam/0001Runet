@@ -13,7 +13,7 @@
 .top-nav {
 	// @include mt;
 	position: relative;
-	z-index: 2;
+	z-index: 4;
 	@include media-breakpoint-up(md) {
 
 		--sPT: #{rem(54)};

@@ -66,13 +66,13 @@ mixin headerBlock02(title)
 				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
 			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems.d-none.d-sm-block#headElems 
+			.alems#headElems 
 				
 				+b.el--4.--1-page( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-10.png", alt="")
+					img(src="img/el-10-1.png", alt="")
 				+b.el--5-1( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-5.png", alt="")
-				+b.el--6( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+				+b.el--6.--6-page( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-6.png", alt="")
 				+b.el--7-1( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-17.png", alt="")
@@ -105,7 +105,7 @@ mixin headerBlock03(title)
 	// start headerBlock
 	+b.headerBlock--page.--page-nominees.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back.d-none.d-sm-block#headElemsBack
+			.alems.alems--back#headElemsBack
 				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
 					img(src="img/el-1.png", alt="")
 				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
@@ -113,10 +113,10 @@ mixin headerBlock03(title)
 				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
 			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems.d-none.d-sm-block#headElems 
+			.alems#headElems 
 			
 				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-18.png", alt="")
+					img(src="img/el-18-3.png", alt="")
 				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-5.png", alt="")
 				+b.el--6.--6-page3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
@@ -153,7 +153,7 @@ mixin headerBlock08(title)
 	// start headerBlock
 	+b.headerBlock--form.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back.d-none.d-sm-block#headElemsBack
+			.alems.alems--back#headElemsBack
 				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
 					img(src="img/el-1.png", alt="")
 				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
@@ -161,7 +161,7 @@ mixin headerBlock08(title)
 				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
 				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems.d-none.d-sm-block#headElems 
+			.alems#headElems 
 			
 				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
 					img(src="img/el-18.png", alt="")
@@ -201,7 +201,7 @@ mixin headerBlock09(title)
 	// start headerBlock
 	+b.headerBlock--form.--form-invoicing.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back.d-none.d-sm-block#headElemsBack
+			.alems.alems--back#headElemsBack
 				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
 					img(src="img/el-1.png", alt="")
 				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
@@ -209,7 +209,7 @@ mixin headerBlock09(title)
 				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
 				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems.d-none.d-sm-block#headElems
+			.alems#headElems
 				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
 					img(src="img/el-18.png", alt="")
 				+b.el--18( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
@@ -322,5 +322,42 @@ mixin headerBlock10(title)
 					.col-md-6.order-md-first
 							button.btn.btn-dark.w-100.btn-lg(type="button" ) отменить
 
+	// end headerBlock
+
+
+
+
+mixin headerBlock404(title)
+	// start headerBlock
+	+b.headerBlock--page.--page-404.section#headerBlock&attributes(attributes)
+		.container-xl-fluid.container
+			.alems.alems--back#headElemsBack
+				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+					img(src="img/el-1.png", alt="")
+				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+					img(src="img/el-2.png", alt="")
+				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+					img(src="img/el-3.png", alt="")
+			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+			.alems#headElems 
+			
+				+b.el--4-p404( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+					img(src="img/el-18-3.png", alt="")
+				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-5.png", alt="")
+				+b.el--6-404( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-19.png", alt="")
+				+b.el--18-p404( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-18.png", alt="")
+					//- img(src="img/premia.png", alt="").res-i
+					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
+			+b.center-404(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+				+e.title.mono#scene404
+					span 4
+					.img-wrap( data-depth="0.05").el
+							img(src="img/list.png", alt="")
+					span 4
+				+e.text.h6 Страница не&nbsp;существует или недоступна  в&nbsp;данный&nbsp;момент
+				+e.btn.btn.btn-dark(href="#")  вернуться на главную
 	// end headerBlock
 

@@ -36,7 +36,7 @@ function eventHandler() {
 		toggleActions: "play none play none",
 	});
 	let bodyScrollBar;
-	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		bodyScrollBar = Scrollbar.init(scroller, {
 			// let bodyScrollBar = Scrollbar.init(document.body, {
 			damping: 0.1,
@@ -45,12 +45,12 @@ function eventHandler() {
 			onlyScrollIfNeeded: true,
 		});
 	}
-	$(document).on('click','.arrow-up--js', function(e) {
+	$(document).on('click', '.arrow-up--js', function (e) {
 		e.preventDefault();
-		bodyScrollBar.scrollTo(0,0,800);
+		bodyScrollBar.scrollTo(0, 0, 800);
 		$('html, body').animate({ scrollTop: 0 }, 0);
 	})
-	$(document).on('click','.toggle-menu-mobile--js', function(e) {
+	$(document).on('click', '.toggle-menu-mobile--js', function (e) {
 		e.preventDefault();
 		// bodyScrollBar.scrollTo(0,0,800);
 	})
@@ -91,6 +91,32 @@ function eventHandler() {
 			invalidateOnRefresh: true,
 		});
 	})
+	
+	let sections = document.querySelectorAll(".section--animate");
+	for (const section of sections) {
+		 let aosElems = section.querySelectorAll('[ data-aos]');
+		 for (const el of aosElems) {
+			el.setAttribute("data-aos-offset",'-150');
+		 }
+		var up = gsap.timeline({
+			scrollTrigger: {
+				scroller,
+				trigger: section,
+				start: 'top bottom',
+				end: "70% bottom",
+				scrub: 1,
+				pinSpacing: false
+			}
+
+		})
+		up
+			.from(section.querySelector(".animate-block"), {
+				ease: "none", y: 200
+			})
+			.to(section.querySelector(".animate-block"), {
+				ease: "none", y: -50
+			});
+	}
 
 	AOS.init({
 		// mirror: true,
@@ -128,8 +154,9 @@ function eventHandler() {
 		scrollTrigger: {
 			scroller,
 			trigger: '.headerBlock',
-			start:  "clamp(bottom top)",
+			start: "clamp(bottom top)",
 			end: "+=1000%",
+			// toggleActions: "play none none none",
 			// endTrigger: scroller,
 			scrub: 1,
 			// pin: true,
@@ -138,55 +165,34 @@ function eventHandler() {
 		}
 
 	})
-	
+
 	// fixedBtns.to(".fixed-btn-wrap ", { toggleClass: "active" });
 
-	let sections = document.querySelectorAll(".section--animate"); 
-	for (const section of sections) {
-		var up = gsap.timeline({ 
+
+	function setAnimationStep(step, d1 = 1, y1 = 1, y2 = 1, d2 = 2) {
+		var up = gsap.timeline({
 			scrollTrigger: {
 				scroller,
-				trigger: section,
-				start: 'top bottom', 
-				end: "70% bottom", 
-				scrub: 1,
+				trigger: '.sSteps',
+				start: '20% bottom',
+				end: "bottom+=20% bottom",
+				scrub: 1.2,
 				pinSpacing: false
 			}
-
 		})
 		up
-			.from(section.querySelector(".animate-block"), { 
-				ease: "none",  y: 200
+			.from(step, {
+				ease: "none", y: 150 + y1
 			})
-			.to(section.querySelector(".animate-block"), { 
-				ease: "none", y: -50
+			.to(step, {
+				ease: "none", y: -150 + y2
 			});
-		}
-
-	function setAnimationStep(step, d1 = 1,y1 = 1,  y2 = 1, d2 = 2){ 
-			var up = gsap.timeline({ 
-				scrollTrigger: {
-					scroller,
-					trigger: '.sSteps',
-					start: '20% bottom', 
-					end: "bottom+=20% bottom", 
-					scrub: 1.2 ,
-					pinSpacing: false
-				} 
-			})
-			up
-				.from(step, { 
-					ease: "none", y: 150 + y1
-				})
-				.to(step, { 
-					ease: "none", y: -150 + y2
-				});
-			}
+	}
 	setAnimationStep(".sSteps__col:nth-child(1)")
 	setAnimationStep(".sSteps__col:nth-child(2)", .8, 100, -200, .4)
 	setAnimationStep(".sSteps__col:nth-child(3)", 1.5, 50, -150, 1)
-	setAnimationStep(".sSteps__col:nth-child(4)", .6, 200, -220, .4)  
-	
+	setAnimationStep(".sSteps__col:nth-child(4)", .6, 200, -220, .4)
+
 	var titleStep = gsap.timeline({
 		scrollTrigger: {
 			scroller,
@@ -200,14 +206,14 @@ function eventHandler() {
 	})
 	titleStep
 		.from('.sSteps h2', {
-			ease: "none", y: -150 
+			ease: "none", y: -150
 		})
-		.to('.sSteps h2' , {
+		.to('.sSteps h2', {
 			ease: "none", y: 200
-		}); 
-		
+		});
 
-	function setAnimationsFolkVote(step,   y1 = 1, y2 = 1, start='10%', end="80%") {
+
+	function setAnimationsFolkVote(step, y1 = 1, y2 = 1, start = '10%', end = "80%") {
 		var up = gsap.timeline({
 			scrollTrigger: {
 				scroller,
@@ -223,49 +229,71 @@ function eventHandler() {
 				ease: "none", y: 50 + y1
 			})
 			.to(step, {
-				ease: "none" 	})
+				ease: "none"
+			})
 			.to(step, {
 				ease: "none", y: -50 + y2
 			});
 	}
+	function setAnimationsHands(step, y1 = 1, y2 = 1, start = '10%', end = "80%") {
+		var up = gsap.timeline({
+			scrollTrigger: {
+				scroller,
+				trigger: '.sFolkVote',
+				start: `${start} bottom`,
+				end: "bottom bottom",
+				scrub: 1,
+				pinSpacing: false
+			}
+		})
+		up
+			.from(step, {
+				ease: "none", y: y1
+			})
+			// .to(step, {
+			// 	ease: "none" 	})
+			.to(step, {
+				ease: "none", y: y2
+			});
+	}
 	setAnimationsFolkVote('.sFolkVote h2')
-	setAnimationsFolkVote('.sFolkVote .before',  150, 50) 
-	setAnimationsFolkVote('.el--9 div',   -50, 50, )
-	setAnimationsFolkVote('.el--10 div',   10, 10, )
-	setAnimationsFolkVote('.el--11 div',   20, 150, )
-	setAnimationsFolkVote('.sFolkVote__row-date',   50, 100, )
-	setAnimationsFolkVote('.hands-block__item--3',  -300, -100, '50%', `86%`)
-	setAnimationsFolkVote('.hands-block__item--2', -150, -150, '55%', `86%`)
-	setAnimationsFolkVote('.hands-block__item--1', 50, -200, '60%', `86%`)
+	setAnimationsFolkVote('.sFolkVote .before', 150, 50)
+	setAnimationsFolkVote('.el--9 div', -50, 50,)
+	setAnimationsFolkVote('.el--10 div', 10, 10,)
+	setAnimationsFolkVote('.el--11 div', 20, 150,)
+	setAnimationsFolkVote('.sFolkVote__row-date', 50, 100,)
+	setAnimationsHands('.hands-block__item--3', -300, -100, '50%', `86%`)
+	setAnimationsHands('.hands-block__item--2', -200, -200, '50%', `86%`)
+	setAnimationsHands('.hands-block__item--1', -100, -300, '50%', `86%`)
 
 
 	var scene = document.getElementById('headElems');
-	if(scene){
+	if (scene) {
 
 		var parallaxInstance = new Parallax(scene, {
 			scalarX: 20,
 			scalarY: 20,
 			precision: 50,
 			calibrationDelay: 1500,
-		} );
-		parallaxInstance.friction(0.2, 0.2); 
+		});
+		parallaxInstance.friction(0.2, 0.2);
 	}
-	
+
 	var scene0 = document.getElementById('headElemsBack');
-	if(scene0){
+	if (scene0) {
 
 		var parallaxInstance0 = new Parallax(scene0, {
 			scalarX: 20,
 			scalarY: 20,
 			precision: 50,
 			calibrationDelay: 1500,
-		} );
+		});
 		parallaxInstance0.friction(0.2, 0.2);
 	}
-	
+
 	var scene2 = document.getElementById('scene2');
 
-	if ( scene2){
+	if (scene2) {
 
 		var parallaxInstance2 = new Parallax(scene2, {
 			scalarX: 20,
@@ -273,14 +301,14 @@ function eventHandler() {
 			precision: 50,
 			selector: '.el',
 			// pointerEvents: 'all'
-		} );
-		
-		
+		});
+
+
 		parallaxInstance2.friction(0.2, 0.2);
-		
+
 	}
 	var scene3 = document.getElementById('scene3');
-	if(scene3) {
+	if (scene3) {
 
 		var parallaxInstance3 = new Parallax(scene3, {
 			scalarX: 20,
@@ -288,14 +316,14 @@ function eventHandler() {
 			precision: 50,
 			selector: '.el',
 			// pointerEvents: 'all'
-		} );	
+		});
 		parallaxInstance3.friction(0.2, 0.2);
 	}
 
-	
+
 
 	var scene4 = document.getElementById('scene4');
-	if(scene4) {
+	if (scene4) {
 
 		var parallaxInstance4 = new Parallax(scene4, {
 			scalarX: 30,
@@ -303,14 +331,33 @@ function eventHandler() {
 			precision: 10,
 			selector: '.el',
 			// pointerEvents: 'all'
-		} );	
+		});
 		parallaxInstance4.friction(0.4, 0.4);
 	}
 
-	$(".select-wrap").each(function(){
+	$(".select-wrap").each(function () {
 		let self = $(this);
 		self.find(".select-js").select2({
 			dropdownParent: self
+		});
+	})
+	var scene404 = document.getElementById('scene404');
+	if (scene404) {
+
+		var parallaxInstance4 = new Parallax(scene404, {
+			scalarX: 30,
+			scalarY: 30,
+			precision: 10,
+			selector: '.el',
+			// pointerEvents: 'all'
+		});
+		parallaxInstance4.friction(0.4, 0.4);
+	}
+
+	$(".select-wrap").each(function () {
+		let self = $(this);
+		self.find(".select-js").select2({
+			dropdownParent: self,
 		});
 	})
 

@@ -194,14 +194,22 @@ class JSCCommon {
 
 	static makeDDGroup() {
 		$('.dd-head-js').on('click', function () {
-			let clickedHead = this;
-			$(this).toggleClass('active').parent().toggleClass('active');
-			$(this)
+			let self = $(this);
+			self.toggleClass('active').parent().toggleClass('active');
+			self
 				.next()
 				.slideToggle(function () {
 					$(this).toggleClass('active');
 				});
-		}); 
+				if(!self.parent().siblings().hasClass('active')) return;
+				self.parent()
+					.siblings().removeClass('active')
+					.find('.dd-head-js').removeClass('active')
+					.next()
+					.slideUp(function () {
+						$(this).removeClass('active');
+					});
+		});
 	}
 
 	static imgToSVG() {
