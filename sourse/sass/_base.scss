@@ -678,6 +678,8 @@ p {
 	// }
 	// font-size: 12px;
 }
+
+.btn-lg,
 .form-control,
 .btn{
 	@include media-breakpoint-up(lg) {
@@ -1194,4 +1196,14 @@ p {
 	}
 	.toggle-menu-mobile{
 	}
+}
+
+.btn-primary{
+	--bs-btn-disabled-color: #7C7C7C;
+	--bs-btn-disabled-bg: #3D3D3D;
+	--bs-btn-disabled-border-color: #3D3D3D;
+}
+
+.form-check-input[type=checkbox] {
+	background-size: 70%;
 }

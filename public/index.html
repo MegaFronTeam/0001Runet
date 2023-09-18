@@ -881,7 +881,7 @@ let  pixelRatio = window.devicePixelRatio;
 let  width = canvas.clientWidth * pixelRatio;
 let  height = canvas.clientHeight * pixelRatio;
 renderer.setSize(width, height);
-// renderer.setPixelRatio(window.devicePixelRatio * x);
+
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = .094;
 renderer.setClearColor(0x000000, 0); 
@@ -920,7 +920,9 @@ window.addEventListener("resize", function () {
 	height = canvas.clientHeight * pixelRatio;
 	camera.aspect = window.innerWidth / (window.innerWidth );
 	camera.updateProjectionMatrix();
+
 	renderer.setSize(width, height);
+	renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 	// renderer.setSize(window.innerWidth, window.innerWidth  );
 }); 
 

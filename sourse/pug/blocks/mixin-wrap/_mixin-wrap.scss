@@ -8,8 +8,10 @@
 		vertical-align: middle;
 		@include mt;
 		display: grid;
+		color: #fff;
 		place-items: center;
 		&:hover{
+			color:  $primary;
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}

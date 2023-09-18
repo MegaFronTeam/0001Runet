@@ -1,20 +1,35 @@
 .form-wrap {
 	&__input-wrap {
 		// @extend .form-group;
-		margin-bottom: rem(15);
+		margin-bottom: rem(36);
 	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
 	}
-	&__btn {
-		cursor: pointer;
-		margin-bottom: rem(15);
+	&__input-title{
+		color: $primary;
+		font-weight: bold;
+		letter-spacing: -0.03em;
+		display: block;
+		margin-bottom: rem(8);
+		
+	}
+	.btn { 
+		margin-bottom: rem(36);
 	}
 	label {
 		width: 100%;
 		display: block;
+	}
+	&__footer{
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		padding-top: rem(36);
+	}
+
+	textarea{
+		min-height: 112px;
 	}
 }
 

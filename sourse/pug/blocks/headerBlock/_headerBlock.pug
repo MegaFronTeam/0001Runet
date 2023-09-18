@@ -24,6 +24,7 @@ mixin headerBlock()
 			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
 			div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+				//- #container3D.premia-block
 				#container3D.premia-block.d-none.d-md-block
 				.d-md-none
 					img(src="img/premia.png", alt="").res-i.main-img
@@ -64,6 +65,7 @@ mixin headerBlock02(title)
 					img(src="img/el-2.png", alt="")
 				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
+			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 			.alems.d-none.d-sm-block#headElems 
 				
 				+b.el--4.--1-page( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
@@ -74,12 +76,11 @@ mixin headerBlock02(title)
 					img(src="img/el-6.png", alt="")
 				+b.el--7-1( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-17.png", alt="")
-			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 					//- img(src="img/premia.png", alt="").res-i
 					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
-			div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
-				+b.premia-block--page
-					img(src="img/head-img-2.png", alt="").res-i
+				div( data-depth="0.05")
+					+b.premia-block--page(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+						img(src="img/head-img-2.png", alt="").res-i
 			+e.head
 				+e.title
 					span.h1.animate-text-wrap
@@ -111,6 +112,7 @@ mixin headerBlock03(title)
 					img(src="img/el-2.png", alt="")
 				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
 					img(src="img/el-3.png", alt="")
+			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 			.alems.d-none.d-sm-block#headElems 
 			
 				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
@@ -121,12 +123,11 @@ mixin headerBlock03(title)
 					img(src="img/el-19.png", alt="")
 				+b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
 					img(src="img/el-20.png", alt="")
-			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 					//- img(src="img/premia.png", alt="").res-i
 					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
-			div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
-				+b.premia-block--page3
-					img(src="img/head-img-3.png", alt="").res-i
+				div( data-depth="0.05")
+					+b.premia-block--page3(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+						img(src="img/head-img-3.png", alt="").res-i
 			+e.head
 				+e.title
 					span.h1.animate-text-wrap
@@ -143,6 +144,182 @@ mixin headerBlock03(title)
 			//- 			.col-auto.ttu.order-sm-first.d-none.d-md-block
 			//- 				+e.date.text-lg-end В этом разделе представлен #[strong экспертный состав Премии 2023]
 			//- 	.col.order-lg-first.my-0
+
+	// end headerBlock
+
+
+
+mixin headerBlock08(title)
+	// start headerBlock
+	+b.headerBlock--form.section#headerBlock&attributes(attributes)
+		.container-xl-fluid.container
+			.alems.alems--back.d-none.d-sm-block#headElemsBack
+				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+					img(src="img/el-1.png", alt="")
+				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+					img(src="img/el-2.png", alt="")
+				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+					img(src="img/el-3.png", alt="")
+				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+			.alems.d-none.d-sm-block#headElems 
+			
+				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+					img(src="img/el-18.png", alt="")
+				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-5.png", alt="")
+				+b.el--21( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-21.png", alt="")
+				+b.el--15( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-15.png", alt="") 
+				//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-20.png", alt="") 
+				+b.el--22( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-22.png", alt="") 
+			+b.form-wrap
+				h1 Авторизация
+				+input('Введите RUNET-ID','text','RUNET-ID')(autocomplete="off")
+				+input('Введите пароль','password','Пароль')(autocomplete="off")
+				+e.input-wrap.row
+					.col
+						+in-c('checkbox','Запомнить меня')
+					.col-auto
+						a(href="#").strong Восстановить пароль
+				button.btn.btn-primary.w-100.btn-lg(type="submit" ) Войти
+				+e.input-wrap.row
+					.col
+						| Вы можете авторизоваться при помощи учетных&nbsp;записей социальных сетей:
+					.col-auto
+						+soc
+				+e.footer Если у&nbsp;Вас нет аккаунта RUNET-ID, Вы&nbsp;можете его #[a(href="#").strong  зарегистрировать]
+
+	// end headerBlock
+
+
+
+
+mixin headerBlock09(title)
+	// start headerBlock
+	+b.headerBlock--form.--form-invoicing.section#headerBlock&attributes(attributes)
+		.container-xl-fluid.container
+			.alems.alems--back.d-none.d-sm-block#headElemsBack
+				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+					img(src="img/el-1.png", alt="")
+				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+					img(src="img/el-2.png", alt="")
+				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+					img(src="img/el-3.png", alt="")
+				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+			.alems.d-none.d-sm-block#headElems
+				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+					img(src="img/el-18.png", alt="")
+				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-5.png", alt="")
+				+b.el--21( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-21.png", alt="")
+				+b.el--15( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-15.png", alt="")
+				//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-20.png", alt="")
+				+b.el--22( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-22.png", alt="")
+			+b.form-wrap
+				.row 
+					.col
+						h1 Оплата
+					.col-auto
+						a(href="#")
+							+icon("chevron-left")
+							| Оплата
+				+e.block
+					table
+						thead
+							tr
+								th Название
+								th Цена
+						tbody
+							tr
+								td Участие в номинации «Государство и Общество»
+								td 15 000 ₽
+							tr
+								td Участие в номинации «Образование и кадры»
+								td 15 000 ₽
+							tr
+								td Участие в номинации «Народов много – Родина одна»
+								td 15 000 ₽
+					+e.total 
+						| Итого:
+						strong 45 000 ₽
+				+e.input-wrap
+					+in-c('checkbox')
+						+e.text Я согласен с условиями #[a(href="#").strong договора оферты] и готов перейти к оплате
+				.row.gy-0.align-items-start
+					.col-md-6
+							button.btn.btn-dark.w-100.btn-lg(type="submit" ) Оплатить картой 
+								small Для физических лиц 
+							+e.payments.text-center
+								img(src="img/pay-1.svg", alt="")
+								img(src="img/pay-2.svg", alt="")
+								img(src="img/pay-3.svg", alt="")
+					.col-md-6
+							button.btn.btn-dark.w-100.btn-lg(type="button" ) Выставить счёт 
+								small Для юридических лиц
+
+	// end headerBlock
+
+
+
+mixin headerBlock10(title)
+	// start headerBlock
+	+b.headerBlock--form.--form-invoicing.section#headerBlock&attributes(attributes)
+		.container-xl-fluid.container
+			.alems.alems--back.d-none.d-sm-block#headElemsBack
+				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+					img(src="img/el-1.png", alt="")
+				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+					img(src="img/el-2.png", alt="")
+				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+					img(src="img/el-3.png", alt="")
+				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+			.alems.d-none.d-sm-block#headElems
+				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+					img(src="img/el-18.png", alt="")
+				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-5.png", alt="")
+				+b.el--21( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-21.png", alt="")
+				+b.el--15( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-15.png", alt="")
+				//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-20.png", alt="")
+				+b.el--22( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+					img(src="img/el-22.png", alt="")
+			+b.form-wrap
+				h1 Выставление счета
+				+e.input-wrap
+					p Пожалуйста внимательно заполните реквизиты компании, которая будет оплачивать Ваше участие. Указанные Вами данные будут использованы в&nbsp;выставленном счете. Документы на&nbsp;оплату будут созданы автоматически, без проверки корректности реквизитов.
+				+e.input-wrap
+					+in-c('checkbox','Иностранная компания')
+				.row
+					.col-md-6
+						+input('10 или 12 цифр','text','ИНН ','number')
+					.col-md-6
+						+input('9 цифр','text','КПП ','number')
+				+input('Введите название','text','Название компании')
+				+input('Введите юридический адрес компании','textarea','Юридический адрес (с индексом')
+				+input('Введите почтовый адрес компании','textarea','Почтовый адрес (с индексом)')
+				+input('+7 (999) 999 - 99 - 99','tel','Телефон')
+				+e.input-wrap
+					+e.input-title Как вы хотите получить закрывающие документы по счету?
+					.select-wrap
+						select.form-select.select-js
+							option(value="") На бумаге, адрес указан в счете 1
+							option(value="") На бумаге, адрес указан в счете 2
+							option(value="") На бумаге, адрес указан в счете 3
+				.row.gy-0
+					.col-md-6
+							button.btn.btn-dark.w-100.btn-lg(type="submit" ) выставить счет
+					.col-md-6.order-md-first
+							button.btn.btn-dark.w-100.btn-lg(type="button" ) отменить
 
 	// end headerBlock
 
