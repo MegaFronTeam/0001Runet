@@ -520,6 +520,26 @@
 			left: 0 !important;
 			top: 0 !important; 
 		}
+		&--25-envoicing{
+			left: auto !important;
+			right: 0;
+			top: 0;
+			width: rem(700);
+			position: absolute !important;
+		}
+		&--22-envoicing{
+			top: auto !important;
+			bottom: 10%;
+			left: auto !important;
+			right: 0;
+		}
+		
+		&--26-envoicing{
+			top: auto !important;
+			bottom: 10%;
+			left: 0 !important;
+			// right: 0;
+		}
 
 	}
 }
