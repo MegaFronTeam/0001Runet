@@ -54,7 +54,7 @@
 	}
 
 	&__logo{
-		display: flex;
+		display: inline-flex;
 		align-items: flex-start;
 		line-height: 0.8;
 		@include rfs(54px);
