@@ -229,7 +229,7 @@ mixin headerBlock09(title)
 					.col-auto.align-self-end
 						+b.link-back(href="#")
 							+icon("chevron-left")
-							| Оплата
+							| Вернуться назад
 				+e.block
 					table
 						thead
@@ -253,6 +253,9 @@ mixin headerBlock09(title)
 					+in-c('checkbox')
 						+e.text Я согласен с условиями #[a(href="#").strong договора оферты] и готов перейти к оплате
 				.row.gy-0.align-items-start
+					.col-md-6.order-md-last
+							button.btn.btn-dark.w-100.btn-lg(type="button" ) Выставить счёт 
+								small Для юридических лиц
 					.col-md-6
 							button.btn.btn-dark.w-100.btn-lg(type="submit" ) Оплатить картой 
 								small Для физических лиц 
@@ -260,9 +263,6 @@ mixin headerBlock09(title)
 								img(src="img/pay-1.svg", alt="")
 								img(src="img/pay-2.svg", alt="")
 								img(src="img/pay-3.svg", alt="")
-					.col-md-6
-							button.btn.btn-dark.w-100.btn-lg(type="button" ) Выставить счёт 
-								small Для юридических лиц
 
 	// end headerBlock
 
