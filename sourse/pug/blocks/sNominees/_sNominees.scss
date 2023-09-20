@@ -1,5 +1,10 @@
 // start .sNominees
 .sNominees {
+	@include media-breakpoint-down(lg) {
+		.search-block{
+			width: 100%;
+		}
+	}
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};

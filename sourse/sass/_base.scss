@@ -876,6 +876,9 @@ p {
 	}
 
 	&--4-page3{
+		@include media-breakpoint-down(lg){
+			display: none !important;
+		}
 		@include media-breakpoint-up(lg){
 
 			bottom: 110%;
@@ -1002,7 +1005,7 @@ p {
 		// margin-top: rem(-150);
 		@include media-breakpoint-up(lg){
 			
-			left: 18% !important; 
+			// left: 18% !important; 
 			top: 100% !important;
 			width: rem(400);  
 		}
@@ -1010,7 +1013,15 @@ p {
 		left: 0 !important; 
 		top: 120% !important;
 	}
-
+	&--18-page3{
+		@include media-breakpoint-up(lg){
+			// display: none !important;
+			top: 200% !important;
+			left: 20% !important; 
+		}
+		left: 30% !important; 
+		top: -60% !important; 
+	}
 }
 
 

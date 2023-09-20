@@ -1,43 +1,46 @@
+mixin headerBlockPart()
+	.alems.alems--back.d-none.d-sm-block#headElemsBack
+		+b.el--1( data-depth=".2" data-scalar-x="14" data-scalar-y="20"): div(data-aos="fade-up"  data-aos-duration="2000")
+			img(src="img/el-1.png", alt="")
+		+b.el--2( data-depth="0.2"): div(data-aos="fade-up"   data-aos-duration="2000")
+			img(src="img/el-2.png", alt="")
+		+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
+			img(src="img/el-3.png", alt="")
+		
+	.alems.d-none.d-sm-block#headElems 
+		
+		+b.el--4( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			img(src="img/el-4.png", alt="")
+		+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-5.png", alt="")
+		+b.el--6( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-6.png", alt="")
+		+b.el--7( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-7.png", alt="")
+	.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+			//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
+	div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+		//- #container3D.premia-block
+		#container3D.premia-block.d-none.d-md-block
+		.d-md-none
+			img(src="img/premia.png", alt="").res-i.main-img
+	+e.title
+		+e.text.animate-text-wrap
+			.animate-text( data-aos="fade-up"  data-aos-delay="800")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
+		span.h1.animate-text-wrap
+			span.animate-text( data-aos="fade-up"  data-aos-delay="800")  Премия 
+		span.h1.animate-text-wrap
+			span.animate-text( data-aos="fade-up"  data-aos-delay="800")  РУНЕТА 
+		span.h1.animate-text-wrap
+			span.text-primary.animate-text-wrap
+				span.animate-text( data-aos="fade-up"  data-aos-delay="800")  2023
+				
 mixin headerBlock()
 
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back.d-none.d-sm-block#headElemsBack
-				+b.el--1( data-depth=".2" data-scalar-x="14" data-scalar-y="20"): div(data-aos="fade-up"  data-aos-duration="2000")
-					img(src="img/el-1.png", alt="")
-				+b.el--2( data-depth="0.2"): div(data-aos="fade-up"   data-aos-duration="2000")
-					img(src="img/el-2.png", alt="")
-				+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
-					img(src="img/el-3.png", alt="")
-				
-			.alems.d-none.d-sm-block#headElems 
-				
-				+b.el--4( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-4.png", alt="")
-				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-5.png", alt="")
-				+b.el--6( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-6.png", alt="")
-				+b.el--7( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-7.png", alt="")
-			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
-			div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
-				//- #container3D.premia-block
-				#container3D.premia-block.d-none.d-md-block
-				.d-md-none
-					img(src="img/premia.png", alt="").res-i.main-img
-			+e.title
-				+e.text.animate-text-wrap
-					.animate-text( data-aos="fade-up"  data-aos-delay="800")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
-				span.h1.animate-text-wrap
-					span.animate-text( data-aos="fade-up"  data-aos-delay="800")  Премия 
-				span.h1.animate-text-wrap
-					span.animate-text( data-aos="fade-up"  data-aos-delay="800")  РУНЕТА 
-				span.h1.animate-text-wrap
-					span.text-primary.animate-text-wrap
-						span.animate-text( data-aos="fade-up"  data-aos-delay="800")  2023
+			+headerBlockPart()
 			+e.footer.row
 				.col-lg-auto
 					+e.row.row( data-aos="fade-up" data-aos-delay="500") 
@@ -53,42 +56,43 @@ mixin headerBlock()
 	// end headerBlock
 
 	
-
+mixin headerBlock02Part()
+	.alems.alems--back.d-none.d-sm-block#headElemsBack
+		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+			img(src="img/el-1.png", alt="")
+		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+			img(src="img/el-2.png", alt="")
+		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+			img(src="img/el-3.png", alt="")
+	.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+	.alems#headElems 
+		
+		+b.el--4.--1-page( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			img(src="img/el-10-1.png", alt="")
+		+b.el--5-1( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-5.png", alt="")
+		+b.el--6.--6-page( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-6.png", alt="")
+		+b.el--7-1( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-17.png", alt="")
+			//- img(src="img/premia.png", alt="").res-i
+			//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
+		div( data-depth="0.05")
+			+b.premia-block--page(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+				img(src="img/head-img-2.png", alt="").res-i
+	+e.head
+		+e.title
+			span.h1.animate-text-wrap
+				span.animate-text( data-aos="fade-up"  data-aos-delay="800") Эксперты
+		.container
+			+e.text-page.d-none.d-lg-block
+				.animate-text(data-aos="fade-up" data-aos-delay="800")
+					p В&nbsp;этом разделе представлены номинанты Премии Рунета. Кликая по&nbsp;названиям кейсов, вы&nbsp;можете ознакомиться с&nbsp;проектами, представленными на&nbsp;конкурсе в&nbsp;2023 году
 mixin headerBlock02(title)
 	// start headerBlock
 	+b.headerBlock--page.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back.d-none.d-sm-block#headElemsBack
-				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-					img(src="img/el-1.png", alt="")
-				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-					img(src="img/el-2.png", alt="")
-				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-					img(src="img/el-3.png", alt="")
-			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems#headElems 
-				
-				+b.el--4.--1-page( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-10-1.png", alt="")
-				+b.el--5-1( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-5.png", alt="")
-				+b.el--6.--6-page( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-6.png", alt="")
-				+b.el--7-1( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-17.png", alt="")
-					//- img(src="img/premia.png", alt="").res-i
-					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
-				div( data-depth="0.05")
-					+b.premia-block--page(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
-						img(src="img/head-img-2.png", alt="").res-i
-			+e.head
-				+e.title
-					span.h1.animate-text-wrap
-						span.animate-text( data-aos="fade-up"  data-aos-delay="800")= title
-				.container
-					+e.text-page.d-none.d-lg-block
-						.animate-text(data-aos="fade-up" data-aos-delay="800")
-							p В&nbsp;этом разделе представлены номинанты Премии Рунета. Кликая по&nbsp;названиям кейсов, вы&nbsp;можете ознакомиться с&nbsp;проектами, представленными на&nbsp;конкурсе в&nbsp;2023 году
+			+headerBlock02Part()
 			+e.footer.row
 				.col-lg-auto
 					+e.row.row( data-aos="fade-up" data-aos-delay="500") 
@@ -101,41 +105,45 @@ mixin headerBlock02(title)
 	// end headerBlock
 
 
+mixin headerBlock03Part()
+	.alems.alems--back#headElemsBack
+		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+			img(src="img/el-1.png", alt="")
+		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+			img(src="img/el-2.png", alt="")
+		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+			img(src="img/el-3.png", alt="")
+	.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+	.alems#headElems 
+	
+		+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			img(src="img/el-18.png", alt="")
+		+b.el--18-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			img(src="img/el-18-3.png", alt="")
+		+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-5.png", alt="")
+		+b.el--6.--6-page3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-19.png", alt="")
+		+b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-20.png", alt="")
+			//- img(src="img/premia.png", alt="").res-i
+			//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
+		div( data-depth="0.05")
+			+b.premia-block--page3(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+				img(src="img/head-img-3.png", alt="").res-i
+	+e.head
+		+e.title
+			span.h1.animate-text-wrap
+				span.animate-text( data-aos="fade-up"  data-aos-delay="800") Номинанты
+		.container
+			+e.text-page.d-none.d-md-block
+				.animate-text(data-aos="fade-up" data-aos-delay="800")
+					p В&nbsp;этом разделе представлены номинанты Премии Рунета. Кликая по&nbsp;названиям кейсов, вы&nbsp;можете ознакомиться с&nbsp;проектами, представленными на&nbsp;конкурсе в&nbsp;2023 году
 mixin headerBlock03(title)
 	// start headerBlock
 	+b.headerBlock--page.--page-nominees.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back#headElemsBack
-				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-					img(src="img/el-1.png", alt="")
-				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-					img(src="img/el-2.png", alt="")
-				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-					img(src="img/el-3.png", alt="")
-			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems#headElems 
-			
-				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-18-3.png", alt="")
-				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-5.png", alt="")
-				+b.el--6.--6-page3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-19.png", alt="")
-				+b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-20.png", alt="")
-					//- img(src="img/premia.png", alt="").res-i
-					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
-				div( data-depth="0.05")
-					+b.premia-block--page3(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
-						img(src="img/head-img-3.png", alt="").res-i
-			+e.head
-				+e.title
-					span.h1.animate-text-wrap
-						span.animate-text( data-aos="fade-up"  data-aos-delay="800")= title
-				.container
-					+e.text-page.d-none.d-md-block
-						.animate-text(data-aos="fade-up" data-aos-delay="800")
-							p В&nbsp;этом разделе представлены номинанты Премии Рунета. Кликая по&nbsp;названиям кейсов, вы&nbsp;можете ознакомиться с&nbsp;проектами, представленными на&nbsp;конкурсе в&nbsp;2023 году
+			+headerBlock03Part()
 			//- +e.footer.row
 			//- 	.col-lg-auto
 			//- 		+e.row.row( data-aos="fade-up" data-aos-delay="500") 
@@ -148,33 +156,34 @@ mixin headerBlock03(title)
 	// end headerBlock
 
 
-
+mixin headerBlock08Part()
+	.alems.alems--back#headElemsBack
+		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+			img(src="img/el-1.png", alt="")
+		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+			img(src="img/el-2.png", alt="")
+		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+			img(src="img/el-3.png", alt="")
+		.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+	.alems#headElems 
+	
+		+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			img(src="img/el-18.png", alt="")
+		+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-5.png", alt="")
+		+b.el--21( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-21.png", alt="")
+		+b.el--15( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-15.png", alt="") 
+		//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-20.png", alt="") 
+		+b.el--22( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-22.png", alt="") 
 mixin headerBlock08(title)
 	// start headerBlock
 	+b.headerBlock--form.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back#headElemsBack
-				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-					img(src="img/el-1.png", alt="")
-				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-					img(src="img/el-2.png", alt="")
-				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-					img(src="img/el-3.png", alt="")
-				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems#headElems 
-			
-				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-18.png", alt="")
-				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-5.png", alt="")
-				+b.el--21( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-21.png", alt="")
-				+b.el--15( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-15.png", alt="") 
-				//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-20.png", alt="") 
-				+b.el--22( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-22.png", alt="") 
+			+headerBlock08Part()
 			+b.form-wrap
 				h1 Авторизация
 				+input('Введите RUNET-ID','text','RUNET-ID')(autocomplete="off")
@@ -197,31 +206,33 @@ mixin headerBlock08(title)
 
 
 
+mixin headerBlock09Part(title)
+	.alems.alems--back#headElemsBack
+		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+			img(src="img/el-1.png", alt="")
+		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+			img(src="img/el-2.png", alt="")
+		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+			img(src="img/el-3.png", alt="")
+		.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+	.alems#headElems
+		+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			img(src="img/el-18.png", alt="")
+		+b.el--18( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-18.png", alt="")
+		+b.el--23( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-23.png", alt="")
+		+b.el--24( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-24.png", alt="")
+		//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-20.png", alt="")
+		+b.el--25( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-25.png", alt="")
 mixin headerBlock09(title)
 	// start headerBlock
 	+b.headerBlock--form.--form-invoicing.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back#headElemsBack
-				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-					img(src="img/el-1.png", alt="")
-				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-					img(src="img/el-2.png", alt="")
-				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-					img(src="img/el-3.png", alt="")
-				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems#headElems
-				+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-18.png", alt="")
-				+b.el--18( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-18.png", alt="")
-				+b.el--23( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-23.png", alt="")
-				+b.el--24( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-24.png", alt="")
-				//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-20.png", alt="")
-				+b.el--25( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-25.png", alt="")
+			+headerBlock09Part(title)
 			+b.form-wrap
 				.row 
 					.col
@@ -267,33 +278,35 @@ mixin headerBlock09(title)
 	// end headerBlock
 
 
+mixin headerBlock10Part(title)
+	.alems.alems--back.d-none.d-sm-block#headElemsBack
+		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+			img(src="img/el-1.png", alt="")
+		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+			img(src="img/el-2.png", alt="")
+		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+			img(src="img/el-3.png", alt="")
+		.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+	.alems.d-none.d-sm-block#headElems
+		+b.el--25-envoicing( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			img(src="img/el-25.png", alt="")
+		+b.el--22-envoicing( data-depth="0.02"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-22.png", alt="")
+		
+		+b.el--26-envoicing( data-depth="0.5"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-26.png", alt="")
+		+b.el--18-envoicing( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-18.png", alt="")
+		//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-20.png", alt="")
+		//- +b.el--22-envoicing( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			img(src="img/el-22.png", alt="")
 
 mixin headerBlock10(title)
 	// start headerBlock
 	+b.headerBlock--form.--form-invoicing.section#headerBlock&attributes(attributes)
 		.container-xl-fluid.container
-			.alems.alems--back.d-none.d-sm-block#headElemsBack
-				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-					img(src="img/el-1.png", alt="")
-				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-					img(src="img/el-2.png", alt="")
-				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-					img(src="img/el-3.png", alt="")
-				.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
-			.alems.d-none.d-sm-block#headElems
-				+b.el--25-envoicing( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					img(src="img/el-25.png", alt="")
-				+b.el--22-envoicing( data-depth="0.02"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-22.png", alt="")
-				
-				+b.el--26-envoicing( data-depth="0.5"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-26.png", alt="")
-				+b.el--18-envoicing( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-18.png", alt="")
-				//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-20.png", alt="")
-				//- +b.el--22-envoicing( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					img(src="img/el-22.png", alt="")
+			+headerBlock10Part(title)
 			+b.form-wrap
 				h1 Выставление счета
 				+e.input-wrap
@@ -323,8 +336,6 @@ mixin headerBlock10(title)
 							button.btn.btn-dark.w-100.btn-lg(type="button" ) отменить
 
 	// end headerBlock
-
-
 
 
 mixin headerBlock404(title)
