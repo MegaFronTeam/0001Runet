@@ -1,14 +1,14 @@
-mixin sFolkVote(data)
+mixin sFolkVote(pa)
 	// start sFolkVote
 	+b.SECTION.sFolkVote.section#sFolkVote&attributes(attributes)
 
 		#scene3
 			+b.el--9.layer( data-depth="0.3"): div()
-				img(src="img/el-9.png", alt="").res-i
+				+img("img/el-9.png",'',pa).res-i
 			+b.el--10.layer( data-depth="0.2"): div()
-				img(src="img/el-10.png", alt="").res-i
+				+img("img/el-10.png",'',pa).res-i
 			+b.el--11.layer( data-depth="0.5"): div()
-				img(src="img/el-11.png", alt="").res-i
+				+img("img/el-11.png",'',pa).res-i
 			.before
 		.container-xl-fluid.container
 			.container
@@ -16,11 +16,11 @@ mixin sFolkVote(data)
 					.col-lg-6.order-lg-last
 						+b.hands-block
 							+e.item--1
-								img(src="img/hand-1.png", alt="") 
+								+img("img/hand-1.png", '',pa)
 							+e.item--2
-								img(src="img/hand-2.png", alt="") 
+								+img("img/hand-2.png", '',pa)
 							+e.item--3
-								img(src="img/hand-2.png", alt="") 
+								+img("img/hand-2.png", '',pa)
 					.col
 						+b.section-title
 							h2 Народное голосование

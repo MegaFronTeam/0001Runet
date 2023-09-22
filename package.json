@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "gulp": "gulp",
+    "build": "gulp build",
     "img": "gulp img"
   },
   "author": "Khalunin Pavel",
@@ -47,6 +48,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "gsap": "^3.12.2",
+    "gulp-useref": "^5.0.0",
     "inputmask": "^5.0.8",
     "jquery": "^3.7.0",
     "parallax-js": "^3.1.0",

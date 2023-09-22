@@ -1,5 +1,6 @@
 'use strict';
 let  publicPath = 'public',
+    dist = 'dist',
     sourse = 'sourse',
     destSprite = '../_sprite.scss',
     destSpriteC = '../_spriteC.scss'
@@ -33,7 +34,7 @@ import plumber  from 'gulp-plumber'
 import sharpResponsive from "gulp-sharp-responsive"; 
 import data from "gulp-data"; 
 import  fs from 'fs';
-
+import  useref from 'gulp-useref';
 const dataFromFile = JSON.parse(fs.readFileSync(sourse + '/pug/content.json'))
 class gs {
     static browsersync() {
@@ -343,6 +344,18 @@ class gs {
         watch([sourse + '/js/*.js'], { usePolling: true }, gs.common);
         // watch(sourse + '/img', { usePolling: true }, gs.img);
     }
+
+
+    static cleanPublic() {
+        return deleteAsync([dist])
+    }
+    static copyPublic() {
+        return src(`${publicPath}/**/*`)
+            .pipe(useref({ searchPath: '.html' }))
+            .pipe(plumber())
+            .pipe(dest(`${dist}/`))
+        
+    }
 }
 export let imgAll = series(gs.cleanimg, gs.img) 
 export let libs = series(gs.cleanlibs, gs.copyLibs)
@@ -351,6 +364,7 @@ export let sprite2 = series(gs.svgC, gs.svgCopyC)
 export let styles = parallel(gs.bootstrapstyles, gs.styles)
 
 
+export let build = series( gs.cleanPublic, gs.copyPublic);
 
 export default series(gs.common, libs, styles, 
     // imgAll,
