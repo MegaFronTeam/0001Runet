@@ -509,7 +509,7 @@
 		vertical-align: top;
 		border-bottom: 1px solid var(--white-002, rgba(255, 255, 255, 0.08));
 		// line-height: calc(22 / 14);
-		&:nth-child(2){
+		&:last-child{
 			white-space: nowrap;
 		}
 	}
@@ -522,6 +522,10 @@
 		font-size: rem(18);
 		padding-top: rem(24);
 		padding-bottom: rem(24);
+		padding-right: 10px;
+		&:last-child{
+			padding-right: 0;
+		}
 	}
 }
 .headerBlock--form-invoicing{
