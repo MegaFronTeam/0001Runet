@@ -342,7 +342,7 @@ class gs {
         watch(sourse + '/sass/*.svg', { usePolling: true }, gs.svgCopyC);
 
         watch([sourse + '/js/*.js'], { usePolling: true }, gs.common);
-        // watch(sourse + '/img', { usePolling: true }, gs.img);
+        watch(sourse + '/img', { usePolling: true }, gs.img);
     }
 
 
@@ -367,5 +367,5 @@ export let styles = parallel(gs.bootstrapstyles, gs.styles)
 export let build = series( gs.cleanPublic, gs.copyPublic);
 
 export default series(gs.common, libs, styles, 
-    // imgAll,
+    imgAll,
     parallel(sprite, sprite2), gs.pugFiles, parallel(gs.browsersync, gs.startwatch))

@@ -1,29 +1,29 @@
 mixin headerBlockPart(pa)
 	.alems.alems--back.d-none.d-sm-block#headElemsBack
 		+b.el--1( data-depth=".2" data-scalar-x="14" data-scalar-y="20"): div(data-aos="fade-up"  data-aos-duration="2000")
-			+img("img/el-1.png",'',pa)
+			+pic("el-1.png",'',pa)
 		+b.el--2( data-depth="0.2"): div(data-aos="fade-up"   data-aos-duration="2000")
-			+img("img/el-2.png",'',pa)
+			+pic("el-2.png",'',pa)
 		+b.el--3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-duration="2000")
-			+img("img/el-3.png",'',pa)
+			+pic("el-3.png",'',pa)
 		
 	.alems.d-none.d-sm-block#headElems 
 		
 		+b.el--4( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-			+img("img/el-4.png",'',pa)
+			+pic("el-4.png",'',pa)
 		+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-5.png",'',pa)
+			+pic("el-5.png",'',pa)
 		+b.el--6( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-6.png",'',pa)
+			+pic("el-6.png",'',pa)
 		+b.el--7( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-7.png",'',pa)
+			+pic("el-7.png",'',pa)
 	.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 			//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
 	div(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
 		//- #container3D.premia-block
 		#container3D.premia-block.d-none.d-md-block
 		.d-md-none
-			+img("img/premia.png",'',pa).res-i.main-img
+			+pic("premia.png",'',pa).res-i.main-img
 	+e.title
 		+e.text.animate-text-wrap
 			.animate-text( data-aos="fade-up"  data-aos-delay="800")  НАЦИОНАЛЬНАЯ ПРЕМИЯ  ЗА&nbsp;ВКЛАД В&nbsp;РАЗВИТИЕ РОССИЙСКОГО СЕГМЕНТА СЕТИ ИНТЕРНЕТ
@@ -50,8 +50,8 @@ mixin headerBlock()
 							+e.date.text-sm-end приём заявок
 								.strong до 28 НОЯБРЯ
 				.col.order-lg-first( data-aos="fade-up" data-aos-delay="500" data-aos-offset="50") 
-					+img("img/head-logo-1.png",'',pa).res-i
-					+img("img/head-logo-2.png",'',pa).res-i
+					+pic("head-logo-1.png",'',pa).res-i
+					+pic("head-logo-2.png",'',pa).res-i
 
 	// end headerBlock
 
@@ -60,27 +60,27 @@ mixin headerBlock02Part(pa)
 	.alems.alems--back.d-none.d-sm-block#headElemsBack
 		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
 
-			+img("img/el-1.png",'',pa)
+			+pic("el-1.png",'',pa)
 		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-			+img("img/el-2.png",'',pa)
+			+pic("el-2.png",'',pa)
 		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-			+img("img/el-3.png",'',pa)
+			+pic("el-3.png",'',pa)
 	.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 	.alems#headElems 
 		
 		+b.el--4.--1-page( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-			+img("img/el-10-1.png",'',pa)
+			+pic("el-10-1.png",'',pa)
 		+b.el--5-1( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-5.png",'',pa)
+			+pic("el-5.png",'',pa)
 		+b.el--6.--6-page( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-6.png",'',pa)
+			+pic("el-6.png",'',pa)
 		+b.el--7-1( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-17.png",'',pa)
-			//- +img("img/premia.png",'',pa).res-i
+			+pic("el-17.png",'',pa)
+			//- +pic("premia.png",'',pa).res-i
 			//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
 		div( data-depth="0.05")
 			+b.premia-block--page(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
-				+img("img/head-img-2.png",'',pa).res-i
+				+pic("head-img-2.png",'',pa).res-i
 	+e.head
 		+e.title
 			span.h1.animate-text-wrap
@@ -109,29 +109,29 @@ mixin headerBlock02(title)
 mixin headerBlock03Part(pa)
 	.alems.alems--back#headElemsBack
 		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-			+img("img/el-1.png",'',pa)
+			+pic("el-1.png",'',pa)
 		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-			+img("img/el-2.png",'',pa)
+			+pic("el-2.png",'',pa)
 		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-			+img("img/el-3.png",'',pa)
+			+pic("el-3.png",'',pa)
 	.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 	.alems#headElems 
 	
 		+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-			+img("img/el-18.png",'',pa)
+			+pic("el-18.png",'',pa)
 		+b.el--18-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-			+img("img/el-18-3.png",'',pa)
+			+pic("el-18-3.png",'',pa)
 		+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-5.png",'',pa)
+			+pic("el-5.png",'',pa)
 		+b.el--6.--6-page3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-19.png",'',pa)
+			+pic("el-19.png",'',pa)
 		+b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-20.png",'',pa)
-			//- +img("img/premia.png",'',pa).res-i
+			+pic("el-20.png",'',pa)
+			//- +pic("premia.png",'',pa).res-i
 			//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
 		div( data-depth="0.05")
 			+b.premia-block--page3(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
-				+img("img/head-img-3.png",'',pa).res-i
+				+pic("head-img-3.png",'',pa).res-i
 	+e.head
 		+e.title
 			span.h1.animate-text-wrap
@@ -160,26 +160,26 @@ mixin headerBlock03(title)
 mixin headerBlock08Part(pa)
 	.alems.alems--back#headElemsBack
 		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-			+img("img/el-1.png",'',pa)
+			+pic("el-1.png",'',pa)
 		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-			+img("img/el-2.png",'',pa)
+			+pic("el-2.png",'',pa)
 		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-			+img("img/el-3.png",'',pa)
+			+pic("el-3.png",'',pa)
 		.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 	.alems#headElems 
 	
 		+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-			+img("img/el-18.png",'',pa)
+			+pic("el-18.png",'',pa)
 		+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-5.png",'',pa)
+			+pic("el-5.png",'',pa)
 		+b.el--21( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-21.png",'',pa)
+			+pic("el-21.png",'',pa)
 		+b.el--15( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-15.png",'',pa) 
+			+pic("el-15.png",'',pa) 
 		//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-20.png",'',pa) 
+			+pic("el-20.png",'',pa) 
 		+b.el--22( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-22.png",'',pa) 
+			+pic("el-22.png",'',pa) 
 mixin headerBlock08(title)
 	// start headerBlock
 	+b.headerBlock--form.section#headerBlock&attributes(attributes)
@@ -210,25 +210,25 @@ mixin headerBlock08(title)
 mixin headerBlock09Part(pa)
 	.alems.alems--back#headElemsBack
 		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-			+img("img/el-1.png",'',pa)
+			+pic("el-1.png",'',pa)
 		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-			+img("img/el-2.png",'',pa)
+			+pic("el-2.png",'',pa)
 		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-			+img("img/el-3.png",'',pa)
+			+pic("el-3.png",'',pa)
 		.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 	.alems#headElems
 		+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-			+img("img/el-18.png",'',pa)
+			+pic("el-18.png",'',pa)
 		+b.el--18( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-18.png",'',pa)
+			+pic("el-18.png",'',pa)
 		+b.el--23( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-23.png",'',pa)
+			+pic("el-23.png",'',pa)
 		+b.el--24( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-24.png",'',pa)
+			+pic("el-24.png",'',pa)
 		//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-20.png",'',pa)
+			+pic("el-20.png",'',pa)
 		+b.el--25( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-25.png",'',pa)
+			+pic("el-25.png",'',pa)
 mixin headerBlock09(title)
 	// start headerBlock
 	+b.headerBlock--form.--form-invoicing.section#headerBlock&attributes(attributes)
@@ -289,26 +289,26 @@ mixin headerBlock09(title)
 mixin headerBlock10Part(pa)
 	.alems.alems--back.d-none.d-sm-block#headElemsBack
 		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-			+img("img/el-1.png",'',pa)
+			+pic("el-1.png",'',pa)
 		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-			+img("img/el-2.png",'',pa)
+			+pic("el-2.png",'',pa)
 		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-			+img("img/el-3.png",'',pa)
+			+pic("el-3.png",'',pa)
 		.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 	.alems.d-none.d-sm-block#headElems
 		+b.el--25-envoicing( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-			+img("img/el-25.png",'',pa)
+			+pic("el-25.png",'',pa)
 		+b.el--22-envoicing( data-depth="0.02"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-22.png",'',pa)
+			+pic("el-22.png",'',pa)
 		
 		+b.el--26-envoicing( data-depth="0.5"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-26.png",'',pa)
+			+pic("el-26.png",'',pa)
 		+b.el--18-envoicing( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-18.png",'',pa)
+			+pic("el-18.png",'',pa)
 		//- +b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-20.png",'',pa)
+			+pic("el-20.png",'',pa)
 		//- +b.el--22-envoicing( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-			+img("img/el-22.png",'',pa)
+			+pic("el-22.png",'',pa)
 
 mixin headerBlock10(title)
 	// start headerBlock
@@ -352,29 +352,29 @@ mixin headerBlock404(pa)
 		.container-xl-fluid.container
 			.alems.alems--back#headElemsBack
 				+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
-					+img("img/el-1.png",'',pa)
+					+pic("el-1.png",'',pa)
 				+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
-					+img("img/el-2.png",'',pa)
+					+pic("el-2.png",'',pa)
 				+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
-					+img("img/el-3.png",'',pa)
+					+pic("el-3.png",'',pa)
 			.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
 			.alems#headElems 
 			
 				+b.el--4-p404( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
-					+img("img/el-18-3.png",'',pa)
+					+pic("el-18-3.png",'',pa)
 				+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					+img("img/el-5.png",'',pa)
+					+pic("el-5.png",'',pa)
 				+b.el--6-404( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					+img("img/el-19.png",'',pa)
+					+pic("el-19.png",'',pa)
 				+b.el--18-p404( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
-					+img("img/el-18.png",'',pa)
-					//- +img("img/premia.png",'',pa).res-i
+					+pic("el-18.png",'',pa)
+					//- +pic("premia.png",'',pa).res-i
 					//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
 			+b.center-404(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
 				+e.title.mono#scene404
 					span 4
 					.img-wrap( data-depth="0.05").el
-							+img("img/list.png",'',pa)
+							+pic("list.png",'',pa)
 					span 4
 				+e.text.h6 Страница не&nbsp;существует или недоступна  в&nbsp;данный&nbsp;момент
 				+e.btn.btn.btn-dark(href="/")  вернуться на главную

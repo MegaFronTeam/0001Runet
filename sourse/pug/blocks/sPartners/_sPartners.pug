@@ -3,16 +3,16 @@ mixin sPartners(pa)
 	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
 		#scene4 
 			+b.el--12.layer( data-depth="0.1"): div( data-aos="fade-up")
-				+img("img/el-12.png",'', pa).res-i
+				+pic("el-12.png",'', pa).res-i
 				
 			+b.el--13.layer( data-depth="0.2"): div( data-aos="fade-up")
-				+img("img/el-13.png",'', pa).res-i
+				+pic("el-13.png",'', pa).res-i
 			+b.el--14.layer( data-depth="0.1"): div( data-aos="fade-up")
-				+img("img/el-14.png",'', pa).res-i
+				+pic("el-14.png",'', pa).res-i
 			+b.el--15.layer( data-depth="0.13"): div( data-aos="fade-up")
-				+img("img/el-15.png",'', pa).res-i
+				+pic("el-15.png",'', pa).res-i
 			+b.el--16.layer( data-depth="0.15"): div( data-aos="fade-up")
-				+img("img/el-16.png",'', pa).res-i
+				+pic("el-16.png",'', pa).res-i
 
 		.container-xl-fluid.container
 			.section-inner.section-inner--transparent.p-0
@@ -23,7 +23,7 @@ mixin sPartners(pa)
 						mixin item(i,pa)
 							+e.col.col-md-3.col-6( data-aos="fade-up")&attributes(attributes)
 								+e.item
-									+img(`img/logo-${i}.png`,'',pa).res-i
+									+pic(`logo-${i}.png`,'',pa).res-i
 						+e.group 
 							+e.row.row
 								+e.group-title--col.h4.col-md-3.order-first( data-aos="fade-up")  Организатор

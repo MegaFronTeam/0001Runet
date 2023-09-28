@@ -47,13 +47,16 @@ function eventHandler() {
 	}
 	$(document).on('click', '.arrow-up--js', function (e) {
 		e.preventDefault();
+		if(bodyScrollBar ) {
 		bodyScrollBar.scrollTo(0, 0, 800);
+		}
 		$('html, body').animate({ scrollTop: 0 }, 0);
 	})
 	$(document).on('click', '.toggle-menu-mobile--js', function (e) {
 		e.preventDefault();
 		// bodyScrollBar.scrollTo(0,0,800);
 	})
+	if(bodyScrollBar ) {
 	ScrollTrigger.scrollerProxy(scroller, {
 		scrollTop(value) {
 			if (arguments.length) {
@@ -62,7 +65,9 @@ function eventHandler() {
 			return bodyScrollBar.scrollTop;
 		},
 	});
-	bodyScrollBar.addListener(ScrollTrigger.update);
+
+		bodyScrollBar.addListener(ScrollTrigger.update);
+	}
 
 
 	gsap.utils.toArray("[data-aos]").forEach(aos => {
