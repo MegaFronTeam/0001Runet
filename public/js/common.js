@@ -47,24 +47,27 @@ function eventHandler() {
 	}
 	$(document).on('click', '.arrow-up--js', function (e) {
 		e.preventDefault();
-		if(bodyScrollBar ) {
-		bodyScrollBar.scrollTo(0, 0, 800);
+		if (bodyScrollBar) {
+			bodyScrollBar.scrollTo(0, 0, 800);
 		}
-		$('html, body').animate({ scrollTop: 0 }, 0);
+		else {
+
+			$('html, body').animate({ scrollTop: 0 }, 0);
+		}
 	})
 	$(document).on('click', '.toggle-menu-mobile--js', function (e) {
 		e.preventDefault();
 		// bodyScrollBar.scrollTo(0,0,800);
 	})
-	if(bodyScrollBar ) {
-	ScrollTrigger.scrollerProxy(scroller, {
-		scrollTop(value) {
-			if (arguments.length) {
-				bodyScrollBar.scrollTop = value;
-			}
-			return bodyScrollBar.scrollTop;
-		},
-	});
+	if (bodyScrollBar) {
+		ScrollTrigger.scrollerProxy(scroller, {
+			scrollTop(value) {
+				if (arguments.length) {
+					bodyScrollBar.scrollTop = value;
+				}
+				return bodyScrollBar.scrollTop;
+			},
+		});
 
 		bodyScrollBar.addListener(ScrollTrigger.update);
 	}
@@ -96,13 +99,13 @@ function eventHandler() {
 			invalidateOnRefresh: true,
 		});
 	})
-	
+
 	let sections = document.querySelectorAll(".section--animate");
 	for (const section of sections) {
-		 let aosElems = section.querySelectorAll('[ data-aos]');
-		 for (const el of aosElems) {
-			el.setAttribute("data-aos-offset",'-150');
-		 }
+		let aosElems = section.querySelectorAll('[ data-aos]');
+		for (const el of aosElems) {
+			el.setAttribute("data-aos-offset", '-150');
+		}
 		var up = gsap.timeline({
 			scrollTrigger: {
 				scroller,
@@ -152,7 +155,7 @@ function eventHandler() {
 			// delay: 0.1, // wait 0.2 seconds from the last scroll event before doing the snapping
 			ease: "none",
 			// duration: 10000,  
-			y: "-200px"
+			y: "-150px"
 		});
 	var fixedBtns = gsap.timeline({
 
@@ -272,91 +275,26 @@ function eventHandler() {
 	setAnimationsHands('.hands-block__item--1', -100, -300, '50%', `86%`)
 
 
-	var scene = document.getElementById('headElems');
-	if (scene) {
 
-		var parallaxInstance = new Parallax(scene, {
-			scalarX: 20,
-			scalarY: 20,
-			precision: 50,
-			calibrationDelay: 1500,
-		});
-		parallaxInstance.friction(0.2, 0.2);
-	}
-
-	var scene0 = document.getElementById('headElemsBack');
-	if (scene0) {
-
-		var parallaxInstance0 = new Parallax(scene0, {
-			scalarX: 20,
-			scalarY: 20,
-			precision: 50,
-			calibrationDelay: 1500,
-		});
-		parallaxInstance0.friction(0.2, 0.2);
-	}
-
-	var scene2 = document.getElementById('scene2');
-
-	if (scene2) {
-
-		var parallaxInstance2 = new Parallax(scene2, {
-			scalarX: 20,
-			scalarY: 20,
-			precision: 50,
-			selector: '.el',
-			// pointerEvents: 'all'
-		});
-
-
-		parallaxInstance2.friction(0.2, 0.2);
-
-	}
-	var scene3 = document.getElementById('scene3');
-	if (scene3) {
-
-		var parallaxInstance3 = new Parallax(scene3, {
-			scalarX: 20,
-			scalarY: 20,
-			precision: 50,
-			selector: '.el',
-			// pointerEvents: 'all'
-		});
-		parallaxInstance3.friction(0.2, 0.2);
-	}
-
-
-
-	var scene4 = document.getElementById('scene4');
-	if (scene4) {
-
-		var parallaxInstance4 = new Parallax(scene4, {
-			scalarX: 30,
-			scalarY: 30,
-			precision: 10,
-			selector: '.el',
-			// pointerEvents: 'all'
-		});
-		parallaxInstance4.friction(0.4, 0.4);
-	}
-
-	$(".select-wrap").each(function () {
-		let self = $(this);
-		self.find(".select-js").select2({
-			dropdownParent: self
-		});
-	})
-	var scene404 = document.getElementById('scene404');
-	if (scene404) {
-
-		var parallaxInstance4 = new Parallax(scene404, {
-			scalarX: 30,
-			scalarY: 30,
-			precision: 10,
-			selector: '.el',
-			// pointerEvents: 'all'
-		});
-		parallaxInstance4.friction(0.4, 0.4);
+	let scenes = [
+		document.getElementById('headElems'),
+		document.getElementById('headElemsBack'),
+		document.getElementById('scene2'),
+		document.getElementById('scene3'),
+		document.getElementById('scene4'),
+		document.getElementById('scene404'),
+	]
+	for (const scene of scenes) {
+		if (scene) {
+			var parallaxInstance4 = new Parallax(scene, {
+				scalarX: 30,
+				scalarY: 30,
+				precision: 10,
+				selector: '.el',
+				// pointerEvents: 'all'
+			});
+			parallaxInstance4.friction(0.4, 0.4);
+		}
 	}
 
 	$(".select-wrap").each(function () {
