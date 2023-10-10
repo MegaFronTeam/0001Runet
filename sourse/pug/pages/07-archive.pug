@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sNominations/_sNominations.pug
+//- include ../blocks/sSteps/_sSteps.pug
+ 
+//- include ../blocks/sFolkVote/_sFolkVote.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/top-nav/_top-nav.pug
+include ../blocks/sExperts/_sExperts.pug
+include ../blocks/sArchive/_sArchive.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Номинанты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+top-nav
+	main
+		+headerBlock07(title)
+		.container-xl-fluid.container
+		+sArchive
+	+footer

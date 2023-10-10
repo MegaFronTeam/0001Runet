@@ -1,0 +1,35 @@
+mixin archiveItem(year)
+	+e.col.col-12.col-xl-6(data-aos="fade-up")
+		+e.item
+			.row.justify-content-between
+				.col-12.col-sm-auto
+					+e.title Премия 
+						span.text-primary= year
+				.col
+					p Небольшое описание прошедшей премии, например, про номинации, тему (если есть) и&nbsp;тд&nbsp;Далее ключевые цифры
+			.row.justify-content-between
+				.col-auto
+					+e.info-list.UL
+						+e.info-item.LI
+							.text-primary 2245
+							+e.info-text заявок
+						+e.info-item.LI
+							.text-primary 15
+							+e.info-text номинаций
+						+e.info-item.LI
+							.text-primary 150
+							+e.info-text лауреатов
+				.col-auto
+					+e.button.btn.BUTTON
+						+icon('arrow-right')
+
+mixin sArchive(data)
+	// start sArchive
+	+b.SECTION.sArchive.section#sArchive&attributes(attributes)
+		.container
+			+e.row.row
+				+archiveItem('2022')
+				+archiveItem('2021')
+				+archiveItem('2020')
+				+archiveItem('2019')
+	// end sArchive
