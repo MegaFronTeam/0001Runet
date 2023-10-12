@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Номинанты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="main.jpg">
+		<div class="toggl-menu-container">
+			<div class="container-xl-fluid container">
+				<div class="ms-auto">
+					<div class="fixed-btn-wrap">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+						</div>
+					</div>
+					<div class="fixed-btn-wrap fixed-btn-wrap--footer">
+						<div class="arrow-up arrow-up--js">
+							<svg class="icon icon-chevron-up ">
+								<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-mobile menu-mobile menu-mobile--js">
+			<div class="menu-mobile__inner">
+				<div class="menu-mobile__head container-xl-fluid container">
+					<svg class="iconC iconC-menu ">
+						<use xlink:href="img/svg/spriteC.svg#menu"></use>
+					</svg><a href="/"><img src="img/logo.svg" alt=""></a>
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+						<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Архив</a></li>
+					</ul>
+				</nav>
+				<div class="footer container-xl-fluid container">
+					<div class="row">
+						<div class="col-md-auto col">
+							<div class="row">
+								<div class="col-auto">
+									<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000  
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto">
+							<a class="footer__link" href="#">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroller">
+			<div class="main-wrapper">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy section">
+					<div class="container-xl-fluid container">
+						<div class="top-nav__row row" data-aos="fade-up"> 
+							<div class="col">
+								<a class="top-nav__logo" href="/"><img src="img/logo.svg" alt=""/>
+									<div class="top-nav__text d-none d-sm-block mono">  Премия <br> РУНЕТА 
+										<div class="text-primary">2023</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-auto order-md-0 order-last d-none d-md-block">
+								<nav>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+										<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">
+												<svg class="icon icon-vk ">
+													<use xlink:href="img/svg/sprite.svg#vk"></use>
+												</svg></a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col-auto d-md-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+				<main>
+					<!-- start headerBlock-->
+					<div class="headerBlock section" id="headerBlock">
+						<div class="container-xl-fluid container">
+							<div class="row">
+								<div class="col">
+									<div class="h1">Новости</div>
+								</div>
+								<div class="col-12 col-xl">
+									<div class="filter-block">
+										<div class="filter-block__row row">
+											<div class="col-md-auto col-md-7" data-aos="fade-up">
+												<div class="search-block"> 
+													<input class="form-control" type="text" placeholder="Введите запрос" inputmode="search"/>
+													<button> 
+														<svg class="icon icon-search ">
+															<use xlink:href="img/svg/sprite.svg#search"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+											<div class="col-md">
+												<div class="filter-block__selects ms-auto">
+													<div class="filter-block__row-sm row">
+														<div class="col-md-7" data-aos="fade-up">
+															<div class="select-wrap">
+																<select class="form-select select-js">
+																	<option value=""> Год </option>
+																	<option value=""> 2023</option>
+																	<option value=""> 2022</option>
+																	<option value=""> 2021</option>
+																	<option value=""> 2020</option>
+																	<option value=""> 2019</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container-xl-fluid container"></div>
+					<!-- start sNews-->
+					<section class="sNews section section section--animate" id="sNews">
+						<div class="container-xl-fluid container animate-block">
+							<div class="section-inner">
+								<div class="container">
+									<ul class="sNews__list">
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-4.webp"/><img src="img/@2x/news-img-4.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">13 декабря
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Объявлены лауреаты Премии Рунета 2022
+													</div>
+													<p data-aos="fade-up">13 декабря в Москве, на площадке пресс-центра МИА «Россия сегодня», состоялась торжественная церемония вручения национальной награды «Премия Рунета 2022»</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">28 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Более 1000 организаций и проектов подали заявки на участие в Премии Рунета
+													</div>
+													<p data-aos="fade-up">28 ноября завершился приём заявок на Премию Рунета, которая вручается за значительный вклад в развитие российского сегмента интернета</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-5.webp"/><img src="img/@2x/news-img-5.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">20 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Памятка экспертам Премии Рунета
+													</div>
+													<p data-aos="fade-up">Как стать экспертом Премии Рунета, как проходит судейство, что получает эксперт Премии?</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-6.webp"/><img src="img/@2x/news-img-6.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">14 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Прием заявок на Премию Рунета продлен до 28 ноября
+													</div>
+													<p data-aos="fade-up">6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-7.webp"/><img src="img/@2x/news-img-7.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">6 декабря
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Опубликован шорт-лист Премии Рунета 2022
+													</div>
+													<p data-aos="fade-up">6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-8.webp"/><img src="img/@2x/news-img-8.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">23 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Организатор “Премии Рунета” Сергей Гребенников рассказал, как получить интернет-оскар
+													</div>
+													<p data-aos="fade-up">Продолжается прием заявок на Премию Рунета — одну из ключевых наград в сфере интернета и технологий</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">18 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Премия Рунета прогнозирует тренды и определяет лидеров рынка будущего
+													</div>
+													<p data-aos="fade-up">Из года в год в рамках «Премии Рунета» отбираются выдающиеся проекты в российском сегменте Всемирной паутины. Церемония объединяет представителей самых разных компаний, которые вносят общий вклад в процветание цифровых технологий</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-1.webp"/><img src="img/@2x/news-img-1.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">7 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Премия Рунета: сохранили стоимость подачи заявки до 7 ноября
+													</div>
+													<p data-aos="fade-up">Ноябрьские праздники — отличная возможность не только отдохнуть, но и доделать накопившиеся дела.</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-3.webp"/><img src="img/@2x/news-img-3.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">30 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Стартует «Народное Голосование» Премии Рунета
+													</div>
+													<p data-aos="fade-up">С 1 по 12 декабря пользователи определят победителей в трех номинациях: «Лучший блогер Рунета», «Лучшее бизнес-сообщество в соцсетях» и «Лучший социальный проект в Рунете»</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-2.webp"/><img src="img/@2x/news-img-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">22 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Оцифровать культуру: 7 проектов-лауреатов Премии Рунета, о которых вы должны знать
+													</div>
+													<p data-aos="fade-up">Современные культуру и искусство невозможно представить без инновационных технологий</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__img-wrap" data-aos="fade-up"> 
+													<!-- picture-->
+													<picture class="res-i"> 
+														<source type="image/webp" srcset="img/@2x/webp/news-img-10.webp"/><img src="img/@2x/news-img-10.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</div>
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">18 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Зачем диджитал-компаниям премии и рейтинги
+													</div>
+													<p data-aos="fade-up">Если вы PR-менеджер, маркетолог или руководитель, но все еще пропускаете премии и рейтинги — эта статья для вас</p>
+												</div>
+											</a>
+										</li>
+										<li class="sNews__item">
+											<a class="sNews__link" href="#">
+												<div class="sNews__caption">
+													<div class="sNews__date" data-aos="fade-up">30 ноября
+													</div>
+													<div class="sNews__title h6" data-aos="fade-up">Опубликован шорт-лист Премии Рунета 2022
+													</div>
+													<p data-aos="fade-up">6 декабря 2022 года объявлен шорт-лист Премии Рунета — престижной награды российской интернет-отрасли, которая в этом году будет вручена уже в 19-й раз</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- end sNews-->
+				</main>
+				<div class="footer-wrap">
+					<footer class="footer section">
+						<div class="container-xl-fluid container">
+							<div class="footer__row row">
+								<div class="col-xl-2 order-first">
+									<a class="footer__logo" href="#"><img src="img/logo-footer.svg" alt="" loading="lazy"/>
+									</a>
+								</div>
+								<div class="col-lg-3 col">
+									<ul>
+										<li><a href="#"> Номинанты</a></li>
+										<li><a href="#"> Эксперты</a></li>
+										<li><a href="#"> Лауреаты</a></li>
+										<li><a href="#"> Новости</a></li>
+										<li><a href="#"> Архив</a></li>
+									</ul>
+								</div>
+								<div class="footer__col-right col-sm-auto text-lg-end">
+									<div class="row">
+										<div class="col">
+											<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000 
+											</a><br/>
+											<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+											</a>
+										</div>
+										<div class="col-lg-12 col-auto">
+											<a class="footer__link" href="#">
+												<svg class="icon icon-vk ">
+													<use xlink:href="img/svg/sprite.svg#vk"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg order-lg-first">
+									<p>Общенациональная награда в&nbsp;области высоких технологий и&nbsp;интернета. Поощряет выдающиеся заслуги компаний-лидеров и&nbsp;отдельных деятелей, внесших значительный вклад в&nbsp;развитие российского сегмента сети Интернет (Рунета)</p>
+								</div>
+							</div>
+							<div class="footer__footer">
+								<div class="row">
+									<div class="footer__copy col">© 2023 Премия Рунета
+									</div>
+									<div class="col-lg-3 order-lg-0 order-sm-last">
+										<a class="footer__policy" href="#">Политика конфиденциальности
+										</a>
+									</div>
+									<div class="footer__col-right col-sm-auto text-sm-end">
+										<a class="footer__developer" href="#"> <span>Сделано в агентстве </span><img src="img/developer.svg" alt="" loading="lazy"/>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/gsap/gsap.min.js"></script>
+		<script src="libs/gsap/ScrollToPlugin.min.js"></script>
+		<script src="libs/gsap/ScrollTrigger.min.js"></script>
+		<script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
+		<script src="libs/aos/aos.js"></script>
+		<script src="libs/parallax-js/parallax.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

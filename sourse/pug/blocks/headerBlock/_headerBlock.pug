@@ -156,6 +156,45 @@ mixin headerBlock03(title)
 
 	// end headerBlock
 
+mixin headerBlock07Part(pa)
+	.alems.alems--back#headElemsBack
+		+b.el--1(data-aos="fade-up" data-aos-duration="2000" data-depth=".2" data-scalar-x="14" data-scalar-y="20")
+			+pic("el-1.png",'',pa)
+		+b.el--2(data-aos="fade-up" data-aos-duration="2000" data-depth="0.2")
+			+pic("el-2.png",'',pa)
+		+b.el--3(data-aos="fade-up" data-aos-duration="2000" data-depth="0.3")
+			+pic("el-3.png",'',pa)
+	.before( data-aos="zoom-in"  data-aos-delay="500"    data-aos-duration="1000")
+	.alems#headElems 
+	
+		+b.el--4.--4-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			+pic("el-18.png",'',pa)
+		+b.el--18-page3( data-depth="0.1"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+			+pic("el-18-3.png",'',pa)
+		+b.el--5( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			+pic("el-5.png",'',pa)
+		+b.el--6.--6-page3( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			+pic("el-19.png",'',pa)
+		+b.el--7-2( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			+pic("el-20.png",'',pa)
+			//- +pic("premia.png",'',pa).res-i
+			//- <model-3d background-color="#000000" src="/models/3Dmodel.glb"></model-3d>
+		div( data-depth="0.05")
+			+b.premia-block--page7(data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000")
+				+pic("head-img-7.png",'',pa).res-i
+	+e.head
+		+e.title
+			span.h1.animate-text-wrap
+				span.animate-text( data-aos="fade-up"  data-aos-delay="800") Архив
+		.container
+			+e.text-page.d-none.d-md-block
+				.animate-text(data-aos="fade-up" data-aos-delay="800")
+					p В&nbsp;этом разделе представлена информация о&nbsp;прошедших Премиях Рунета.
+mixin headerBlock07(title)
+	// start headerBlock
+	+b.headerBlock--page.--page-nominees.section#headerBlock&attributes(attributes)
+		.container-xl-fluid.container
+			+headerBlock07Part()
 
 mixin headerBlock08Part(pa)
 	.alems.alems--back#headElemsBack
@@ -379,4 +418,58 @@ mixin headerBlock404(pa)
 				+e.text.h6 Страница не&nbsp;существует или недоступна  в&nbsp;данный&nbsp;момент
 				+e.btn.btn.btn-dark(href="/")  вернуться на главную
 	// end headerBlock
+
+mixin headerBlockNews(topik)
+	// start headerBlock
+	+b.headerBlock--news.section#headerBlock&attributes(attributes)
+		+e.container.container-xl-fluid.container
+			+e.bg
+			.row
+				if topik
+					+b.topik
+						+b.section-title
+							h1 Новости
+						+e.img
+							+pic(`news-img-8.jpg`).res-i
+						+e.text
+							+e.date 30 ноября
+							+e.title Объявлены лауреаты Премии Рунета 2022
+							p 13 декабря в Москве, на площадке пресс-центра МИА «Россия сегодня», состоялась торжественная церемония вручения национальной награды «Премия Рунета 2022»
+							+e.button.btn.BUTTON
+								+icon('arrow-right')
+					+b.filter-block--topik
+						+e.row.row
+							.col-12.col-md-auto(data-aos="fade-up"  )
+								+search()
+							.col-12.col-md-auto
+								+e.selects
+									+e.row-sm
+										.select-wrap(data-aos="fade-up"  )
+											select.form-select.select-js
+												option(value="")  Год 
+												option(value="")  2023
+												option(value="")  2022
+												option(value="")  2021
+												option(value="")  2020
+												option(value="")  2019
+				else
+					.col
+						.h1 Новости
+					.col-12.col-xl
+						+b.filter-block
+							+e.row.row
+								.col-md-auto.col-md-7(data-aos="fade-up"  )
+									+search()
+								.col-md
+									+e.selects.ms-auto
+										+e.row-sm.row
+											.col-md-7(data-aos="fade-up"  )
+												.select-wrap
+													select.form-select.select-js
+														option(value="")  Год 
+														option(value="")  2023
+														option(value="")  2022
+														option(value="")  2021
+														option(value="")  2020
+														option(value="")  2019
 
