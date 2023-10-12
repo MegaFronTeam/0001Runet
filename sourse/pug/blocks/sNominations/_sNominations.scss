@@ -20,6 +20,7 @@
 	}
 	&__item{
 		border-top: 1px solid $body-color;
+		position: relative;
 		&:last-child{
 			border-bottom: 1px solid $body-color;
 

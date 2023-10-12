@@ -3,6 +3,9 @@
 const $ = jQuery;
 
 
+
+
+
 function eventHandler() {
 
 	JSCCommon.init()
@@ -39,10 +42,10 @@ function eventHandler() {
 	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		bodyScrollBar = Scrollbar.init(scroller, {
 			// let bodyScrollBar = Scrollbar.init(document.body, {
-			damping: 0.1,
+			damping: 0.2,
 			thumbMinSize: 20,
 			// delegateTo: document,
-			onlyScrollIfNeeded: true,
+			// onlyScrollIfNeeded: true,
 		});
 	}
 	$(document).on('click', '.arrow-up--js', function (e) {
@@ -80,14 +83,14 @@ function eventHandler() {
 		function myfunction() {
 			aos.classList.add(`aos-animate`);
 			if (animate) {
-				// aos.classList.toggle(animate);
+				aos.classList.toggle(animate);
 			}
 		};
 		const rect = aos.getBoundingClientRect();
 		ScrollTrigger.create({
 			scroller: scroller,
 			trigger: aos,
-			start: 'top 95%',
+			start: 'top bottom',
 			end: 'bottom +100 top',
 
 			// markers: true,
@@ -119,51 +122,52 @@ function eventHandler() {
 		})
 		up
 			.from(section.querySelector(".animate-block"), {
-				ease: "none", y: 200
+				  y: 200
 			})
 			.to(section.querySelector(".animate-block"), {
-				ease: "none", y: -50
+				  y: -50
 			});
 	}
 
-	AOS.init({
-		// mirror: true,
-		// offset: 50,
-		duration: 800, // values from 0 to 3000, with step 50ms
-		easing: 'easeOutQuart',
-		once: true,
-	});
+	// AOS.init({
+	// 	// mirror: true,
+	// 	// offset: 50,
+	// 	duration: 800, // values from 0 to 3000, with step 50ms
+	// 	easing: 'easeOutQuart',
+	// 	once: true,
+	// });
 
-	var foot = gsap.timeline({
+	// var foot = gsap.timeline({
 
-		scrollTrigger: {
-			scroller,
-			trigger: '.footer-wrap',
-			start: 'top bottom',
-			// endTrigger: "html",
-			end: "bottom bottom",
-			// markers: true, 
-			// ease: "expo", 
-			// toggleActions: "play none reverse none",
-			scrub: 1,
-			pinSpacing: false
-		}
+	// 	scrollTrigger: {
+	// 		scroller,
+	// 		trigger: '.footer-wrap',
+	// 		start: 'clamp(top  bottom)',
+	// 		// endTrigger: "html",
+	// 		end: "clamp( bottom)",
+	// 		// markers: true, 
+	// 		// ease: "expo", 
+	// 		// toggleActions: "play none reverse none",
+	// 		scrub: 1,
+	// 		pinSpacing: false
+	// 	}
 
-	})
-	foot
-		.from(".footer-wrap .footer", {
-			// delay: 0.1, // wait 0.2 seconds from the last scroll event before doing the snapping
-			ease: "none",
-			// duration: 10000,  
-			y: "-150px"
-		});
+	// })
+	// foot
+	// 	.from(".footer-wrap .footer", {
+	// 		// delay: 0.1, // wait 0.2 seconds from the last scroll event before doing the snapping
+	// 		ease: "none",
+	// 		// duration: 10000,  
+	// 		y: -200
+	// 	}); 
+
 	var fixedBtns = gsap.timeline({
 
 		scrollTrigger: {
 			scroller,
 			trigger: '.headerBlock',
 			start: "clamp(bottom top)",
-			end: "+=1000%",
+			end: "+=600%",
 			// toggleActions: "play none none none",
 			// endTrigger: scroller,
 			scrub: 1,
@@ -282,7 +286,7 @@ function eventHandler() {
 		document.getElementById('scene2'),
 		document.getElementById('scene3'),
 		document.getElementById('scene4'),
-		document.getElementById('scene404'),
+		// document.getElementById('scene404'),
 	]
 	for (const scene of scenes) {
 		if (scene) {
@@ -296,6 +300,28 @@ function eventHandler() {
 			parallaxInstance4.friction(0.4, 0.4);
 		}
 	}
+
+	// const maxRot = 30;
+	// function mouseMoveFunc(evt) {
+
+	// 	for (const iterator of object) {
+			
+	// 	}
+	// 	const maxX = gsap.getProperty(".bigText", "width") * 0.75;
+		
+	// 	const percent = gsap.utils.normalize(0, innerWidth, evt.pageX);
+		
+	// 	gsap.to('.el', {
+	// 		duration: 0.2,
+	// 		x: percent * maxX - maxX / 2,
+	// 		rotationY: -(percent * maxRot - maxRot / 2),
+	// 		overwrite: true
+	// 	});
+	// }
+
+	// window.addEventListener("mousemove", mouseMoveFunc);
+ 
+// window.addEventListener("mousemove", mouseMoveFunc);
 
 	$(".select-wrap").each(function () {
 		let self = $(this);

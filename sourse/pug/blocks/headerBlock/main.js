@@ -62,9 +62,6 @@ renderer.setSize(width, height);
 
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.setClearColor(0x000000, 0);
-// renderer.setSize(window.innerWidth, window.innerWidth);
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-
 
 
 //Add the renderer to the DOM

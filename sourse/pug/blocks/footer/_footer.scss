@@ -9,6 +9,10 @@
 	position: relative;
 	z-index: 2;
 	// transform: translate(0,-100px);
+	@include media-breakpoint-up(md){
+		// transform: translateY(-200px);
+	
+	}
 	// position: relative;
 --sPT: #{rem(80)};
 	--sPB: #{rem(0)};
@@ -16,7 +20,6 @@
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		@include media-breakpoint-up(sm) {
-
 			--bs-gutter-y:#{rem(60)};
 		}
 		--bs-gutter-y: 36px;
