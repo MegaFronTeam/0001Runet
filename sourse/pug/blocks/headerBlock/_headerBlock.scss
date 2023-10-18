@@ -553,9 +553,12 @@
 		vertical-align: top;
 		border-bottom: 1px solid var(--white-002, rgba(255, 255, 255, 0.08));
 		// line-height: calc(22 / 14);
-		&:last-child{
-			white-space: nowrap;
-		}
+		// &:last-child{
+		// 	white-space: nowrap;
+		// }
+		// * {
+		// 	white-space: normal;
+		// }
 	}
 	th{
 		font-weight: normal;

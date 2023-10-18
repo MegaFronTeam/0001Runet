@@ -210,6 +210,19 @@ class JSCCommon {
 						$(this).removeClass('active');
 					});
 		});
+
+		
+		$('.tr-head-js').on('click', function () {
+			let self = $(this);
+			self.toggleClass('active')
+			self
+				.next()
+				.slideToggle(function () {
+					$(this).toggleClass('active');
+				});
+		});
+
+
 	}
 
 	static imgToSVG() {
