@@ -165,6 +165,49 @@
 		}
 	}
 
+	&__nothing {
+		position: relative;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: 1.57;
+		// max-width: rem(830);
+		padding-bottom: rem(100);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(1530);
+			// max-width: rem(1460);
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: 1200px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: rem(1);
+			left: 0;
+			bottom: 0;
+			background-color: #fff;
+			@include media-breakpoint-up(xl) {
+				width: calc(100% - 40px);
+				left: 20px;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(28);
+		}
+		// @include media-breakpoint-up(xl) {
+		// 	font-size: rem(24);
+		// }
+		// @include media-breakpoint-up(xxl) {
+		// 	font-size: rem(28);
+		// }
+	}
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

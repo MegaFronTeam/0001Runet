@@ -8,12 +8,14 @@ mixin item(img,date,title,text)
 				+e.date( data-aos="fade-up")= date
 				+e.title.h6( data-aos="fade-up")= title
 				p( data-aos="fade-up")= text
-mixin sNewsPage(data)
+mixin sNewsPage(otherNews)
 	// start sNews
 	+b.SECTION.sNewsPage.section.section--animate#sNews&attributes(attributes)
 		.container-xl-fluid.container.animate-block
 			.section-inner
 				.container
+					if otherNews
+						+e.section-title(data-aos="fade-up") Другие новости
 					//- +b.section-title( data-aos="fade-up") 
 					//- 	.row
 					//- 		.col

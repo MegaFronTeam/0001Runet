@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Номинант</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="main.jpg">
+		<div class="toggl-menu-container">
+			<div class="container-xl-fluid container">
+				<div class="ms-auto">
+					<div class="fixed-btn-wrap">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+						</div>
+					</div>
+					<div class="fixed-btn-wrap fixed-btn-wrap--footer">
+						<div class="arrow-up arrow-up--js">
+							<svg class="icon icon-chevron-up ">
+								<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-mobile menu-mobile menu-mobile--js">
+			<div class="menu-mobile__inner">
+				<div class="menu-mobile__head container-xl-fluid container">
+					<svg class="iconC iconC-menu ">
+						<use xlink:href="img/svg/spriteC.svg#menu"></use>
+					</svg><a href="/"><img src="img/logo.svg" alt=""></a>
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+						<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+						<li class="menu-item" itemprop="item"><a href="#">Архив</a></li>
+					</ul>
+				</nav>
+				<div class="footer container-xl-fluid container">
+					<div class="row">
+						<div class="col-md-auto col">
+							<div class="row">
+								<div class="col-auto">
+									<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000  
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto">
+							<a class="footer__link" href="#">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroller">
+			<div class="main-wrapper">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy section">
+					<div class="container-xl-fluid container">
+						<div class="top-nav__row row" data-aos="fade-up"> 
+							<div class="col">
+								<a class="top-nav__logo" href="/"><img src="img/logo.svg" alt=""/>
+									<div class="top-nav__text d-none d-sm-block mono">  Премия <br> РУНЕТА 
+										<div class="text-primary">2023</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-auto order-md-0 order-last d-none d-md-block">
+								<nav>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+										<li class="menu-item" itemprop="item"><a href="#">Номинанты</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">Эксперты</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">Новости</a></li>
+										<li class="menu-item" itemprop="item"><a href="#">
+												<svg class="icon icon-vk ">
+													<use xlink:href="img/svg/sprite.svg#vk"></use>
+												</svg></a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col-auto d-md-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+				<main>
+					<!-- start sContent-->
+					<section class="sContent section" id="sContent">
+						<div class="container-xl-fluid container">
+							<div class="sContent__row row">
+								<div class="col-md-6 col-lg-4 col-xl-3">
+									<div class="side-info">
+										<a class="side-info__go-back" href="#">
+											<svg class="icon icon-arrow-left ">
+												<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+											</svg>Все номинанты
+										</a>
+										<div class="side-info__item"><span>Организация: </span>
+											<p>АНО «Национальные приоритеты»</p>
+										</div>
+										<div class="side-info__item"><span>Номинация: </span>
+											<p>Государство и Общество</p>
+										</div>
+										<a class="side-info__site" href="gorodtroika.ru" target="_blank">
+											<div class="icon-wrap">
+												<svg class="icon icon-arrow-up-right ">
+													<use xlink:href="img/svg/sprite.svg#arrow-up-right"></use>
+												</svg>
+											</div>gorodtroika.ru
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-8 col-xl-9">
+									<div class="sContent__wrap">
+										<div class="section-title">
+											<h1 class="h2">Мобильное<br>приложение "Город"</h1><span>Шортлист</span>
+											<p>Мобильное приложение Город создано на&nbsp;базе транспортной карты &laquo;Тройка&raquo; для объединения городских и&nbsp;коммерческих сервисов в&nbsp;едином цифровом пространстве. Город&nbsp;&mdash; единственная официальная программа лояльности Московского Метрополитена. Каждый владелец карты Тройка становится потенциальным пользователем программы лояльности Город и&nbsp;уже получает привилегии совершая поездки на&nbsp;общественном транспорте.</p>
+										</div>
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/sContent-img-1.webp"/><img class="object-fit-js" src="img/@2x/sContent-img-1.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+										<h3>Экосистема приложения Город объединяет ряд востребованных сервисов и&nbsp;продуктов, многие из&nbsp;которых не&nbsp;имеют аналогов:</h3>
+										<ul>
+											<li>Вернуть часть средств, потраченных за&nbsp;последние шесть месяцев на&nbsp;пополнение &laquo;Тройки&raquo;</li>
+											<li>Получать кешбэк за&nbsp;покупки в&nbsp;любых продуктовых магазинах</li>
+											<li>Пополнять &laquo;Тройку&raquo; с&nbsp;кешбэком 3%</li>
+											<li>Проверять баланс проездного</li>
+											<li>Бронировать столики в&nbsp;ресторанах с&nbsp;выгодой до&nbsp;300 рублей </li>
+											<li>Приобретать в&nbsp;&laquo;Магазине&raquo; приложения подарочные сертификаты и&nbsp;купоны за&nbsp;бонусы Города со&nbsp;скидками до&nbsp;80% от&nbsp;любимых брендов</li>
+										</ul>
+										<div class="sContent__thesis h3">В&nbsp;2021 году билетная система &laquo;Тройка&raquo; стала победителем самой престижной международной премии в&nbsp;области билетных решений Transport Ticketing Award в&nbsp;Лондоне. В&nbsp;номинации Best Smart Ticketing Programme победил проект по&nbsp;интеграции столичной билетной системы на&nbsp;базе карты &laquo;Тройка&raquo; в&nbsp;другие регионы Российской Федерации.
+										</div>
+										<p>На&nbsp;данный момент стратегия развития транспортной системы &laquo;Тройка&raquo; уже запущена. Первым регионом, жителям которого стала доступна &laquo;Тройка&raquo;, стала Тульская область, а&nbsp;до&nbsp;конца 2023 года билетную систему внедрят еще в&nbsp;35&nbsp;регионов России. Вслед за&nbsp;билетной системой в&nbsp;регионах будет запущено мобильное приложение Город, которое является неотъемлемой частью данного проекта.С развитием карты &laquo;Тройка&raquo; в&nbsp;регионы и&nbsp;превращением ее&nbsp;в&nbsp;единый стандарт транспортного носителя, приложение Город станет одной из&nbsp;крупнейших экосистем на&nbsp;рынке. В&nbsp;рамках масштабирования карты &laquo;Тройка&raquo; программа лояльности Город будет масштабироваться по&nbsp;умолчанию.</p>
+										<div class="sContent__person">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/sContent-img-2.webp"/><img class="object-fit-js" src="img/@2x/sContent-img-2.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div>
+												<div class="sContent__name">Никита Нечаев
+												</div><span>CEO мобильного приложения Город</span>
+											</div>
+											<p>Примеры информационных постов: В&nbsp;честь дня рождения программы лояльности Город владельцы &laquo;Тройки&raquo; получат доступ на&nbsp;24&nbsp;часа в&nbsp;закрытый раздел магазина с&nbsp;эксклюзивными предложениями от&nbsp;партнеров:</p>
+										</div>
+										<h2>Вклад организации в&nbsp;развитие Рунета&nbsp;/ цифровой экономики</h2>
+										<p>Город&nbsp;&mdash; это экосистема цифровых сервисов, которая в&nbsp;формате одного приложения помогает экономить на&nbsp;привычных тратах в&nbsp;течение всего дня практически в&nbsp;каждом сегменте повседневной жизни. С&nbsp;Городом гораздо выгоднее пользоваться наземным транспортом, оплачивать мобильную связь, пользоваться каршерингом, оплачивать доставку продуктов домой или заказывать готовую еду, покупать лекарства и&nbsp;получать медицинские услуги, планировать досуг на&nbsp;выходные и&nbsp;многое другое. Даже за&nbsp;такое простое действие, как бронирование столика в&nbsp;ресторане через Город, пользователи получают от&nbsp;100 до&nbsp;300 рублей кешбэка на&nbsp;мобильный телефон.</p>
+										<p>Мы&nbsp;следим за&nbsp;тем, чтобы в&nbsp;каждом пользовательском сегменте приложения присутствовали топовые игроки рынка, среди которых онлайн заказ продуктов &laquo;Сбермаркет&raquo;, сеть пиццерий &laquo;Додо пицца&raquo;, торговая площадка &laquo;AliExpress&raquo;, магазин продуктов здорового питания &laquo;Вкусвилл&raquo;, розничная сеть &laquo;Магнит&raquo;, каршеринг Ситидрайв, образовательная онлайн-платформа &laquo;Нетология&raquo;, &laquo;Аэроэкспресс&raquo;, аптечная сеть &laquo;Аптека&nbsp;36,6&raquo;, интернет-магазин &laquo;Яндекс Маркет&raquo;, подписка на&nbsp;скидки и&nbsp;спецпредложения &laquo;VK&nbsp;combo&raquo;, сеть кинотеатров &laquo;Каро&raquo;, онлайн-кинотеатр &laquo;IVI&raquo; медицинская компания &laquo;Инвитро&raquo;, ювелирная сеть &laquo;585&nbsp;золотой&raquo;, онлайн сервис по&nbsp;поиску туров по&nbsp;всем туроператорам &laquo;Level Travel&raquo;, застройщик &laquo;Самолет&raquo;, сеть фитнес-клубов &laquo;XFit&raquo;, крупнейший представитель рынка электронных и&nbsp;аудиокниг&quot;Литрес&quot; и&nbsp;многие другие.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- end sContent-->
+				</main>
+				<div class="footer-wrap">
+					<footer class="footer section">
+						<div class="container-xl-fluid container">
+							<div class="footer__row row">
+								<div class="col-xl-2 order-first">
+									<a class="footer__logo" href="#"><img src="img/logo-footer.svg" alt="" loading="lazy"/>
+									</a>
+								</div>
+								<div class="col-lg-3 col">
+									<ul>
+										<li><a href="#"> Номинанты</a></li>
+										<li><a href="#"> Эксперты</a></li>
+										<li><a href="#"> Лауреаты</a></li>
+										<li><a href="#"> Новости</a></li>
+										<li><a href="#"> Архив</a></li>
+									</ul>
+								</div>
+								<div class="footer__col-right col-sm-auto text-lg-end">
+									<div class="row">
+										<div class="col">
+											<a class="footer__link" href="tel:+7(800)8000000">+7 (800) 800 0000 
+											</a><br/>
+											<a class="footer__link" href="mailto:premia@runet.group">premia@runet.group
+											</a>
+										</div>
+										<div class="col-lg-12 col-auto">
+											<a class="footer__link" href="#">
+												<svg class="icon icon-vk ">
+													<use xlink:href="img/svg/sprite.svg#vk"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg order-lg-first">
+									<p>Общенациональная награда в&nbsp;области высоких технологий и&nbsp;интернета. Поощряет выдающиеся заслуги компаний-лидеров и&nbsp;отдельных деятелей, внесших значительный вклад в&nbsp;развитие российского сегмента сети Интернет (Рунета)</p>
+								</div>
+							</div>
+							<div class="footer__footer">
+								<div class="row">
+									<div class="footer__copy col">© 2023 Премия Рунета
+									</div>
+									<div class="col-lg-3 order-lg-0 order-sm-last">
+										<a class="footer__policy" href="#">Политика конфиденциальности
+										</a>
+									</div>
+									<div class="footer__col-right col-sm-auto text-sm-end">
+										<a class="footer__developer" href="#"> <span>Сделано в агентстве </span><img src="img/developer.svg" alt="" loading="lazy"/>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/gsap/gsap.min.js"></script>
+		<script src="libs/gsap/ScrollToPlugin.min.js"></script>
+		<script src="libs/gsap/ScrollTrigger.min.js"></script>
+		<script src="libs/smooth-scrollbar/smooth-scrollbar.js"></script>
+		<script src="libs/parallax-js/parallax.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
