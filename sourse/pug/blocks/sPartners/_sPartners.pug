@@ -23,33 +23,33 @@ mixin sPartners(pa)
 						mixin item(i,pa)
 							+e.col.col-md-3.col-6( data-aos="fade-up")&attributes(attributes)
 								+e.item
-									+pic(`logo-${i}.png`,'',pa).res-i
+									+pic(`logo-1-${i}.png`,'',pa).res-i
 						+e.group 
 							+e.row.row
 								+e.group-title--col.h4.col-md-3.order-first( data-aos="fade-up")  Организатор
 								+item('1')
 								+e.group-title--col.h4.col-md-auto.order-md-first( data-aos="fade-up")  При поддержке
 								.col-12.m-md-0.order-md-first  
-								+item('2')
-								+item('3')
+								+item('2')(style="--brightness: 3;")
+								+item('3')(style=" --invert:1; --rotate: 180deg;--contras:-1")
 								+item('4')
 						
 						+e.group
 							+e.group-title.h4( data-aos="fade-up") Партнеры номинации
 							+e.row.row
-								+item('5')  
+								+item('5')(style="--op: 1") 
 								+item('6')
 								+item('7')
 								
 						
 						+e.group
-							+e.group-title.h4( data-aos="fade-up") Генеральные партнеры
+							+e.group-title.h4( data-aos="fade-up") Генеральные информационные партнеры
 							+e.row.row
-								+item('8')
-								+item('9')
-								+item('10')
-								+item('11')
-								+item('12')
+								+item('8')(style="--brightness: 1")
+								+item('9')(style=" --invert:1")
+								+item('10')(style=" --invert:1")
+								+item('11')(style="--brightness: 1")
+								+item('12')(style=" --invert:1")
 								+item('13')
 								
 						+e.group
@@ -58,15 +58,18 @@ mixin sPartners(pa)
 								+item('14') 
 								+item('15') 
 								+item('16') 
-								+item('17') 
-								+item('18') 
-								+item('19') 
+								+item('17')(style="--invert:1")
+								+item('18')(style="--invert:1") 
+								+item('19')
 								+item('20') 
-								+item('21') 
-								+item('22') 
+								+item('21')(style="--invert:1") 
+								+item('22')(style="--invert:1") 
 								+item('23') 
 								+item('24') 
 								+item('25') 
 								+item('26') 
-								+item('27') 
+								+item('27')(style="--brightness: 0;--invert:1") 
+								+item('28')(style="--brightness: 1") 
+								+item('29')(style="--brightness: 0;--invert:1") 
+								+item('30') 
 	// end sPartners
