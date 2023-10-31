@@ -29,10 +29,10 @@
 		
 	}
 	--op: .3;
-	--saturate: 0; 
+	--saturate: 1; 
 	--brightness: 2;
 	--invert: 0; 
-	--contrast: 0;
+	--contrast: 1;
 	--rotate:0;
 	&__item{
 		@include media-breakpoint-up(md) {
@@ -46,9 +46,9 @@
 			@include mt;
 			opacity: var(--op);
 			filter: 
-				saturate(var(--saturate))  
+				grayscale(var(--saturate))  
 				brightness(var(--brightness)) 
-				// contrast(var(--contrast)) 
+				contrast(var(--contrast)) 
 				hue-rotate(var(--rotate))
 				invert(var(--invert));
 
@@ -57,7 +57,7 @@
 		background: var(--white-002, rgba(255, 255, 255, 0.08));
 		&:hover{
 			background-color: #fff;
-			--op: 1;
+			--op: 1 !important;
 			img{
 				filter: none;
 			}
