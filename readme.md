@@ -9,4 +9,5 @@
 3. <https://megafronteam.github.io/0001Runet/09-payment.html>
 3. <https://megafronteam.github.io/0001Runet/10-invoicing.html>
 3. <https://megafronteam.github.io/0001Runet/11-nominee.html>
+3. <https://megafronteam.github.io/0001Runet/12-news-item.html>
 4. <https://megafronteam.github.io/0001Runet/00-modal.html>

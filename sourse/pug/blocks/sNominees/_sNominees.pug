@@ -42,3 +42,66 @@ mixin sNominees(data)
 							+e.label Шортлист
 						
 	// end sNominees
+
+mixin sNominees2(data)
+	// start sNominees
+	+b.SECTION.sNominees--2.section#sNominees&attributes(attributes)
+		.container-xl-fluid.container.animate-block
+			+e.row.row
+				mixin item(t,p, f)
+					+b.card(href="#" data-aos="fade-up")&attributes(attributes)
+						block
+						+e.body 
+							if t
+								+e.title!= t
+							if p
+								.h6!= p
+						if f
+							+e.footer!= f
+				.col-xxl-3.d-none.d-xxl-block
+				.col-xxl-9
+					+e.slider.def-slider-js.swiper
+						.slider-control
+							.h3 СМИ о нас
+							+arrow
+						.swiper-wrapper
+							- for(let i = 0; i < 2; i++)
+								+e.slide.swiper-slide 
+									+item(`Мобильное приложение Город запускает виртуального оператора мобильной связи`,``,`ComNews`)
+										+e.label 24 апреля
+								+e.slide.swiper-slide 
+									+item(` Проект «Объясняем.РФ»`,`АНО «Национальные приоритеты»`,`Государство и общество`)
+										+e.label 18 августа 2021
+								+e.slide.swiper-slide 
+									+item(`Программы поддержки бизнеса`,`Федеральная налоговая служба`,`Экономика и бизнес`)
+										+e.label 24 апреля
+
+mixin sNominees3(data)
+	// start sNominees
+	+b.SECTION.sNominees--3.section#sNominees&attributes(attributes)
+		.container-xl-fluid.container.animate-block
+			mixin item(t,p, f)
+				+b.card(href="#" data-aos="fade-up")&attributes(attributes)
+					block
+					+e.body 
+						if t
+							+e.title!= t
+						if p
+							.h6!= p
+					if f
+						+e.footer!= f
+			+e.slider.def-slider-js.swiper
+				.slider-control
+					.h3 Другие номинанты
+				.swiper-wrapper
+					- for(let i = 0; i < 2; i++)
+						+e.slide.swiper-slide 
+							+item(`«Особый взгляд на Золотое кольцо»`,`Информационное Агентство России ТАСС`,`Туризм и индустрия гостеприимства`)
+						+e.slide.swiper-slide 
+							+item(` Проект «Объясняем.РФ»`,`АНО «Национальные приоритеты»`,`Государство и общество`)
+								+e.label Шортлист
+						+e.slide.swiper-slide 
+							+item(`Программы поддержки бизнеса`,`Федеральная налоговая служба`,`Экономика и бизнес`)
+						+e.slide.swiper-slide 
+							+item(`Проект «Цифровое право»`,`Российское агентство правовой и судебной информации (РАПСИ)`,`Государство и общество`)
+								+e.label Шортлист

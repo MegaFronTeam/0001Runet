@@ -28,13 +28,43 @@
 	&__col{
 		
 	}
+	--op: .3;
+	--saturate: 0; 
+	--brightness: 2;
+	--invert: 0; 
+	--contrast: 0;
+	--rotate:0;
 	&__item{
 		@include media-breakpoint-up(md) {
 
 			border-radius: rem(16px);
 		}
 		border-radius: rem(12);
+		@include mt;
+		text-align: center; 
+		img{
+			@include mt;
+			opacity: var(--op);
+			filter: 
+				saturate(var(--saturate))  
+				brightness(var(--brightness)) 
+				// contrast(var(--contrast)) 
+				hue-rotate(var(--rotate))
+				invert(var(--invert));
+
+			// background: lightgray ;
+		}
 		background: var(--white-002, rgba(255, 255, 255, 0.08));
+		&:hover{
+			background-color: #fff;
+			--op: 1;
+			img{
+				filter: none;
+			}
+			// --saturate: 1;
+			// --brightness: 1 !important;
+			// --contrast: 1;
+		}
 
 		display: flex;
 		justify-content: center;

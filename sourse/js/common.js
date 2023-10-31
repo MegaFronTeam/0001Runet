@@ -161,6 +161,29 @@ function eventHandler() {
 	// 		y: -200
 	// 	}); 
 
+	var foot = gsap.timeline({
+
+		scrollTrigger: {
+			scroller,
+			trigger: '.footer-wrap',
+			start: 'top bottom',
+			end: 'bottom bottom',
+			// endTrigger: '.footer-wrap',
+			// end: '90% bottom',
+			// markers: true,
+			// toggleActions: "play none reverse none",
+			scrub: true,
+			
+		}
+
+	})
+	foot
+		.from(".footer", {
+			ease: 'none', 
+			// duration: .02,  
+			y: '-80%' });
+
+
 	var fixedBtns = gsap.timeline({
 
 		scrollTrigger: {
@@ -329,6 +352,65 @@ function eventHandler() {
 			dropdownParent: self,
 		});
 	})
+
+	let sContentSliders = document.querySelectorAll('.def-slider-js');
+	if(sContentSliders.length > 0) {
+		sContentSliders.forEach((sContentSlider) => {
+			let slides = sContentSlider.querySelectorAll('.sContent__slide');
+			const swiper = new Swiper(sContentSlider, {
+				slidesPerView: 'auto',
+				navigation: {
+					nextEl: sContentSlider.querySelector('.swiper-button-next'),
+					prevEl: sContentSlider.querySelector('.swiper-button-prev'),
+				},
+				scrollbar: {
+					el: sContentSlider.querySelector('.swiper-scrollbar'),
+					draggable: true,
+				},
+				on: {
+					init: function () {
+						if(sContentSlider.querySelector('.all-slides')) {
+							sContentSlider.querySelector('.all-slides').innerHTML = `${slides.length < 10 ? '0' : ''}${slides.length}`;
+						}
+					},
+					slideChange: function () {
+						if(sContentSlider.querySelector('.current-slide')) {
+							sContentSlider.querySelector('.current-slide').innerHTML = `${swiper.activeIndex < 9 ? '0' : ''}${swiper.activeIndex + 1}`;
+						}
+					},
+				},
+			});
+		})
+	}
+
+	const offsetTopSection = 114;
+	let stickyElem = document.querySelector('.sticky-content');
+	if (stickyElem) {
+		let stickyNav = new hcSticky(stickyElem, {
+			stickTo: $('.sticky-wrap'),
+			top: 80,
+			mobileFirst: true,
+			disable: true,
+			responsive: {
+				992: {
+					disable: false,
+				}
+			}
+		});
+
+		ScrollTrigger.create({
+			scroller: scroller,
+			// trigger: stickyNav,
+			onUpdate: (self) => {
+				stickyNav.update();
+				if (stickyElem.classList.contains('sticky')) {
+					stickyElem.style.transform = `translate3d(0px, ${bodyScrollBar.offset.y}px, 0px)`;
+				} else {
+					stickyElem.style.transform = `translate3d(0px,0px, 0px)`;
+				}
+			},
+		})
+	}
 
 };
 if (document.readyState !== 'loading') {

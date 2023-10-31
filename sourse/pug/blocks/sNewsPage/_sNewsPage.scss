@@ -100,6 +100,9 @@
     @include media-breakpoint-down(sm) {
       margin-bottom: rem(20);
     }
+    picture {
+      width: 100%;
+    }
   }
   &__date {
     margin-bottom: rem(20);
@@ -128,6 +131,35 @@
 		letter-spacing: rem(-1.14);
 		margin-bottom: rem(100);
 	}
+  &--2 {
+    --sPT: #{rem(120)};
+    position: relative;
+    h2 {
+      font-size: rem(38);
+      margin-bottom: rem(60);
+      @include media-breakpoint-up(lg) {
+        margin-bottom: rem(100);
+      }
+    }
+    .sNewsPage {
+      &__list {
+        @include roww('47px', '60px', m);
+        display: flex;
+        flex-wrap: wrap;
+        columns: 1;
+        @include media-breakpoint-up(lg) {
+          flex-wrap: nowrap;
+        }
+        @include media-breakpoint-up(md) {
+          --bs-gutter-x: #{rem(122)};
+        }
+      }
+      &__item {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+  }
   @include media-breakpoint-up(xl) {
   }
   @include media-breakpoint-up(lg) {

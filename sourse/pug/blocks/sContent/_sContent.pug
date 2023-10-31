@@ -1,6 +1,15 @@
 mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.alems#headElems
+			+b.el--27( data-depth="0.07"): div(data-aos="fade-up" data-aos-delay="500"    data-aos-duration="2000" )
+				+pic("el-27.png",'')
+			+b.el--10( data-depth="0.2"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+				+pic("el-10-1.png",'')
+			+b.el--28( data-depth="0.3"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+				+pic("el-28.png",'')
+			//- +b.el--27( data-depth="0.1"): div(data-aos="fade-up"  data-aos-delay="500"  data-aos-duration="2000")
+			//- 	+pic("el-27.png",'')
 		.container-xl-fluid.container
 			block
 	// end sContent
