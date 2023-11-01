@@ -441,9 +441,49 @@
 		}
 		&--10 {
 			@include media-breakpoint-up(xl) {
-				left: 8%!important;
-				top: 5%!important;
+				left: 58%!important;
+    		top: 2.5%!important;
 			}
+		}
+		&--28 {
+			right: 1%!important;
+    	top: 1.9%!important;
+			width: 382px;
+    	left: auto !important;
+		}
+		&--26 {
+			left: 1%!important;
+    	top: 7.6%!important;
+			width: 382px;
+		}
+		&--29 {
+			left: auto!important;
+			right: 1%!important;
+    	top: 14%!important;
+			width: 785px;
+		}
+		&--30 {
+			left: auto!important;
+			right: -14%!important;
+    	top: 24%!important;
+			width: 508px;
+		}
+		&--1 {
+			margin-left: 0;
+			margin-right: 0;
+			left: 1% !important;
+			top: 40% !important;
+		}
+		&--2 {
+			margin-left: 0;
+			left: auto !important;
+			right: -8%!important;
+    	top: 44%!important;
+		}
+		&--31 {
+			width: 533px;
+			left: 1% !important;
+			top: 77% !important;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
