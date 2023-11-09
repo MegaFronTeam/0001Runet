@@ -7,10 +7,20 @@
 	fill: currentColor;
 }
 
+.icon-arrow-left {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(60 / #{$h} *1em );
+}
 .icon-arrow-right {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(60 / #{$h} *1em );
+}
+.icon-arrow-up-right {
+	$h: 19;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(19 / #{$h} *1em );
 }
 .icon-basket {
 	$h: 24;
@@ -26,6 +36,16 @@
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-chevron-left2 {
+	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(21 / #{$h} *1em );
+}
+.icon-chevron-right2 {
+	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(21 / #{$h} *1em );
 }
 .icon-chevron-up {
 	$h: 13;

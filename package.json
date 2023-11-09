@@ -49,6 +49,7 @@
     "aos": "^2.3.4",
     "gsap": "^3.12.2",
     "gulp-useref": "^5.0.0",
+    "hc-sticky": "^2.2.7",
     "inputmask": "^5.0.8",
     "jquery": "^3.7.0",
     "parallax-js": "^3.1.0",

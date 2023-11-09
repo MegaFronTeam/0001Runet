@@ -419,7 +419,7 @@ mixin headerBlock404(pa)
 				+e.btn.btn.btn-dark(href="/")  вернуться на главную
 	// end headerBlock
 
-mixin headerBlockNews(topik)
+mixin headerBlockNews(topik, nothing)
 	// start headerBlock
 	+b.headerBlock--news.section#headerBlock&attributes(attributes)
 		+e.container.container-xl-fluid.container
@@ -472,4 +472,7 @@ mixin headerBlockNews(topik)
 														option(value="")  2021
 														option(value="")  2020
 														option(value="")  2019
+					if nothing
+						.col-12
+							+e.nothing(data-aos="fade-up") К&nbsp;сожалению, по&nbsp;вашему запросу ничего не&nbsp;найдено.<br>Попробуйте изменить параметры поиска
 
