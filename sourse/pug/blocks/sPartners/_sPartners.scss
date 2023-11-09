@@ -42,6 +42,11 @@
 		border-radius: rem(12);
 		@include mt;
 		text-align: center; 
+		color: #fff;
+		svg{
+			fill: currentColor !important; 
+			opacity: var(--op);
+		} 
 		img{
 			@include mt;
 			opacity: var(--op);
@@ -56,8 +61,9 @@
 		}
 		background: var(--white-002, rgba(255, 255, 255, 0.08));
 		&:hover{
-			background-color: #fff;
+			background-color: var(--hover-bg, #fff);
 			--op: 1 !important;
+			color: #333;
 			img{
 				filter: none;
 			}
