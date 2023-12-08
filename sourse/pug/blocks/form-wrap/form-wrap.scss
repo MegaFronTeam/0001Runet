@@ -73,3 +73,10 @@ input::-webkit-inner-spin-button {
 }
 
 
+
+.form-select{
+option{
+	background:   $body-bg;
+	font-size: rem(18);
+}
+}

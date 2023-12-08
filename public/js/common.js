@@ -346,12 +346,12 @@ function eventHandler() {
  
 // window.addEventListener("mousemove", mouseMoveFunc);
 
-	$(".select-wrap").each(function () {
-		let self = $(this);
-		self.find(".select-js").select2({
-			dropdownParent: self,
-		});
-	})
+	// $(".select-wrap").each(function () {
+	// 	let self = $(this);
+	// 	self.find(".select-js").select2({
+	// 		dropdownParent: self,
+	// 	});
+	// })
 
 	let sContentSliders = document.querySelectorAll('.def-slider-js');
 	if(sContentSliders.length > 0) {

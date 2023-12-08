@@ -41,6 +41,9 @@ class gs {
         browserSync.init({
             server: {
                 baseDir: './' + publicPath,
+                serveStaticOptions: {
+                    extensions: ['html']
+                }
                 // middleware: bssi({ baseDir: './' + publicPath, ext: '.html' })
             },
             // ghostMode: { clicks: false },
