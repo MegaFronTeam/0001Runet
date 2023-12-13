@@ -44,29 +44,29 @@
 		text-align: center; 
 		color: #fff;
 		svg{
-			fill: currentColor !important; 
-			opacity: var(--op);
+			// fill: currentColor !important; 
+			// opacity: var(--op);
 		} 
 		img{
-			@include mt;
-			opacity: var(--op);
-			filter: 
-				grayscale(var(--saturate))  
-				brightness(var(--brightness)) 
-				contrast(var(--contrast)) 
-				hue-rotate(var(--rotate))
-				invert(var(--invert));
+			// @include mt;
+			// opacity: var(--op);
+			// filter: 
+			// 	grayscale(var(--saturate))  
+			// 	brightness(var(--brightness)) 
+			// 	contrast(var(--contrast)) 
+			// 	hue-rotate(var(--rotate))
+			// 	invert(var(--invert));
 
 			// background: lightgray ;
 		}
-		background: var(--white-002, rgba(255, 255, 255, 0.08));
+		// background: var(--white-002, rgba(255, 255, 255, 0.08));
+		background-color: var(--hover-bg, #fff);
+		--op: 1 !important;
+		color: #333;
+		img{
+			filter: none;
+		}
 		&:hover{
-			background-color: var(--hover-bg, #fff);
-			--op: 1 !important;
-			color: #333;
-			img{
-				filter: none;
-			}
 			// --saturate: 1;
 			// --brightness: 1 !important;
 			// --contrast: 1;
