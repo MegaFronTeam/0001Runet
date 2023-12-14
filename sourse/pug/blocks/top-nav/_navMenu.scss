@@ -19,6 +19,7 @@
 	a {
 		display: block;
 		color: #fff;
+		&.selected,
 		&:hover {
 			color: $primary;
 		}

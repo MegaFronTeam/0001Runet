@@ -161,27 +161,27 @@ function eventHandler() {
 	// 		y: -200
 	// 	}); 
 
-	var foot = gsap.timeline({
+	// var foot = gsap.timeline({
 
-		scrollTrigger: {
-			scroller,
-			trigger: '.footer-wrap',
-			start: 'top bottom',
-			end: 'bottom bottom',
-			// endTrigger: '.footer-wrap',
-			// end: '90% bottom',
-			// markers: true,
-			// toggleActions: "play none reverse none",
-			scrub: true,
+	// 	scrollTrigger: {
+	// 		scroller,
+	// 		trigger: '.footer-wrap',
+	// 		start: 'top bottom',
+	// 		end: 'bottom bottom',
+	// 		// endTrigger: '.footer-wrap',
+	// 		// end: '90% bottom',
+	// 		// markers: true,
+	// 		// toggleActions: "play none reverse none",
+	// 		scrub: true,
 			
-		}
+	// 	}
 
-	})
-	foot
-		.from(".footer", {
-			ease: 'none', 
-			// duration: .02,  
-			y: '-80%' });
+	// })
+	// foot
+	// 	.from(".footer", {
+	// 		ease: 'none', 
+	// 		// duration: .02,  
+	// 		y: '-80%' });
 
 
 	var fixedBtns = gsap.timeline({
@@ -313,14 +313,14 @@ function eventHandler() {
 	]
 	for (const scene of scenes) {
 		if (scene) {
-			var parallaxInstance4 = new Parallax(scene, {
-				scalarX: 30,
-				scalarY: 30,
-				precision: 10,
-				selector: '.el',
-				// pointerEvents: 'all'
-			});
-			parallaxInstance4.friction(0.4, 0.4);
+			// var parallaxInstance4 = new Parallax(scene, {
+			// 	scalarX: 30,
+			// 	scalarY: 30,
+			// 	precision: 10,
+			// 	selector: '.el',
+			// 	// pointerEvents: 'all'
+			// });
+			// parallaxInstance4.friction(0.4, 0.4);
 		}
 	}
 
