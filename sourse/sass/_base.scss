@@ -843,15 +843,17 @@ p {
 		// top: 0;
 		@include media-breakpoint-up(lg){
 			right: auto;
-			left: 65% !important;
-			margin-left: rem(-300); 
-			width: rem(240); 
-			bottom: 90%;
+			left: 71% !important;
+			margin-left: rem(-290); 
+			width: rem(160); 
+			bottom: 103%;
+      transform: rotate(-6deg);
 		}
 		// top: -10% !important;
-		bottom: 50%;
+    transform: rotate(47deg);
+		bottom: 70%;
 		top: auto !important;
-		width: rem(160); 
+		width: rem(140); 
 		left: auto !important;
 		right: 0;
 		position: absolute !important;
@@ -894,21 +896,20 @@ p {
 	&--5{ 
 		// top: 0;
 		top: auto !important;
-		bottom: 100% !important;
+		bottom: 105% !important;
 		@include media-breakpoint-down(lg){
 			img{
-
-				transform: rotate(-90deg);
+        transform: rotate(47deg);
 			}
 		}
 		@include media-breakpoint-up(lg){
-			
+      bottom: 91% !important;
 			left: auto !important;
-			right: 0 !important;
-			width: rem(140); 
+			right: 130px !important;
+			width: rem(200); 
 		}
-		width: rem(100); 
-		left: 20% !important;	
+		width: rem(120); 
+		left: 26% !important;	
 		// left: 65%;
 		// opacity: 0.77; 
 		filter: saturate(0);
@@ -937,8 +938,8 @@ p {
 			width: rem(250);  
 			margin-top: rem(-100);
 			left: auto !important;
-			right: 150px !important;  
-			top: 50%  !important;
+			right: 145px !important;  
+			top: 49%  !important;
 		}
 		top: 40%  !important;
 		left: 24% !important;
@@ -971,17 +972,19 @@ p {
 		// top: 80%;
 			@include media-breakpoint-up(xxl) {
 
-				bottom: 0;
+				// bottom: 0;
 			}
 			bottom: -20%;
 		// margin-top: rem(-150);
 		@include media-breakpoint-up(lg){
 			width: rem(300);  
-			left: 28% !important; 
+			left: 25% !important; 
+			bottom: -172px;
 			
 		}
-		width: rem(280);  
-		left: 62% !important; 
+    bottom:-8%;
+		width: rem(156);  
+		left: 70% !important; 
 		top: auto !important;
 	}
 	&--7-1{ 
